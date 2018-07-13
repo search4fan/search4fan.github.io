@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Search For Fun</title>
+  
+  <subtitle>search4fan</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://search4fan.github.com/"/>
+  <updated>2018-07-13T13:14:55.063Z</updated>
+  <id>http://search4fan.github.com/</id>
+  
+  <author>
+    <name>killfun</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>add rss feed into hexo blog</title>
+    <link href="http://search4fan.github.com/2018/07/13/hexo%20rss%20feed/"/>
+    <id>http://search4fan.github.com/2018/07/13/hexo rss feed/</id>
+    <published>2018-07-13T06:04:44.852Z</published>
+    <updated>2018-07-13T13:14:55.063Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;install-feed-plugin-in-hexo-blog&quot;&gt;&lt;a href=&quot;#install-feed-plugin-in-hexo-blog&quot; class=&quot;headerlink&quot; title=&quot;install feed plugin in hexo
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://search4fan.github.com/tags/hexo/"/>
+    
+      <category term="feed" scheme="http://search4fan.github.com/tags/feed/"/>
+    
+      <category term="rss" scheme="http://search4fan.github.com/tags/rss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo next google adsense</title>
+    <link href="http://search4fan.github.com/2018/07/13/hexo%20next%20google%20adsense/"/>
+    <id>http://search4fan.github.com/2018/07/13/hexo next google adsense/</id>
+    <published>2018-07-13T01:54:57.816Z</published>
+    <updated>2018-07-13T13:14:36.608Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;add-google-adsense-into-hexo-blog-in-next-theme&quot;&gt;&lt;a href=&quot;#add-google-adsense-into-hexo-blog-in-next-theme&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="google" scheme="http://search4fan.github.com/tags/google/"/>
+    
+      <category term="adsense" scheme="http://search4fan.github.com/tags/adsense/"/>
+    
+      <category term="hexo" scheme="http://search4fan.github.com/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://search4fan.github.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python numpy datetime64 today</title>
+    <link href="http://search4fan.github.com/2018/07/12/python%20timedelta%20days/"/>
+    <id>http://search4fan.github.com/2018/07/12/python timedelta days/</id>
+    <published>2018-07-12T09:31:38.568Z</published>
+    <updated>2018-07-13T13:15:14.233Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;python-numpy-datetime64-today&quot;&gt;&lt;a href=&quot;#python-numpy-datetime64-today&quot; class=&quot;headerlink&quot; title=&quot;python numpy datetime64
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://search4fan.github.com/tags/python/"/>
+    
+      <category term="timedelta" scheme="http://search4fan.github.com/tags/timedelta/"/>
+    
+      <category term="datetime64" scheme="http://search4fan.github.com/tags/datetime64/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python timedelta to seconds</title>
+    <link href="http://search4fan.github.com/2018/07/12/python%20timedelta%20to%20seconds/"/>
+    <id>http://search4fan.github.com/2018/07/12/python timedelta to seconds/</id>
+    <published>2018-07-12T09:24:05.270Z</published>
+    <updated>2018-07-13T13:15:31.159Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;python-timedelta-to-seconds&quot;&gt;&lt;a href=&quot;#python-timedelta-to-seconds&quot; class=&quot;headerlink&quot; title=&quot;python timedelta to
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://search4fan.github.com/tags/python/"/>
+    
+      <category term="timedelta" scheme="http://search4fan.github.com/tags/timedelta/"/>
+    
+      <category term="datetime64" scheme="http://search4fan.github.com/tags/datetime64/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://search4fan.github.com/2018/07/05/test/"/>
+    <id>http://search4fan.github.com/2018/07/05/test/</id>
+    <published>2018-07-05T10:26:24.000Z</published>
+    <updated>2018-07-13T02:23:48.569Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;test&lt;br&gt;more on &lt;a href=&quot;http://searchfor.space&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://search4fan.github.com/2018/07/05/hello-world/"/>
+    <id>http://search4fan.github.com/2018/07/05/hello-world/</id>
+    <published>2018-07-05T10:08:47.977Z</published>
+    <updated>2018-07-05T10:08:47.978Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
