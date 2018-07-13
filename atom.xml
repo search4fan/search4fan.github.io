@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.com/"/>
-  <updated>2018-07-13T13:14:55.063Z</updated>
+  <updated>2018-07-13T13:27:27.634Z</updated>
   <id>http://search4fan.github.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Google Home links to Local Host through localtunnel</title>
+    <link href="http://search4fan.github.com/2018/07/13/google%20home/"/>
+    <id>http://search4fan.github.com/2018/07/13/google home/</id>
+    <published>2018-07-13T13:26:06.817Z</published>
+    <updated>2018-07-13T13:27:27.634Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;nodejs-localhost&quot;&gt;&lt;a href=&quot;#nodejs-localhost&quot; class=&quot;headerlink&quot; title=&quot;nodejs localhost&quot;&gt;&lt;/a&gt;nodejs localhost&lt;/h1&gt;&lt;p&gt;Google home
+        
+      
+    
+    </summary>
+    
+    
+      <category term="google" scheme="http://search4fan.github.com/tags/google/"/>
+    
+      <category term="google home" scheme="http://search4fan.github.com/tags/google-home/"/>
+    
+      <category term="nodejs" scheme="http://search4fan.github.com/tags/nodejs/"/>
+    
+      <category term="local tunnel" scheme="http://search4fan.github.com/tags/local-tunnel/"/>
+    
+  </entry>
+  
+  <entry>
     <title>add rss feed into hexo blog</title>
     <link href="http://search4fan.github.com/2018/07/13/hexo%20rss%20feed/"/>
     <id>http://search4fan.github.com/2018/07/13/hexo rss feed/</id>
     <published>2018-07-13T06:04:44.852Z</published>
-    <updated>2018-07-13T13:14:55.063Z</updated>
+    <updated>2018-07-13T23:15:41.399Z</updated>
     
     <summary type="html">
     
@@ -49,7 +79,7 @@
     <link href="http://search4fan.github.com/2018/07/13/hexo%20next%20google%20adsense/"/>
     <id>http://search4fan.github.com/2018/07/13/hexo next google adsense/</id>
     <published>2018-07-13T01:54:57.816Z</published>
-    <updated>2018-07-13T13:14:36.608Z</updated>
+    <updated>2018-07-13T23:15:41.459Z</updated>
     
     <summary type="html">
     

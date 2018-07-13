@@ -307,6 +307,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.com/2018/07/13/google home/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/13/google home/" itemprop="url">
+                  Google Home links to Local Host through localtunnel
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-13 23:26:06 / Modified: 23:27:27" itemprop="dateCreated datePublished" datetime="2018-07-13T23:26:06+10:00">2018-07-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="nodejs-localhost"><a href="#nodejs-localhost" class="headerlink" title="nodejs localhost"></a>nodejs localhost</h1><p>Google home request -&gt; index.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">	app = express(),</span><br><span class="line">	bodyparser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>),</span><br><span class="line">	assistant = <span class="built_in">require</span>(<span class="string">'./assistant.js'</span>),</span><br><span class="line">	util = <span class="built_in">require</span>(<span class="string">'util'</span>);</span><br><span class="line">app.use(bodyparser.json())</span><br><span class="line"></span><br><span class="line"><span class="comment">// GET method route</span></span><br><span class="line">app.all(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  	<span class="built_in">console</span>.log(<span class="string">'index.js/'</span>);</span><br><span class="line">  	assistant.assistantHandler(req,res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.all(<span class="string">'/test'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'index.js/test'</span>);</span><br><span class="line">	res.send(<span class="string">'helloworld'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure></p>
+<p>index.js -&gt; Google actions sdk<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ActionsSdkApp = <span class="built_in">require</span>(<span class="string">'actions-on-google'</span>).ActionsSdkApp;</span><br><span class="line"></span><br><span class="line">exports.assistantHandler = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'assistantHandler'</span>);</span><br><span class="line">    <span class="keyword">const</span> app = <span class="keyword">new</span> ActionsSdkApp(&#123;</span><br><span class="line">        request: req,</span><br><span class="line">        response: res</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">var</span> str = <span class="string">'Sorry. I don\'t understand what you say'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Create functions to handle requests here</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">mainIntent</span>(<span class="params">app</span>) </span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">'assistant.js/mainIntent'</span>);</span><br><span class="line">        voiceResponse(<span class="string">'welcome'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">respond</span>(<span class="params">app</span>) </span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">'assistant.js/respond'</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (app.getRawInput() == <span class="string">'hello'</span>) &#123;</span><br><span class="line">			str = <span class="string">'hello'</span></span><br><span class="line">		&#125;</span><br><span class="line">        voiceResponse(str)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">voiceResponse</span>(<span class="params">strIn</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> inputPrompt = app.buildInputPrompt(<span class="literal">false</span>,strIn);</span><br><span class="line">        app.ask(inputPrompt);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> actionMap = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">    actionMap.set(app.StandardIntents.MAIN, mainIntent);</span><br><span class="line">    actionMap.set(app.StandardIntents.TEXT, respond);</span><br><span class="line"></span><br><span class="line">    app.handleRequest(actionMap);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="localtunnel"><a href="#localtunnel" class="headerlink" title="localtunnel"></a>localtunnel</h1><p>acquire the URL to access localhost : <a href="https://localtunnel.github.io/www/" target="_blank" rel="noopener">https://localtunnel.github.io/www/</a><br>    -&gt; installation: <code>npm install -g localtunnel</code><br>    -&gt; running: <code>lt --port 8000</code><br>    -&gt; copy the url</p>
+<h1 id="Google-Actions-SDK"><a href="#Google-Actions-SDK" class="headerlink" title="Google Actions SDK"></a>Google Actions SDK</h1><ol>
+<li><p>Apply for account: <a href="https://developers.google.com/actions/sdk/" target="_blank" rel="noopener">https://developers.google.com/actions/sdk/</a><br> -&gt; Add project<br> -&gt; fill the form<br> -&gt; get the update code as follow </p>
+<pre><code>`gactions update --action_package PACKAGE_NAME --project PROJECT_NAME`
+</code></pre></li>
+<li><p>gactions Cli : <a href="https://developers.google.com/actions/tools/gactions-cli" target="_blank" rel="noopener">https://developers.google.com/actions/tools/gactions-cli</a><br> -&gt; download<br> -&gt; Run <code>chmod +x gactions</code> to make the binary executable<br> -&gt; get the actions json sample <code>gactions init</code><br> -&gt; change the actions:add the url in the json file<br> -&gt; update </p>
+<pre><code>`gactions update --action_package PACKAGE_NAME --project PROJECT_ID`
+</code></pre></li>
+<li><p>test google actions:<a href="https://developers.google.com/actions/tools/simulator" target="_blank" rel="noopener">https://developers.google.com/actions/tools/simulator</a></p>
+</li>
+</ol>
+<hr>
+<p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">http://searchfor.space</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.com/2018/07/13/hexo rss feed/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -353,12 +507,24 @@
                 
               
 
-              <time title="Created: 2018-07-13 16:04:44 / Modified: 23:14:55" itemprop="dateCreated datePublished" datetime="2018-07-13T16:04:44+10:00">2018-07-13</time>
+              <time title="Created: 2018-07-13 16:04:44" itemprop="dateCreated datePublished" datetime="2018-07-13T16:04:44+10:00">2018-07-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-14 09:15:41" itemprop="dateModified" datetime="2018-07-14T09:15:41+10:00">2018-07-14</time>
               
             
           </span>
@@ -393,11 +559,8 @@
       
         
           
-            <h1 id="install-feed-plugin-in-hexo-blog"><a href="#install-feed-plugin-in-hexo-blog" class="headerlink" title="install feed plugin in hexo blog"></a>install feed plugin in hexo blog</h1><p>hexo-generator-feed<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-generator-feed --save</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>add following contents into <code>_config.yml</code><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">20</span></span><br><span class="line"><span class="attr">  hub:</span></span><br><span class="line"><span class="attr">  content:</span></span><br><span class="line"><span class="attr">  content_limit:</span> <span class="number">140</span></span><br><span class="line"><span class="attr">  content_limit_delim:</span> <span class="string">' '</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+            <h1 id="install-feed-plugin-in-hexo-blog"><a href="#install-feed-plugin-in-hexo-blog" class="headerlink" title="install feed plugin in hexo blog"></a>install feed plugin in hexo blog</h1><h2 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a>hexo-generator-feed</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<h2 id="add-following-contents-into-config-yml"><a href="#add-following-contents-into-config-yml" class="headerlink" title="add following contents into _config.yml"></a>add following contents into <code>_config.yml</code></h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">20</span></span><br><span class="line"><span class="attr">  hub:</span></span><br><span class="line"><span class="attr">  content:</span></span><br><span class="line"><span class="attr">  content_limit:</span> <span class="number">140</span></span><br><span class="line"><span class="attr">  content_limit_delim:</span> <span class="string">' '</span></span><br></pre></td></tr></table></figure>
 <hr>
 <p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">http://searchfor.space</a></p>
 
@@ -499,12 +662,24 @@
                 
               
 
-              <time title="Created: 2018-07-13 11:54:57 / Modified: 23:14:36" itemprop="dateCreated datePublished" datetime="2018-07-13T11:54:57+10:00">2018-07-13</time>
+              <time title="Created: 2018-07-13 11:54:57" itemprop="dateCreated datePublished" datetime="2018-07-13T11:54:57+10:00">2018-07-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-14 09:15:41" itemprop="dateModified" datetime="2018-07-14T09:15:41+10:00">2018-07-14</time>
               
             
           </span>
@@ -539,20 +714,10 @@
       
         
           
-            <h1 id="add-google-adsense-into-hexo-blog-in-next-theme"><a href="#add-google-adsense-into-hexo-blog-in-next-theme" class="headerlink" title="add google adsense into hexo blog in next theme"></a>add google adsense into hexo blog in next theme</h1><ul>
-<li><p>build a new adsense template under <code>next</code> theme in <code>layout/_custom</code> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/layout/_custom/google_adsense.ejs</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>put the google adsense codes into <code>google_adsense.ejs</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  (adsbygoogle = window.adsbygoogle || []).push(&#123;</span></span><br><span class="line"><span class="undefined">    google_ad_client: "ca-pub-5817381835091099",</span></span><br><span class="line"><span class="undefined">    enable_page_level_ads: true</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>add following codes in <code>_layout.swig</code> under theme folder</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google AdSense start --&gt;</span></span><br><span class="line">&#123;% include '_custom/google_adsense.ejs' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Google AdSense end --&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>generate web page and check source file to see the google code in there </p>
-</li>
-</ul>
-<hr>
+            <h1 id="add-google-adsense-into-hexo-blog-in-next-theme"><a href="#add-google-adsense-into-hexo-blog-in-next-theme" class="headerlink" title="add google adsense into hexo blog in next theme"></a>add google adsense into hexo blog in next theme</h1><h2 id="build-a-new-adsense-template-under-next-theme-in-layout-custom"><a href="#build-a-new-adsense-template-under-next-theme-in-layout-custom" class="headerlink" title="build a new adsense template under next theme in layout/_custom"></a>build a new adsense template under <code>next</code> theme in <code>layout/_custom</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/layout/_custom/google_adsense.ejs</span><br></pre></td></tr></table></figure>
+<h2 id="put-the-google-adsense-codes-into-google-adsense-ejs"><a href="#put-the-google-adsense-codes-into-google-adsense-ejs" class="headerlink" title="put the google adsense codes into google_adsense.ejs"></a>put the google adsense codes into <code>google_adsense.ejs</code></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  (adsbygoogle = window.adsbygoogle || []).push(&#123;</span></span><br><span class="line"><span class="undefined">    google_ad_client: "ca-pub-5817381835091099",</span></span><br><span class="line"><span class="undefined">    enable_page_level_ads: true</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="add-following-codes-in-layout-swig-under-theme-folder"><a href="#add-following-codes-in-layout-swig-under-theme-folder" class="headerlink" title="add following codes in _layout.swig under theme folder"></a>add following codes in <code>_layout.swig</code> under theme folder</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google AdSense start --&gt;</span></span><br><span class="line">&#123;% include '_custom/google_adsense.ejs' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Google AdSense end --&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="generate-web-page-and-check-source-file-to-see-the-google-code-in-there"><a href="#generate-web-page-and-check-source-file-to-see-the-google-code-in-there" class="headerlink" title="generate web page and check source file to see the google code in there"></a>generate web page and check source file to see the google code in there</h2><hr>
 <p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">searchfor.space</a></p>
 
           
@@ -1239,7 +1404,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1272,7 +1437,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
