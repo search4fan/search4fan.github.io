@@ -2,9 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://search4fan.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-07-14T06:48:53.246Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/hexo%20title%20seo%20optimization.html</loc>
+    
+    <lastmod>2018-07-14T06:47:26.216Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/python%20timedelta%20days.html</loc>
+    
+    <lastmod>2018-07-14T06:47:26.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/hexo%20next%20google%20adsense.html</loc>
+    
+    <lastmod>2018-07-14T06:47:26.116Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/hexo%20rss%20feed.html</loc>
+    
+    <lastmod>2018-07-14T06:47:26.057Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://search4fan.github.io/post/python%20assign%20value%20of%20dataframe%20by%20conditions.html</loc>
     
-    <lastmod>2018-07-14T06:32:46.912Z</lastmod>
+    <lastmod>2018-07-14T06:47:26.013Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/hexo%20add%20sitemap.html</loc>
+    
+    <lastmod>2018-07-14T06:47:25.976Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/python%20timedelta%20to%20seconds.html</loc>
+    
+    <lastmod>2018-07-14T06:47:25.900Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/google%20home.html</loc>
+    
+    <lastmod>2018-07-14T06:46:28.736Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-07-14T06:45:25.273Z</lastmod>
     
   </url>
   
@@ -12,55 +75,6 @@
     <loc>http://search4fan.github.io/python%20datetime%20get%20yesterday.html</loc>
     
     <lastmod>2018-07-14T04:07:05.687Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://search4fan.github.io/post/hexo%20title%20seo%20optimization.html</loc>
-    
-    <lastmod>2018-07-14T00:03:54.834Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://search4fan.github.io/post/hexo%20add%20sitemap.html</loc>
-    
-    <lastmod>2018-07-13T23:50:15.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://search4fan.github.io/post/hexo%20rss%20feed.html</loc>
-    
-    <lastmod>2018-07-13T23:21:31.926Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://search4fan.github.io/post/hexo%20next%20google%20adsense.html</loc>
-    
-    <lastmod>2018-07-13T23:20:08.783Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://search4fan.github.io/post/google%20home.html</loc>
-    
-    <lastmod>2018-07-13T13:27:27.634Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://search4fan.github.io/post/python%20timedelta%20to%20seconds.html</loc>
-    
-    <lastmod>2018-07-13T13:15:31.159Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://search4fan.github.io/post/python%20timedelta%20days.html</loc>
-    
-    <lastmod>2018-07-13T13:15:14.233Z</lastmod>
     
   </url>
   
