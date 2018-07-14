@@ -120,17 +120,18 @@
 
 
 
-  <meta name="description" content="testmore on http://searchfor.space">
+  <meta name="description" content="python assign or set value if conditions match">
+<meta name="keywords" content="python,assign value conditionally,set value conditionally,assign value based on condition">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://search4fan.github.io/post/test.html">
+<meta property="og:title" content="python assign value of dataframe by conditions">
+<meta property="og:url" content="http://search4fan.github.io/post/python assign value of dataframe by conditions.html">
 <meta property="og:site_name" content="Search For Fun">
-<meta property="og:description" content="testmore on http://searchfor.space">
+<meta property="og:description" content="python assign or set value if conditions match">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-13T02:23:48.569Z">
+<meta property="og:updated_time" content="2018-07-14T06:30:28.270Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="testmore on http://searchfor.space">
+<meta name="twitter:title" content="python assign value of dataframe by conditions">
+<meta name="twitter:description" content="python assign or set value if conditions match">
 
 
 
@@ -139,7 +140,7 @@
 
 
 
-  <link rel="canonical" href="http://search4fan.github.io/post/test.html"/>
+  <link rel="canonical" href="http://search4fan.github.io/post/python assign value of dataframe by conditions.html"/>
 
 
 
@@ -149,7 +150,7 @@
   };
 </script>
 
-  <title>test | Search For Fun</title>
+  <title>python assign value of dataframe by conditions | Search For Fun</title>
   
 
 
@@ -307,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/test.html">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python assign value of dataframe by conditions.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="killfun">
@@ -324,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test
+          <h1 class="post-title" itemprop="name headline">python assign value of dataframe by conditions
               
             
           </h1>
@@ -349,24 +350,12 @@
                 
               
 
-              <time title="Created: 2018-07-05 20:26:24" itemprop="dateCreated datePublished" datetime="2018-07-05T20:26:24+10:00">2018-07-05</time>
+              <time title="Created: 2018-07-14 15:15:24 / Modified: 16:30:28" itemprop="dateCreated datePublished" datetime="2018-07-14T15:15:24+10:00">2018-07-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-13 12:23:48" itemprop="dateModified" datetime="2018-07-13T12:23:48+10:00">2018-07-13</time>
               
             
           </span>
@@ -385,6 +374,8 @@
           
 
           
+              <div class="post-description">python assign or set value if conditions match</div>
+          
 
         </div>
       </header>
@@ -399,7 +390,13 @@
       
 
       
-        <p>test<br>more on <a href="http://searchfor.space" target="_blank" rel="noopener">http://searchfor.space</a></p>
+        <h1 id="python-assign-or-set-value-based-on-conditions"><a href="#python-assign-or-set-value-based-on-conditions" class="headerlink" title="python assign or set value based on conditions"></a>python assign or set value based on conditions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line"></span><br><span class="line">data = pandas.DataFrame(&#123;<span class="string">"test"</span>: [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>], <span class="string">"a"</span>: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">"b"</span>: [<span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>]&#125;)</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0    10  1  0</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br><span class="line"><span class="comment"># 3    40  2  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="filter-the-data-with-condtion-1"><a href="#filter-the-data-with-condtion-1" class="headerlink" title="filter the data with condtion 1"></a>filter the data with condtion 1</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tmp = data[data[<span class="string">"a"</span>] == <span class="number">1</span>]</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0    10  1  0</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="filter-the-data-with-condition-2"><a href="#filter-the-data-with-condition-2" class="headerlink" title="filter the data with condition 2"></a>filter the data with condition 2</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tmp = tmp[tmp[<span class="string">"b"</span>] == <span class="number">2</span>]</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="get-the-index-of-the-data"><a href="#get-the-index-of-the-data" class="headerlink" title="get the index of the data"></a>get the index of the data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">indexes = tmp.index</span><br><span class="line"><span class="comment"># Int64Index([1, 2], dtype='int64')</span></span><br></pre></td></tr></table></figure>
+<h1 id="change-values-by-indexes-and-column-name"><a href="#change-values-by-indexes-and-column-name" class="headerlink" title="change values by indexes and column name"></a>change values by indexes and column name</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data._set_value(indexes, <span class="string">'test'</span>, <span class="number">888888</span>)</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0      10  1  0</span></span><br><span class="line"><span class="comment"># 1  888888  1  2</span></span><br><span class="line"><span class="comment"># 2  888888  1  2</span></span><br><span class="line"><span class="comment"># 3      40  2  2</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
 
       
     </div>
@@ -418,6 +415,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/dataframe/" rel="tag"># dataframe</a>
+          
+        </div>
+      
 
       
       
@@ -427,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/hello-world.html" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/post/hexo title seo optimization.html" rel="next" title="optimze hexo blog title for seo">
+                <i class="fa fa-chevron-left"></i> optimze hexo blog title for seo
               </a>
             
           </div>
@@ -436,10 +441,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/post/python timedelta to seconds.html" rel="prev" title="python timedelta to seconds">
-                python timedelta to seconds <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +592,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python-assign-or-set-value-based-on-conditions"><span class="nav-number">1.</span> <span class="nav-text">python assign or set value based on conditions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#filter-the-data-with-condtion-1"><span class="nav-number">2.</span> <span class="nav-text">filter the data with condtion 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#filter-the-data-with-condition-2"><span class="nav-number">3.</span> <span class="nav-text">filter the data with condition 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#get-the-index-of-the-data"><span class="nav-number">4.</span> <span class="nav-text">get the index of the data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#change-values-by-indexes-and-column-name"><span class="nav-number">5.</span> <span class="nav-text">change values by indexes and column name</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
