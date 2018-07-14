@@ -127,18 +127,18 @@
 
 
 
-  <meta name="description" content="change index.swig fileunder your-hexo-site\themes\next\layout chang the title codes1&amp;#123;% block title %&amp;#125;&amp;#123;&amp;#123; config.title &amp;#125;&amp;#125;&amp;#123;% endblock %&amp;#125; change into1&amp;#123;% block">
-<meta name="keywords" content="hexo,seo,blog">
+  <meta name="description" content="install hexo-generator-feed1$ npm install hexo-generator-feed --save add following contents into _config.yml12345678feed:  type: atom  path: atom.xml  limit: 20  hub:  content:  content_limit: 140  co">
+<meta name="keywords" content="hexo,feed,rss">
 <meta property="og:type" content="article">
-<meta property="og:title" content="optimze hexo blog title for seo">
-<meta property="og:url" content="http://search4fan.github.io/post/hexo title seo optimization.html">
+<meta property="og:title" content="add rss feed into hexo blog - install feed plugin in hexo blog">
+<meta property="og:url" content="http://search4fan.github.io/post/hexo_rss_feed.html">
 <meta property="og:site_name" content="Search For Fun">
-<meta property="og:description" content="change index.swig fileunder your-hexo-site\themes\next\layout chang the title codes1&amp;#123;% block title %&amp;#125;&amp;#123;&amp;#123; config.title &amp;#125;&amp;#125;&amp;#123;% endblock %&amp;#125; change into1&amp;#123;% block">
+<meta property="og:description" content="install hexo-generator-feed1$ npm install hexo-generator-feed --save add following contents into _config.yml12345678feed:  type: atom  path: atom.xml  limit: 20  hub:  content:  content_limit: 140  co">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-14T06:47:26.216Z">
+<meta property="og:updated_time" content="2018-07-14T06:47:26.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="optimze hexo blog title for seo">
-<meta name="twitter:description" content="change index.swig fileunder your-hexo-site\themes\next\layout chang the title codes1&amp;#123;% block title %&amp;#125;&amp;#123;&amp;#123; config.title &amp;#125;&amp;#125;&amp;#123;% endblock %&amp;#125; change into1&amp;#123;% block">
+<meta name="twitter:title" content="add rss feed into hexo blog - install feed plugin in hexo blog">
+<meta name="twitter:description" content="install hexo-generator-feed1$ npm install hexo-generator-feed --save add following contents into _config.yml12345678feed:  type: atom  path: atom.xml  limit: 20  hub:  content:  content_limit: 140  co">
 
 
 
@@ -147,7 +147,7 @@
 
 
 
-  <link rel="canonical" href="http://search4fan.github.io/post/hexo title seo optimization.html"/>
+  <link rel="canonical" href="http://search4fan.github.io/post/hexo_rss_feed.html"/>
 
 
 
@@ -157,7 +157,7 @@
   };
 </script>
 
-  <title>optimze hexo blog title for seo | Search For Fun</title>
+  <title>add rss feed into hexo blog - install feed plugin in hexo blog | Search For Fun</title>
   
 
 
@@ -362,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo title seo optimization.html">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_rss_feed.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="killfun">
@@ -379,7 +379,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">optimze hexo blog title for seo
+          <h2 class="post-title" itemprop="name headline">add rss feed into hexo blog - install feed plugin in hexo blog
               
             
           </h2>
@@ -404,12 +404,24 @@
                 
               
 
-              <time title="Created: 2018-07-14 09:57:04 / Modified: 16:47:26" itemprop="dateCreated datePublished" datetime="2018-07-14T09:57:04+10:00">2018-07-14</time>
+              <time title="Created: 2018-07-13 16:04:44" itemprop="dateCreated datePublished" datetime="2018-07-13T16:04:44+10:00">2018-07-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-14 16:47:26" itemprop="dateModified" datetime="2018-07-14T16:47:26+10:00">2018-07-14</time>
               
             
           </span>
@@ -460,10 +472,8 @@
       
 
       
-        <h1 id="change-index-swig-file"><a href="#change-index-swig-file" class="headerlink" title="change index.swig file"></a>change index.swig file</h1><p>under <code>your-hexo-site\themes\next\layout</code></p>
-<h1 id="chang-the-title-codes"><a href="#chang-the-title-codes" class="headerlink" title="chang the title codes"></a>chang the title codes</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125;&#123;&#123; config.title &#125;&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
-<p>change into<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125;&#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>moreover, it can add keywords into title<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125;&#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="install-hexo-generator-feed"><a href="#install-hexo-generator-feed" class="headerlink" title="install hexo-generator-feed"></a>install hexo-generator-feed</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-generator-feed --save</span></span><br></pre></td></tr></table></figure>
+<h1 id="add-following-contents-into-config-yml"><a href="#add-following-contents-into-config-yml" class="headerlink" title="add following contents into _config.yml"></a>add following contents into <code>_config.yml</code></h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">20</span></span><br><span class="line"><span class="attr">  hub:</span></span><br><span class="line"><span class="attr">  content:</span></span><br><span class="line"><span class="attr">  content_limit:</span> <span class="number">140</span></span><br><span class="line"><span class="attr">  content_limit_delim:</span> <span class="string">' '</span></span><br></pre></td></tr></table></figure>
 <hr>
 <p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">http://searchfor.space</a></p>
 
@@ -491,7 +501,7 @@
     <strong>Post author:  </strong>killfun</li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://search4fan.github.io/post/hexo title seo optimization.html" title="optimze hexo blog title for seo">http://search4fan.github.io/post/hexo title seo optimization.html</a>
+    <a href="http://search4fan.github.io/post/hexo_rss_feed.html" title="add rss feed into hexo blog - install feed plugin in hexo blog">http://search4fan.github.io/post/hexo_rss_feed.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</li>
@@ -506,9 +516,9 @@
           
             <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
           
-            <a href="/tags/seo/" rel="tag"><i class="fa fa-tag"></i> seo</a>
+            <a href="/tags/feed/" rel="tag"><i class="fa fa-tag"></i> feed</a>
           
-            <a href="/tags/blog/" rel="tag"><i class="fa fa-tag"></i> blog</a>
+            <a href="/tags/rss/" rel="tag"><i class="fa fa-tag"></i> rss</a>
           
         </div>
       
@@ -521,8 +531,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/hexo add sitemap.html" rel="next" title="add sitemap into hexo blog">
-                <i class="fa fa-chevron-left"></i> add sitemap into hexo blog
+              <a href="/post/hexo_next_google_adsense.html" rel="next" title="add google adsense into hexo blog in next theme">
+                <i class="fa fa-chevron-left"></i> add google adsense into hexo blog in next theme
               </a>
             
           </div>
@@ -531,8 +541,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/post/python assign value of dataframe by conditions.html" rel="prev" title="python assign value of dataframe by conditions">
-                python assign value of dataframe by conditions <i class="fa fa-chevron-right"></i>
+              <a href="/post/google_home.html" rel="prev" title="Google Home links to Local Host through localtunnel">
+                Google Home links to Local Host through localtunnel <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -712,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#change-index-swig-file"><span class="nav-number">1.</span> <span class="nav-text">change index.swig file</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chang-the-title-codes"><span class="nav-number">2.</span> <span class="nav-text">chang the title codes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#install-hexo-generator-feed"><span class="nav-number">1.</span> <span class="nav-text">install hexo-generator-feed</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-following-contents-into-config-yml"><span class="nav-number">2.</span> <span class="nav-text">add following contents into _config.yml</span></a></li></ol></div>
             
 
           </div>
