@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-14T07:20:19.331Z</updated>
+  <updated>2018-07-14T08:01:08.602Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo add local search</title>
+    <link href="http://search4fan.github.io/post/hexo%20add%20local%20search.html"/>
+    <id>http://search4fan.github.io/post/hexo add local search.html</id>
+    <published>2018-07-14T07:57:30.434Z</published>
+    <updated>2018-07-14T08:01:08.602Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: add a local search for hexo blog &lt;/p&gt;
+&lt;h1 id=&quot;install-hexo-generator-search&quot;&gt;&lt;a href=&quot;#install-hexo-generator-search&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>python assign value of dataframe by conditions</title>
