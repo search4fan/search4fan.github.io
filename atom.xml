@@ -96,9 +96,9 @@
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
-    
       <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
+    
+      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
     
   </entry>
   
