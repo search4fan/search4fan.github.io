@@ -353,7 +353,7 @@
                 
               
 
-              <time title="Created: 2018-07-14 15:15:24 / Modified: 16:30:28" itemprop="dateCreated datePublished" datetime="2018-07-14T15:15:24+10:00">2018-07-14</time>
+              <time title="Created: 2018-07-14 15:15:24 / Modified: 16:32:46" itemprop="dateCreated datePublished" datetime="2018-07-14T15:15:24+10:00">2018-07-14</time>
             
 
             
@@ -392,14 +392,17 @@
 
       
         
-          python assign or set value if conditions match
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/post/python assign value of dataframe by conditions.html">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p>description: python assign or set value if conditions match </p>
+<h1 id="python-assign-or-set-value-based-on-conditions"><a href="#python-assign-or-set-value-based-on-conditions" class="headerlink" title="python assign or set value based on conditions"></a>python assign or set value based on conditions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line"></span><br><span class="line">data = pandas.DataFrame(&#123;<span class="string">"test"</span>: [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>], <span class="string">"a"</span>: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">"b"</span>: [<span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>]&#125;)</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0    10  1  0</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br><span class="line"><span class="comment"># 3    40  2  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="filter-the-data-with-condtion-1"><a href="#filter-the-data-with-condtion-1" class="headerlink" title="filter the data with condtion 1"></a>filter the data with condtion 1</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tmp = data[data[<span class="string">"a"</span>] == <span class="number">1</span>]</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0    10  1  0</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="filter-the-data-with-condition-2"><a href="#filter-the-data-with-condition-2" class="headerlink" title="filter the data with condition 2"></a>filter the data with condition 2</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tmp = tmp[tmp[<span class="string">"b"</span>] == <span class="number">2</span>]</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="get-the-index-of-the-data"><a href="#get-the-index-of-the-data" class="headerlink" title="get the index of the data"></a>get the index of the data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">indexes = tmp.index</span><br><span class="line"><span class="comment"># Int64Index([1, 2], dtype='int64')</span></span><br></pre></td></tr></table></figure>
+<h1 id="change-values-by-indexes-and-column-name"><a href="#change-values-by-indexes-and-column-name" class="headerlink" title="change values by indexes and column name"></a>change values by indexes and column name</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data._set_value(indexes, <span class="string">'test'</span>, <span class="number">888888</span>)</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0      10  1  0</span></span><br><span class="line"><span class="comment"># 1  888888  1  2</span></span><br><span class="line"><span class="comment"># 2  888888  1  2</span></span><br><span class="line"><span class="comment"># 3      40  2  2</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
         
       
     </div>
