@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-15T06:58:18.738Z</updated>
+  <updated>2018-07-15T11:56:59.207Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,99 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>connect sql server from Microsoft Sql Server Management Studio</title>
+    <link href="http://search4fan.github.io/post/docker_sql_server_connect_from_ssms.html"/>
+    <id>http://search4fan.github.io/post/docker_sql_server_connect_from_ssms.html</id>
+    <published>2018-07-15T11:51:00.484Z</published>
+    <updated>2018-07-15T11:56:59.207Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: codes for connecting sql server from Microsoft sql server management studio &lt;/p&gt;
+&lt;h1 id=&quot;start-sql-server&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/categories/docker/sql-server/"/>
+    
+    
+      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+      <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker</title>
+    <link href="http://search4fan.github.io/post/docker_unauthorized_username_password.html"/>
+    <id>http://search4fan.github.io/post/docker_unauthorized_username_password.html</id>
+    <published>2018-07-15T07:11:54.912Z</published>
+    <updated>2018-07-15T07:17:14.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: solve problem of unauthorized username or password in terminal&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>run sql server through docker in Windows</title>
+    <link href="http://search4fan.github.io/post/docker_run_sql_server.html"/>
+    <id>http://search4fan.github.io/post/docker_run_sql_server.html</id>
+    <published>2018-07-15T07:04:52.610Z</published>
+    <updated>2018-07-15T11:42:16.200Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: run sql server through docker &lt;/p&gt;
+&lt;h1 id=&quot;start&quot;&gt;&lt;a href=&quot;#start&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/categories/docker/sql-server/"/>
+    
+      <category term="mssql" scheme="http://search4fan.github.io/categories/docker/sql-server/mssql/"/>
+    
+    
+      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
+    
+      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft Visual Studio Code insert date time variables into snippet template</title>
@@ -125,9 +218,9 @@
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
-    
       <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
+    
+      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
     
   </entry>
   
@@ -249,9 +342,9 @@
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
-    
       <category term="adsense" scheme="http://search4fan.github.io/tags/adsense/"/>
+    
+      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
     
   </entry>
   

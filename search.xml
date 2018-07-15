@@ -3,6 +3,81 @@
   
     
     <entry>
+      <title>connect sql server from Microsoft Sql Server Management Studio</title>
+      <link href="/post/docker_sql_server_connect_from_ssms.html"/>
+      <url>/post/docker_sql_server_connect_from_ssms.html</url>
+      <content type="html"><![CDATA[<p>description: codes for connecting sql server from Microsoft sql server management studio </p><h1 id="start-sql-server"><a href="#start-sql-server" class="headerlink" title="start sql server"></a>start sql server</h1><p><code>Asdfgh123</code> is default password<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"ACCEPT_EULA=Y"</span> -e <span class="string">"SA_PASSWORD=Asdfgh123"</span> `</span><br><span class="line">   -p 1433:1433 --name sql1 `</span><br><span class="line">   -d microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure></p><h1 id="connect-from-external-tools"><a href="#connect-from-external-tools" class="headerlink" title="connect from external tools"></a>connect from external tools</h1><p>under Windows, open Powershell to test service can be accessed from Windows<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlcmd -S 10.3.2.4,1433 -U SA -P <span class="string">"Asdfgh123"</span></span><br></pre></td></tr></table></figure></p><h1 id="connect-from-sql-server-management-studio"><a href="#connect-from-sql-server-management-studio" class="headerlink" title="connect from sql server management studio"></a>connect from sql server management studio</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">server type: database engine </span><br><span class="line">server name: 192.168.11.11 </span><br><span class="line">authentication: sql server authentication </span><br><span class="line">    login: SA</span><br><span class="line">    password: Asdfgh123</span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      <categories>
+          
+          <category> docker </category>
+          
+          <category> sql server </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> sql server </tag>
+            
+            <tag> ssms </tag>
+            
+            <tag> sql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>docker</title>
+      <link href="/post/docker_unauthorized_username_password.html"/>
+      <url>/post/docker_unauthorized_username_password.html</url>
+      <content type="html"><![CDATA[<p>description: solve problem of unauthorized username or password in terminal</p><h1 id="problem-of-unauthorized-incorrect-username-or-password"><a href="#problem-of-unauthorized-incorrect-username-or-password" class="headerlink" title="problem of unauthorized incorrect username or password"></a>problem of unauthorized incorrect username or password</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;docker pull alpine</span><br><span class="line"><span class="comment"># Using default tag: latest</span></span><br><span class="line"><span class="comment"># Error response from daemon: Get https://registry-1.docker.io/v2/library/alpine/manifests/latest: unauthorized: incorrect username or password</span></span><br></pre></td></tr></table></figure><h1 id="solve-solution"><a href="#solve-solution" class="headerlink" title="solve solution"></a>solve solution</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;docker login</span><br><span class="line"><span class="comment"># Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.</span></span><br><span class="line"><span class="comment"># Username (findhill@gmail.com): vifonk</span></span><br><span class="line"><span class="comment"># Password:</span></span><br><span class="line"><span class="comment"># Login Succeeded</span></span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>run sql server through docker in Windows</title>
+      <link href="/post/docker_run_sql_server.html"/>
+      <url>/post/docker_run_sql_server.html</url>
+      <content type="html"><![CDATA[<p>description: run sql server through docker </p><h1 id="start"><a href="#start" class="headerlink" title="start"></a>start</h1><ul><li>open and start docker service</li><li>open Powershell</li></ul><h1 id="download-sql-server-image"><a href="#download-sql-server-image" class="headerlink" title="download sql server image"></a>download sql server image</h1><p>put following commend in powerhell<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure></p><h1 id="start-sql-server"><a href="#start-sql-server" class="headerlink" title="start sql server"></a>start sql server</h1><p><code>Asdfgh123</code> is default password<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"ACCEPT_EULA=Y"</span> -e <span class="string">"SA_PASSWORD=Asdfgh123"</span> `</span><br><span class="line">   -p 1433:1433 --name sql1 `</span><br><span class="line">   -d microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure></p><p>if get following error:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: Conflict. The container name <span class="string">"/sql1"</span> is already <span class="keyword">in</span> use by container <span class="string">"1da5029c71ab937a25acdb4fadf44f4065c2fea4f6a4f157c1a07516558757bb"</span>. You have to remove (or rename) that container to be able to reuse that name.</span><br><span class="line">See <span class="string">'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'</span>.</span><br></pre></td></tr></table></figure></p><p>restart the server<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start sql1</span><br></pre></td></tr></table></figure></p><h1 id="connect-to-server"><a href="#connect-to-server" class="headerlink" title="connect to server"></a>connect to server</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it sql1 <span class="string">"bash"</span></span><br></pre></td></tr></table></figure><h1 id="start-sqlcmd-tool"><a href="#start-sqlcmd-tool" class="headerlink" title="start sqlcmd tool"></a>start sqlcmd tool</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span class="string">'Asdfgh123'</span></span><br></pre></td></tr></table></figure><h1 id="test-create-database"><a href="#test-create-database" class="headerlink" title="test create database"></a>test create database</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> TestDB</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span> <span class="keyword">from</span> sys.Databases</span><br><span class="line"><span class="keyword">GO</span></span><br></pre></td></tr></table></figure><h1 id="test-acquire-database"><a href="#test-acquire-database" class="headerlink" title="test acquire database"></a>test acquire database</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USE</span> TestDB</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">new</span> <span class="keyword">table</span> named Inventory:</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Inventory (<span class="keyword">id</span> <span class="built_in">INT</span>, <span class="keyword">name</span> <span class="keyword">NVARCHAR</span>(<span class="number">50</span>), quantity <span class="built_in">INT</span>)</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Inventory <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">'banana'</span>, <span class="number">150</span>); <span class="keyword">INSERT</span> <span class="keyword">INTO</span> Inventory <span class="keyword">VALUES</span> (<span class="number">2</span>, <span class="string">'orange'</span>, <span class="number">154</span>);</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Inventory <span class="keyword">WHERE</span> quantity &gt; <span class="number">152</span>;</span><br><span class="line">GO</span><br></pre></td></tr></table></figure><h1 id="connect-from-external-tools"><a href="#connect-from-external-tools" class="headerlink" title="connect from external tools"></a>connect from external tools</h1><p>outside the container<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlcmd -S 10.3.2.4,1433 -U SA -P <span class="string">"Asdfgh123"</span></span><br></pre></td></tr></table></figure></p><h1 id="Stop-and-remove-container"><a href="#Stop-and-remove-container" class="headerlink" title="Stop and remove container"></a>Stop and remove container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop sql1</span><br><span class="line">docker rm sql1</span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      <categories>
+          
+          <category> docker </category>
+          
+          <category> sql server </category>
+          
+          <category> mssql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> sql server </tag>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Microsoft Visual Studio Code insert date time variables into snippet template</title>
       <link href="/post/vs_code_datetime_snippet.html"/>
       <url>/post/vs_code_datetime_snippet.html</url>
@@ -86,9 +161,9 @@
             
             <tag> hexo </tag>
             
-            <tag> seo </tag>
-            
             <tag> blog </tag>
+            
+            <tag> seo </tag>
             
         </tags>
       
@@ -190,9 +265,9 @@
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
-            
             <tag> adsense </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
