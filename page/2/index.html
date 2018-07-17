@@ -361,6 +361,678 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/vs_code_datetime_snippet.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/vs_code_datetime_snippet.html" itemprop="url">
+                  Microsoft Visual Studio Code insert date time variables into snippet template
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-15 16:52:14 / Modified: 16:58:18" itemprop="dateCreated datePublished" datetime="2018-07-15T16:52:14+10:00">2018-07-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/VS-code/" itemprop="url" rel="index"><span itemprop="name">VS code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: make a snippet with current datetime </p>
+<h1 id="open-snippet-file-to-edit"><a href="#open-snippet-file-to-edit" class="headerlink" title="open snippet file to edit"></a>open snippet file to edit</h1><p>File -&gt; preference –&gt; user snippets</p>
+<h1 id="edit-snippet-like-following"><a href="#edit-snippet-like-following" class="headerlink" title="edit snippet like following"></a>edit snippet like following</h1><p><code>${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR} ${CURRENT_HOUR}:${CURRENT_MINUTE}</code><br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"post"</span>: &#123;</span><br><span class="line">		<span class="attr">"prefix"</span>: <span class="string">".post"</span>,</span><br><span class="line">		<span class="attr">"body"</span>: [</span><br><span class="line">			<span class="string">"---\r"</span>,</span><br><span class="line">			<span class="string">"title: $&#123;1&#125;\r"</span>,</span><br><span class="line">			<span class="string">"date: $&#123;CURRENT_DATE&#125;/$&#123;CURRENT_MONTH&#125;/$&#123;CURRENT_YEAR&#125; $&#123;CURRENT_HOUR&#125;:$&#123;CURRENT_MINUTE&#125;\r"</span>,</span><br><span class="line">			<span class="string">"tags: \r"</span>,</span><br><span class="line">			<span class="string">"keywords:\r"</span>,</span><br><span class="line">			<span class="string">"categories: \r"</span>,</span><br><span class="line">			<span class="string">"---\r"</span>,</span><br><span class="line">			<span class="string">"description:\r"</span>,</span><br><span class="line">			<span class="string">"\r"</span>,</span><br><span class="line">			<span class="string">"\r"</span>,</span><br><span class="line">			<span class="string">"\r"</span>,</span><br><span class="line">			<span class="string">"\r"</span>,</span><br><span class="line">			<span class="string">"---------------------------------------------\r"</span>,</span><br><span class="line">			<span class="string">"more on [search4fan.github.io](https://search4fan.github.io/)\r"</span>,</span><br><span class="line">			<span class="string">"\r"</span>,</span><br><span class="line">			<span class="string">""</span></span><br><span class="line">		],</span><br><span class="line">		<span class="attr">"description"</span>: <span class="string">"post template"</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="other-variables"><a href="#other-variables" class="headerlink" title="other variables"></a>other variables</h1><p><code>TM_SELECTED_TEXT</code> The currently selected text or the empty string<br><code>TM_LINE_NUMBER</code> The one-index based line number<br><code>TM_FILENAME</code> The filename of the current document<br><code>TM_FILENAME_BASE</code> The filename of the current document without its extensions<br><code>TM_LINE_INDEX</code> The zero-index based line number<br><code>TM_DIRECTORY</code> The directory of the current document<br><code>TM_FILEPATH</code> The full file path of the current document<br><code>CLIPBOARD</code> The contents of your clipboard<br><code>TM_CURRENT_LINE</code> The contents of the current line<br><code>TM_CURRENT_WORD</code> The contents of the word under cursor or the empty string</p>
+<p><code>CURRENT_DAY_NAME</code> The name of day (example ‘Monday’)<br><code>CURRENT_DAY_NAME_SHORT</code> The short name of the day (example ‘Mon’)<br><code>CURRENT_HOUR</code> The current hour in 24-hour clock format<br><code>CURRENT_MINUTE</code> The current minute<br><code>CURRENT_SECOND</code> The current second</p>
+<p><code>CURRENT_YEAR</code> The current year<br><code>CURRENT_YEAR_SHORT</code> The current year’s last two digits<br><code>CURRENT_MONTH</code> The month as two digits (example ‘02’)<br><code>CURRENT_MONTH_NAME</code> The full name of the month (example ‘July’)<br><code>CURRENT_MONTH_NAME_SHORT</code> The short name of the month (example ‘Jul’)<br><code>CURRENT_DATE</code> The day of the month</p>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_add_local_search.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/hexo_add_local_search.html" itemprop="url">
+                  hexo add local search
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-14 17:57:30 / Modified: 18:28:43" itemprop="dateCreated datePublished" datetime="2018-07-14T17:57:30+10:00">2018-07-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: add a local search for hexo blog </p>
+<h1 id="install-hexo-generator-search"><a href="#install-hexo-generator-search" class="headerlink" title="install hexo-generator-search"></a>install hexo-generator-search</h1><p>run following commend under <code>search4fan.github.io/</code> folder<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure></p>
+<h1 id="change-configuration"><a href="#change-configuration" class="headerlink" title="change configuration"></a>change configuration</h1><p>add following text in <code>search4fan.github.io/_config.yml</code><br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span> </span><br><span class="line"><span class="attr">      path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">      field:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="change-theme-configuration"><a href="#change-theme-configuration" class="headerlink" title="change theme configuration"></a>change theme configuration</h1><p>change <code>_config.yml</code> under theme folder <code>search4fan.github.io/themes/next/_config.yml</code><br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/theme-next/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># if auto, trigger search by changing input</span></span><br><span class="line">  <span class="comment"># if manual, trigger search by pressing enter key or search button</span></span><br><span class="line"><span class="attr">  trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># show top n results per article, show all results by setting to -1</span></span><br><span class="line"><span class="attr">  top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># unescape html strings to the readable one</span></span><br><span class="line"><span class="attr">  unescape:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_assign_value_conditionally.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_assign_value_conditionally.html" itemprop="url">
+                  python assign value of dataframe by conditions
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-14 15:15:24 / Modified: 17:20:19" itemprop="dateCreated datePublished" datetime="2018-07-14T15:15:24+10:00">2018-07-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: python assign or set value if conditions match </p>
+<h1 id="python-assign-or-set-value-based-on-conditions"><a href="#python-assign-or-set-value-based-on-conditions" class="headerlink" title="python assign or set value based on conditions"></a>python assign or set value based on conditions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line"></span><br><span class="line">data = pandas.DataFrame(&#123;<span class="string">"test"</span>: [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>], <span class="string">"a"</span>: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>], <span class="string">"b"</span>: [<span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>]&#125;)</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0    10  1  0</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br><span class="line"><span class="comment"># 3    40  2  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="filter-the-data-with-condtion-1"><a href="#filter-the-data-with-condtion-1" class="headerlink" title="filter the data with condtion 1"></a>filter the data with condtion 1</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tmp = data[data[<span class="string">"a"</span>] == <span class="number">1</span>]</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0    10  1  0</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="filter-the-data-with-condition-2"><a href="#filter-the-data-with-condition-2" class="headerlink" title="filter the data with condition 2"></a>filter the data with condition 2</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tmp = tmp[tmp[<span class="string">"b"</span>] == <span class="number">2</span>]</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 1    20  1  2</span></span><br><span class="line"><span class="comment"># 2    30  1  2</span></span><br></pre></td></tr></table></figure>
+<h1 id="get-the-index-of-the-data"><a href="#get-the-index-of-the-data" class="headerlink" title="get the index of the data"></a>get the index of the data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">indexes = tmp.index</span><br><span class="line"><span class="comment"># Int64Index([1, 2], dtype='int64')</span></span><br></pre></td></tr></table></figure>
+<h1 id="change-values-by-indexes-and-column-name"><a href="#change-values-by-indexes-and-column-name" class="headerlink" title="change values by indexes and column name"></a>change values by indexes and column name</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data._set_value(indexes, <span class="string">'test'</span>, <span class="number">888888</span>)</span><br><span class="line"><span class="comment"># test  a  b</span></span><br><span class="line"><span class="comment"># 0      10  1  0</span></span><br><span class="line"><span class="comment"># 1  888888  1  2</span></span><br><span class="line"><span class="comment"># 2  888888  1  2</span></span><br><span class="line"><span class="comment"># 3      40  2  2</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_title_seo_optimization.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/hexo_title_seo_optimization.html" itemprop="url">
+                  optimze hexo blog title for seo
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-14 09:57:04 / Modified: 16:47:26" itemprop="dateCreated datePublished" datetime="2018-07-14T09:57:04+10:00">2018-07-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="change-index-swig-file"><a href="#change-index-swig-file" class="headerlink" title="change index.swig file"></a>change index.swig file</h1><p>under <code>your-hexo-site\themes\next\layout</code></p>
+<h1 id="chang-the-title-codes"><a href="#chang-the-title-codes" class="headerlink" title="chang the title codes"></a>chang the title codes</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125;&#123;&#123; config.title &#125;&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>change into<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125;&#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>moreover, it can add keywords into title<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block title %&#125;&#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">http://searchfor.space</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_add_sitemap.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1409,315 +2081,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/test.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/test.html" itemprop="url">
-                  test
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-05 20:26:24" itemprop="dateCreated datePublished" datetime="2018-07-05T20:26:24+10:00">2018-07-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-16 17:10:08" itemprop="dateModified" datetime="2018-07-16T17:10:08+10:00">2018-07-16</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>test<br>more on <a href="http://searchfor.space" target="_blank" rel="noopener">http://searchfor.space</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hello-world.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/hello-world.html" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-05 20:08:47" itemprop="dateCreated datePublished" datetime="2018-07-05T20:08:47+10:00">2018-07-05</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1760,7 +2128,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1789,7 +2157,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1846,7 +2218,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

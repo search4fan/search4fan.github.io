@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-16T07:24:21.897Z</updated>
+  <updated>2018-07-17T10:12:34.173Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -17,11 +17,123 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>basic frequent Sql commends in sql server</title>
+    <link href="http://search4fan.github.io/post/ssms_basic_frequent_commends.html"/>
+    <id>http://search4fan.github.io/post/ssms_basic_frequent_commends.html</id>
+    <published>2018-07-17T10:10:57.053Z</published>
+    <updated>2018-07-17T10:12:34.173Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: sql comments for basic query &lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="ssms" scheme="http://search4fan.github.io/categories/ssms/"/>
+    
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+      <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>display line number in sql server management studio</title>
+    <link href="http://search4fan.github.io/post/ssms_display_line_number.html"/>
+    <id>http://search4fan.github.io/post/ssms_display_line_number.html</id>
+    <published>2018-07-17T10:06:35.565Z</published>
+    <updated>2018-07-17T10:08:45.007Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: display line number in mssql editor&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tools -&amp;gt; options &lt;/li&gt;
+&lt;li&gt;Text Editor -&amp;gt; Transact-SQL -&amp;gt; line
+        
+      
+    
+    </summary>
+    
+      <category term="ssms" scheme="http://search4fan.github.io/categories/ssms/"/>
+    
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java change array into a list</title>
+    <link href="http://search4fan.github.io/post/java_array_to_list.html"/>
+    <id>http://search4fan.github.io/post/java_array_to_list.html</id>
+    <published>2018-07-17T04:54:26.156Z</published>
+    <updated>2018-07-17T04:55:31.378Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: convert array into a list in java &lt;/p&gt;
+&lt;h1 id=&quot;convert-array-into-list&quot;&gt;&lt;a href=&quot;#convert-array-into-list&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://search4fan.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://search4fan.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ssms save changes not permitted</title>
+    <link href="http://search4fan.github.io/post/ssms_not_permit_change.html"/>
+    <id>http://search4fan.github.io/post/ssms_not_permit_change.html</id>
+    <published>2018-07-16T11:26:11.151Z</published>
+    <updated>2018-07-16T11:29:21.304Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: Sql Server ‘Saving changes is not permitted’&lt;/p&gt;
+&lt;h1 id=&quot;problem-description&quot;&gt;&lt;a href=&quot;#problem-description&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ssms" scheme="http://search4fan.github.io/categories/ssms/"/>
+    
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+  </entry>
+  
+  <entry>
     <title>docker frequent used commends</title>
     <link href="http://search4fan.github.io/post/docker_commends.html"/>
     <id>http://search4fan.github.io/post/docker_commends.html</id>
     <published>2018-07-16T07:22:45.815Z</published>
-    <updated>2018-07-16T07:24:21.897Z</updated>
+    <updated>2018-07-16T11:03:44.353Z</updated>
     
     <summary type="html">
     
@@ -124,9 +236,9 @@
       <category term="ssms" scheme="http://search4fan.github.io/categories/sql-server/ssms/"/>
     
     
-      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
-    
       <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
     
       <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
     
@@ -299,9 +411,9 @@
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
-    
       <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
+    
+      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
     
   </entry>
   
@@ -329,9 +441,9 @@
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
-    
       <category term="sitemap" scheme="http://search4fan.github.io/tags/sitemap/"/>
+    
+      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
     
   </entry>
   
@@ -486,50 +598,6 @@
       <category term="timedelta" scheme="http://search4fan.github.io/tags/timedelta/"/>
     
       <category term="datetime64" scheme="http://search4fan.github.io/tags/datetime64/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://search4fan.github.io/post/test.html"/>
-    <id>http://search4fan.github.io/post/test.html</id>
-    <published>2018-07-05T10:26:24.000Z</published>
-    <updated>2018-07-16T07:10:08.197Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;test&lt;br&gt;more on &lt;a href=&quot;http://searchfor.space&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://search4fan.github.io/post/hello-world.html"/>
-    <id>http://search4fan.github.io/post/hello-world.html</id>
-    <published>2018-07-05T10:08:47.977Z</published>
-    <updated>2018-07-05T10:08:47.978Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
     
   </entry>
   

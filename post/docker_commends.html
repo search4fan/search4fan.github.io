@@ -127,18 +127,18 @@
 
 
 
-  <meta name="description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q)  more on search4fan.github.io">
+  <meta name="description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q) commit container as a new image12docker commit new_im">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker frequent used commends">
 <meta property="og:url" content="http://search4fan.github.io/post/docker_commends.html">
 <meta property="og:site_name" content="Search For Fun">
-<meta property="og:description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q)  more on search4fan.github.io">
+<meta property="og:description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q) commit container as a new image12docker commit new_im">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-16T07:24:21.897Z">
+<meta property="og:updated_time" content="2018-07-16T11:03:44.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker frequent used commends">
-<meta name="twitter:description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q)  more on search4fan.github.io">
+<meta name="twitter:description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q) commit container as a new image12docker commit new_im">
 
 
 
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="Created: 2018-07-16 17:22:45 / Modified: 17:24:21" itemprop="dateCreated datePublished" datetime="2018-07-16T17:22:45+10:00">2018-07-16</time>
+              <time title="Created: 2018-07-16 17:22:45 / Modified: 21:03:44" itemprop="dateCreated datePublished" datetime="2018-07-16T17:22:45+10:00">2018-07-16</time>
             
 
             
@@ -463,6 +463,8 @@
         <p>description: docker commends - not finished yet</p>
 <h1 id="check-all-running-proceses"><a href="#check-all-running-proceses" class="headerlink" title="check all running proceses"></a>check all running proceses</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
 <h1 id="Stop-all-running-containers"><a href="#Stop-all-running-containers" class="headerlink" title="Stop all running containers"></a>Stop all running containers</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -a -q)</span><br></pre></td></tr></table></figure>
+<h1 id="commit-container-as-a-new-image"><a href="#commit-container-as-a-new-image" class="headerlink" title="commit container as a new image"></a>commit container as a new image</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit new_image_name</span><br><span class="line">docker commit old_image new_image</span><br></pre></td></tr></table></figure>
+<h1 id="mount-host-directory-in-docker-container"><a href="#mount-host-directory-in-docker-container" class="headerlink" title="mount host directory in docker container"></a>mount host directory in docker container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount code folder under current folder into the html folder within the Nginx image</span></span><br><span class="line">docker run -v <span class="variable">$PWD</span>/code:/var/www/html Nginx</span><br></pre></td></tr></table></figure>
 <hr>
 <p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
 
@@ -525,6 +527,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/ssms_not_permit_change.html" rel="prev" title="ssms save changes not permitted">
+                ssms save changes not permitted <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -598,7 +604,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -627,7 +633,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -684,7 +694,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -727,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#check-all-running-proceses"><span class="nav-number">1.</span> <span class="nav-text">check all running proceses</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stop-all-running-containers"><span class="nav-number">2.</span> <span class="nav-text">Stop all running containers</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#check-all-running-proceses"><span class="nav-number">1.</span> <span class="nav-text">check all running proceses</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stop-all-running-containers"><span class="nav-number">2.</span> <span class="nav-text">Stop all running containers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#commit-container-as-a-new-image"><span class="nav-number">3.</span> <span class="nav-text">commit container as a new image</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mount-host-directory-in-docker-container"><span class="nav-number">4.</span> <span class="nav-text">mount host directory in docker container</span></a></li></ol></div>
             
 
           </div>
