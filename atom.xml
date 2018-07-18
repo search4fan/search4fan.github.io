@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-17T10:12:34.173Z</updated>
+  <updated>2018-07-18T08:51:36.318Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>get list of modules name in Excel vba</title>
+    <link href="http://search4fan.github.io/post/vba_get_list_of_modules_name.html"/>
+    <id>http://search4fan.github.io/post/vba_get_list_of_modules_name.html</id>
+    <published>2018-07-18T08:49:46.508Z</published>
+    <updated>2018-07-18T08:51:36.318Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: vba to get list of modules name &lt;/p&gt;
+&lt;h1 id=&quot;code-of-vba-to-get-list-of-module-names&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="vba" scheme="http://search4fan.github.io/categories/vba/"/>
+    
+    
+      <category term="vba" scheme="http://search4fan.github.io/tags/vba/"/>
+    
+      <category term="excel" scheme="http://search4fan.github.io/tags/excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Microsoft Sql server installation with 1638 error</title>
+    <link href="http://search4fan.github.io/post/mssql_install_error_1638.html"/>
+    <id>http://search4fan.github.io/post/mssql_install_error_1638.html</id>
+    <published>2018-07-17T23:33:38.321Z</published>
+    <updated>2018-07-17T23:39:53.576Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: unable to install Sql Server with exit code 1638 &lt;/p&gt;
+&lt;h1 id=&quot;solution&quot;&gt;&lt;a href=&quot;#solution&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
+    
+    
+      <category term="mssql" scheme="http://search4fan.github.io/tags/mssql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>basic frequent Sql commends in sql server</title>
     <link href="http://search4fan.github.io/post/ssms_basic_frequent_commends.html"/>
     <id>http://search4fan.github.io/post/ssms_basic_frequent_commends.html</id>
     <published>2018-07-17T10:10:57.053Z</published>
-    <updated>2018-07-17T10:12:34.173Z</updated>
+    <updated>2018-07-18T01:24:26.373Z</updated>
     
     <summary type="html">
     
@@ -36,7 +92,7 @@
     
     </summary>
     
-      <category term="ssms" scheme="http://search4fan.github.io/categories/ssms/"/>
+      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
       <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
@@ -50,7 +106,7 @@
     <link href="http://search4fan.github.io/post/ssms_display_line_number.html"/>
     <id>http://search4fan.github.io/post/ssms_display_line_number.html</id>
     <published>2018-07-17T10:06:35.565Z</published>
-    <updated>2018-07-17T10:08:45.007Z</updated>
+    <updated>2018-07-18T01:24:35.463Z</updated>
     
     <summary type="html">
     
@@ -67,7 +123,7 @@
     
     </summary>
     
-      <category term="ssms" scheme="http://search4fan.github.io/categories/ssms/"/>
+      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
       <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
@@ -106,7 +162,7 @@
     <link href="http://search4fan.github.io/post/ssms_not_permit_change.html"/>
     <id>http://search4fan.github.io/post/ssms_not_permit_change.html</id>
     <published>2018-07-16T11:26:11.151Z</published>
-    <updated>2018-07-16T11:29:21.304Z</updated>
+    <updated>2018-07-18T01:24:49.025Z</updated>
     
     <summary type="html">
     
@@ -121,7 +177,7 @@
     
     </summary>
     
-      <category term="ssms" scheme="http://search4fan.github.io/categories/ssms/"/>
+      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
       <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
@@ -216,7 +272,7 @@
     <link href="http://search4fan.github.io/post/docker_sql_server_connect_from_ssms.html"/>
     <id>http://search4fan.github.io/post/docker_sql_server_connect_from_ssms.html</id>
     <published>2018-07-15T11:51:00.484Z</published>
-    <updated>2018-07-16T06:56:09.002Z</updated>
+    <updated>2018-07-18T01:23:34.888Z</updated>
     
     <summary type="html">
     
@@ -233,12 +289,10 @@
     
       <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
-      <category term="ssms" scheme="http://search4fan.github.io/categories/sql-server/ssms/"/>
-    
-    
-      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
     
       <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
     
       <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
     
@@ -276,7 +330,7 @@
     <link href="http://search4fan.github.io/post/docker_run_sql_server.html"/>
     <id>http://search4fan.github.io/post/docker_run_sql_server.html</id>
     <published>2018-07-15T07:04:52.610Z</published>
-    <updated>2018-07-15T23:51:17.710Z</updated>
+    <updated>2018-07-18T01:24:03.828Z</updated>
     
     <summary type="html">
     
@@ -292,8 +346,6 @@
     </summary>
     
       <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
-    
-      <category term="mssql" scheme="http://search4fan.github.io/categories/sql-server/mssql/"/>
     
     
       <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
@@ -531,73 +583,13 @@
       <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
     
     
-      <category term="google" scheme="http://search4fan.github.io/tags/google/"/>
-    
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
+      <category term="google" scheme="http://search4fan.github.io/tags/google/"/>
     
       <category term="adsense" scheme="http://search4fan.github.io/tags/adsense/"/>
     
-  </entry>
-  
-  <entry>
-    <title>python numpy datetime64 today</title>
-    <link href="http://search4fan.github.io/post/python_timedelta_days.html"/>
-    <id>http://search4fan.github.io/post/python_timedelta_days.html</id>
-    <published>2018-07-12T09:31:38.568Z</published>
-    <updated>2018-07-14T06:47:26.177Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;python-numpy-datetime64-today&quot;&gt;&lt;a href=&quot;#python-numpy-datetime64-today&quot; class=&quot;headerlink&quot; title=&quot;python numpy datetime64
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="timedelta" scheme="http://search4fan.github.io/tags/timedelta/"/>
-    
-      <category term="datetime64" scheme="http://search4fan.github.io/tags/datetime64/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python timedelta to seconds</title>
-    <link href="http://search4fan.github.io/post/python_timedelta%20_to_seconds.html"/>
-    <id>http://search4fan.github.io/post/python_timedelta _to_seconds.html</id>
-    <published>2018-07-12T09:24:05.270Z</published>
-    <updated>2018-07-14T06:47:25.900Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;python-timedelta-to-seconds&quot;&gt;&lt;a href=&quot;#python-timedelta-to-seconds&quot; class=&quot;headerlink&quot; title=&quot;python timedelta to
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="timedelta" scheme="http://search4fan.github.io/tags/timedelta/"/>
-    
-      <category term="datetime64" scheme="http://search4fan.github.io/tags/datetime64/"/>
+      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
     
   </entry>
   

@@ -361,6 +361,341 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/vba_get_list_of_modules_name.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/vba_get_list_of_modules_name.html" itemprop="url">
+                  get list of modules name in Excel vba
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-18 18:49:46 / Modified: 18:51:36" itemprop="dateCreated datePublished" datetime="2018-07-18T18:49:46+10:00">2018-07-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vba/" itemprop="url" rel="index"><span itemprop="name">vba</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: vba to get list of modules name </p>
+<h1 id="code-of-vba-to-get-list-of-module-names"><a href="#code-of-vba-to-get-list-of-module-names" class="headerlink" title="code of vba to get list of module names"></a>code of vba to get list of module names</h1><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> getAllModuleNames()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">Dim</span> modName <span class="keyword">As</span> <span class="built_in">String</span></span><br><span class="line">    <span class="keyword">Dim</span> wb <span class="keyword">As</span> Workbook</span><br><span class="line">    <span class="keyword">Dim</span> l <span class="keyword">As</span> <span class="built_in">Long</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">Set</span> wb = thisWorkbook</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">For</span> l = <span class="number">1</span> <span class="keyword">To</span> wb.VBProject.VBComponents.count</span><br><span class="line">        <span class="keyword">With</span> wb.VBProject.VBComponents(l)</span><br><span class="line">            modName = modName &amp; vbCr &amp; .name</span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line">    <span class="keyword">Next</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">'MsgBox "Module Names:" &amp; vbCr &amp; modName</span></span><br><span class="line">    Cells(<span class="number">40</span>, <span class="number">1</span>).value = modName</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">Set</span> wb = <span class="literal">Nothing</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/mssql_install_error_1638.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/mssql_install_error_1638.html" itemprop="url">
+                  Microsoft Sql server installation with 1638 error
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-18 09:33:38 / Modified: 09:39:53" itemprop="dateCreated datePublished" datetime="2018-07-18T09:33:38+10:00">2018-07-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: unable to install Sql Server with exit code 1638 </p>
+<h1 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h1><ul>
+<li>exit code 1638 means a newer version of Microsoft Visual C++ has been installed </li>
+<li>uninstall 2015, 2017 and others higher than 2015</li>
+<li>restart the process </li>
+</ul>
+<h1 id="problem-description"><a href="#problem-description" class="headerlink" title="problem description"></a>problem description</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">TITLE: Microsoft SQL Server 2017 Setup</span><br><span class="line">------------------------------</span><br><span class="line"></span><br><span class="line">The following error has occurred:</span><br><span class="line"></span><br><span class="line">VS Shell installation has failed with exit code 1638.</span><br></pre></td></tr></table></figure>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/ssms_basic_frequent_commends.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -407,12 +742,24 @@
                 
               
 
-              <time title="Created: 2018-07-17 20:10:57 / Modified: 20:12:34" itemprop="dateCreated datePublished" datetime="2018-07-17T20:10:57+10:00">2018-07-17</time>
+              <time title="Created: 2018-07-17 20:10:57" itemprop="dateCreated datePublished" datetime="2018-07-17T20:10:57+10:00">2018-07-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-18 11:24:26" itemprop="dateModified" datetime="2018-07-18T11:24:26+10:00">2018-07-18</time>
               
             
           </span>
@@ -429,7 +776,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ssms/" itemprop="url" rel="index"><span itemprop="name">ssms</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
 
                 
                 
@@ -572,12 +919,24 @@
                 
               
 
-              <time title="Created: 2018-07-17 20:06:35 / Modified: 20:08:45" itemprop="dateCreated datePublished" datetime="2018-07-17T20:06:35+10:00">2018-07-17</time>
+              <time title="Created: 2018-07-17 20:06:35" itemprop="dateCreated datePublished" datetime="2018-07-17T20:06:35+10:00">2018-07-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-18 11:24:35" itemprop="dateModified" datetime="2018-07-18T11:24:35+10:00">2018-07-18</time>
               
             
           </span>
@@ -594,7 +953,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ssms/" itemprop="url" rel="index"><span itemprop="name">ssms</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
 
                 
                 
@@ -905,12 +1264,24 @@
                 
               
 
-              <time title="Created: 2018-07-16 21:26:11 / Modified: 21:29:21" itemprop="dateCreated datePublished" datetime="2018-07-16T21:26:11+10:00">2018-07-16</time>
+              <time title="Created: 2018-07-16 21:26:11" itemprop="dateCreated datePublished" datetime="2018-07-16T21:26:11+10:00">2018-07-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-18 11:24:49" itemprop="dateModified" datetime="2018-07-18T11:24:49+10:00">2018-07-18</time>
               
             
           </span>
@@ -927,7 +1298,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ssms/" itemprop="url" rel="index"><span itemprop="name">ssms</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
 
                 
                 
@@ -1594,7 +1965,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-16 16:56:09" itemprop="dateModified" datetime="2018-07-16T16:56:09+10:00">2018-07-16</time>
+                <time title="Modified: 2018-07-18 11:23:34" itemprop="dateModified" datetime="2018-07-18T11:23:34+10:00">2018-07-18</time>
               
             
           </span>
@@ -1612,13 +1983,6 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/ssms/" itemprop="url" rel="index"><span itemprop="name">ssms</span></a></span>
 
                 
                 
@@ -1658,369 +2022,6 @@
 <h1 id="start-sql-server"><a href="#start-sql-server" class="headerlink" title="start sql server"></a>start sql server</h1><p><code>Asdfgh123</code> is default password<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"ACCEPT_EULA=Y"</span> -e <span class="string">"SA_PASSWORD=Asdfgh123"</span> `</span><br><span class="line">   -p 1433:1433 --name sql1 `</span><br><span class="line">   -d microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure></p>
 <h1 id="connect-from-external-tools"><a href="#connect-from-external-tools" class="headerlink" title="connect from external tools"></a>connect from external tools</h1><p>under Windows, open Powershell to test service can be accessed from Windows<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlcmd -S 10.3.2.4,1433 -U SA -P <span class="string">"Asdfgh123"</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="connect-from-sql-server-management-studio"><a href="#connect-from-sql-server-management-studio" class="headerlink" title="connect from sql server management studio"></a>connect from sql server management studio</h1><p>server name is the ip address for docker computer. can use commend <code>ipconfig</code> to get the IPv4 Address<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">server type: database engine </span><br><span class="line">server name: 192.168.11.11 </span><br><span class="line">authentication: sql server authentication </span><br><span class="line">    login: SA</span><br><span class="line">    password: Asdfgh123</span><br></pre></td></tr></table></figure></p>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/docker_unauthorized_username_password.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/docker_unauthorized_username_password.html" itemprop="url">
-                  docker
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-15 17:11:54 / Modified: 17:17:14" itemprop="dateCreated datePublished" datetime="2018-07-15T17:11:54+10:00">2018-07-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: solve problem of unauthorized username or password in terminal</p>
-<h1 id="problem-of-unauthorized-incorrect-username-or-password"><a href="#problem-of-unauthorized-incorrect-username-or-password" class="headerlink" title="problem of unauthorized incorrect username or password"></a>problem of unauthorized incorrect username or password</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;docker pull alpine</span><br><span class="line"><span class="comment"># Using default tag: latest</span></span><br><span class="line"><span class="comment"># Error response from daemon: Get https://registry-1.docker.io/v2/library/alpine/manifests/latest: unauthorized: incorrect username or password</span></span><br></pre></td></tr></table></figure>
-<h1 id="solve-solution"><a href="#solve-solution" class="headerlink" title="solve solution"></a>solve solution</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;docker login</span><br><span class="line"><span class="comment"># Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.</span></span><br><span class="line"><span class="comment"># Username (findhill@gmail.com): vifonk</span></span><br><span class="line"><span class="comment"># Password:</span></span><br><span class="line"><span class="comment"># Login Succeeded</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/docker_run_sql_server.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/docker_run_sql_server.html" itemprop="url">
-                  run sql server through docker in Windows
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-15 17:04:52" itemprop="dateCreated datePublished" datetime="2018-07-15T17:04:52+10:00">2018-07-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-16 09:51:17" itemprop="dateModified" datetime="2018-07-16T09:51:17+10:00">2018-07-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/mssql/" itemprop="url" rel="index"><span itemprop="name">mssql</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: run sql server through docker </p>
-<h1 id="start"><a href="#start" class="headerlink" title="start"></a>start</h1><ul>
-<li>open and start docker service</li>
-<li>open Powershell</li>
-</ul>
-<h1 id="download-sql-server-image"><a href="#download-sql-server-image" class="headerlink" title="download sql server image"></a>download sql server image</h1><p>put following commend in powerhell<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure></p>
-<h1 id="start-sql-server"><a href="#start-sql-server" class="headerlink" title="start sql server"></a>start sql server</h1><p><code>Asdfgh123</code> is default password<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"ACCEPT_EULA=Y"</span> -e <span class="string">"SA_PASSWORD=Asdfgh123"</span> `</span><br><span class="line">   -p 1433:1433 --name sql1 `</span><br><span class="line">   -d microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure></p>
-<p>if get following error:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: Conflict. The container name <span class="string">"/sql1"</span> is already <span class="keyword">in</span> use by container <span class="string">"1da5029c71ab937a25acdb4fadf44f4065c2fea4f6a4f157c1a07516558757bb"</span>. You have to remove (or rename) that container to be able to reuse that name.</span><br><span class="line">See <span class="string">'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'</span>.</span><br></pre></td></tr></table></figure></p>
-<p>restart the server<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start sql1</span><br></pre></td></tr></table></figure></p>
-<h1 id="connect-to-server"><a href="#connect-to-server" class="headerlink" title="connect to server"></a>connect to server</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it sql1 <span class="string">"bash"</span></span><br></pre></td></tr></table></figure>
-<h1 id="start-sqlcmd-tool"><a href="#start-sqlcmd-tool" class="headerlink" title="start sqlcmd tool"></a>start sqlcmd tool</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span class="string">'Asdfgh123'</span></span><br></pre></td></tr></table></figure>
-<h1 id="test-create-database"><a href="#test-create-database" class="headerlink" title="test create database"></a>test create database</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> TestDB</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span> <span class="keyword">from</span> sys.Databases</span><br><span class="line"><span class="keyword">GO</span></span><br></pre></td></tr></table></figure>
-<h1 id="test-acquire-database"><a href="#test-acquire-database" class="headerlink" title="test acquire database"></a>test acquire database</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USE</span> TestDB</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">new</span> <span class="keyword">table</span> named Inventory:</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Inventory (<span class="keyword">id</span> <span class="built_in">INT</span>, <span class="keyword">name</span> <span class="keyword">NVARCHAR</span>(<span class="number">50</span>), quantity <span class="built_in">INT</span>)</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Inventory <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">'banana'</span>, <span class="number">150</span>); <span class="keyword">INSERT</span> <span class="keyword">INTO</span> Inventory <span class="keyword">VALUES</span> (<span class="number">2</span>, <span class="string">'orange'</span>, <span class="number">154</span>);</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Inventory <span class="keyword">WHERE</span> quantity &gt; <span class="number">152</span>;</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
-<h1 id="connect-from-external-tools"><a href="#connect-from-external-tools" class="headerlink" title="connect from external tools"></a>connect from external tools</h1><p>outside the container<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlcmd -S 10.3.2.4,1433 -U SA -P <span class="string">"Asdfgh123"</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="Stop-and-remove-container"><a href="#Stop-and-remove-container" class="headerlink" title="Stop and remove container"></a>Stop and remove container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop sql1</span><br><span class="line">docker rm sql1</span><br></pre></td></tr></table></figure>
 <hr>
 <p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
 
@@ -2112,7 +2113,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2141,11 +2142,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2204,7 +2201,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
