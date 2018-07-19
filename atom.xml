@@ -189,7 +189,7 @@
     <link href="http://search4fan.github.io/post/docker_commends.html"/>
     <id>http://search4fan.github.io/post/docker_commends.html</id>
     <published>2018-07-16T07:22:45.815Z</published>
-    <updated>2018-07-16T11:03:44.353Z</updated>
+    <updated>2018-07-18T11:03:02.755Z</updated>
     
     <summary type="html">
     
@@ -198,7 +198,7 @@
         
         
           &lt;p&gt;description: docker commends - not finished yet&lt;/p&gt;
-&lt;h1 id=&quot;check-all-running-proceses&quot;&gt;&lt;a href=&quot;#check-all-running-proceses&quot;
+&lt;h1 id=&quot;check-all-running-proceses-containers&quot;&gt;&lt;a
         
       
     
@@ -290,9 +290,9 @@
       <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
-      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
-    
       <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
     
       <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
     
@@ -330,7 +330,7 @@
     <link href="http://search4fan.github.io/post/docker_run_sql_server.html"/>
     <id>http://search4fan.github.io/post/docker_run_sql_server.html</id>
     <published>2018-07-15T07:04:52.610Z</published>
-    <updated>2018-07-18T01:24:03.828Z</updated>
+    <updated>2018-07-19T08:38:17.613Z</updated>
     
     <summary type="html">
     
@@ -348,9 +348,9 @@
       <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
-      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
-    
       <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
+    
+      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
     
   </entry>
   

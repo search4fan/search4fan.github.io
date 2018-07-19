@@ -1445,12 +1445,24 @@
                 
               
 
-              <time title="Created: 2018-07-16 17:22:45 / Modified: 21:03:44" itemprop="dateCreated datePublished" datetime="2018-07-16T17:22:45+10:00">2018-07-16</time>
+              <time title="Created: 2018-07-16 17:22:45" itemprop="dateCreated datePublished" datetime="2018-07-16T17:22:45+10:00">2018-07-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-18 21:03:02" itemprop="dateModified" datetime="2018-07-18T21:03:02+10:00">2018-07-18</time>
               
             
           </span>
@@ -1504,7 +1516,10 @@
         
           
             <p>description: docker commends - not finished yet</p>
-<h1 id="check-all-running-proceses"><a href="#check-all-running-proceses" class="headerlink" title="check all running proceses"></a>check all running proceses</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="check-all-running-proceses-containers"><a href="#check-all-running-proceses-containers" class="headerlink" title="check all running proceses/containers"></a>check all running proceses/containers</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="delete-a-container"><a href="#delete-a-container" class="headerlink" title="delete a container"></a>delete a container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm container_name</span><br></pre></td></tr></table></figure>
+<h1 id="see-all-images"><a href="#see-all-images" class="headerlink" title="see all images"></a>see all images</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h1 id="remove-an-image"><a href="#remove-an-image" class="headerlink" title="remove an image"></a>remove an image</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi image_name</span><br></pre></td></tr></table></figure>
 <h1 id="Stop-all-running-containers"><a href="#Stop-all-running-containers" class="headerlink" title="Stop all running containers"></a>Stop all running containers</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -a -q)</span><br></pre></td></tr></table></figure>
 <h1 id="commit-container-as-a-new-image"><a href="#commit-container-as-a-new-image" class="headerlink" title="commit container as a new image"></a>commit container as a new image</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit new_image_name</span><br><span class="line">docker commit old_image new_image</span><br></pre></td></tr></table></figure>
 <h1 id="mount-host-directory-in-docker-container"><a href="#mount-host-directory-in-docker-container" class="headerlink" title="mount host directory in docker container"></a>mount host directory in docker container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount code folder under current folder into the html folder within the Nginx image</span></span><br><span class="line">docker run -v <span class="variable">$PWD</span>/code:/var/www/html Nginx</span><br></pre></td></tr></table></figure>

@@ -127,18 +127,18 @@
 
 
 
-  <meta name="description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q) commit container as a new image12docker commit new_im">
+  <meta name="description" content="description: docker commends - not finished yet check all running proceses/containers1docker ps -a delete a container1docker rm container_name see all images1docker images remove an image1docker rmi i">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker frequent used commends">
 <meta property="og:url" content="http://search4fan.github.io/post/docker_commends.html">
 <meta property="og:site_name" content="Search For Fun">
-<meta property="og:description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q) commit container as a new image12docker commit new_im">
+<meta property="og:description" content="description: docker commends - not finished yet check all running proceses/containers1docker ps -a delete a container1docker rm container_name see all images1docker images remove an image1docker rmi i">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-16T11:03:44.353Z">
+<meta property="og:updated_time" content="2018-07-18T11:03:02.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker frequent used commends">
-<meta name="twitter:description" content="description: docker commends - not finished yet check all running proceses1docker ps -a Stop all running containers1docker stop $(docker ps -a -q) commit container as a new image12docker commit new_im">
+<meta name="twitter:description" content="description: docker commends - not finished yet check all running proceses/containers1docker ps -a delete a container1docker rm container_name see all images1docker images remove an image1docker rmi i">
 
 
 
@@ -404,12 +404,24 @@
                 
               
 
-              <time title="Created: 2018-07-16 17:22:45 / Modified: 21:03:44" itemprop="dateCreated datePublished" datetime="2018-07-16T17:22:45+10:00">2018-07-16</time>
+              <time title="Created: 2018-07-16 17:22:45" itemprop="dateCreated datePublished" datetime="2018-07-16T17:22:45+10:00">2018-07-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-18 21:03:02" itemprop="dateModified" datetime="2018-07-18T21:03:02+10:00">2018-07-18</time>
               
             
           </span>
@@ -461,7 +473,10 @@
 
       
         <p>description: docker commends - not finished yet</p>
-<h1 id="check-all-running-proceses"><a href="#check-all-running-proceses" class="headerlink" title="check all running proceses"></a>check all running proceses</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="check-all-running-proceses-containers"><a href="#check-all-running-proceses-containers" class="headerlink" title="check all running proceses/containers"></a>check all running proceses/containers</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="delete-a-container"><a href="#delete-a-container" class="headerlink" title="delete a container"></a>delete a container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm container_name</span><br></pre></td></tr></table></figure>
+<h1 id="see-all-images"><a href="#see-all-images" class="headerlink" title="see all images"></a>see all images</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h1 id="remove-an-image"><a href="#remove-an-image" class="headerlink" title="remove an image"></a>remove an image</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi image_name</span><br></pre></td></tr></table></figure>
 <h1 id="Stop-all-running-containers"><a href="#Stop-all-running-containers" class="headerlink" title="Stop all running containers"></a>Stop all running containers</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -a -q)</span><br></pre></td></tr></table></figure>
 <h1 id="commit-container-as-a-new-image"><a href="#commit-container-as-a-new-image" class="headerlink" title="commit container as a new image"></a>commit container as a new image</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit new_image_name</span><br><span class="line">docker commit old_image new_image</span><br></pre></td></tr></table></figure>
 <h1 id="mount-host-directory-in-docker-container"><a href="#mount-host-directory-in-docker-container" class="headerlink" title="mount host directory in docker container"></a>mount host directory in docker container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount code folder under current folder into the html folder within the Nginx image</span></span><br><span class="line">docker run -v <span class="variable">$PWD</span>/code:/var/www/html Nginx</span><br></pre></td></tr></table></figure>
@@ -741,7 +756,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#check-all-running-proceses"><span class="nav-number">1.</span> <span class="nav-text">check all running proceses</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stop-all-running-containers"><span class="nav-number">2.</span> <span class="nav-text">Stop all running containers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#commit-container-as-a-new-image"><span class="nav-number">3.</span> <span class="nav-text">commit container as a new image</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mount-host-directory-in-docker-container"><span class="nav-number">4.</span> <span class="nav-text">mount host directory in docker container</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#check-all-running-proceses-containers"><span class="nav-number">1.</span> <span class="nav-text">check all running proceses/containers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#delete-a-container"><span class="nav-number">2.</span> <span class="nav-text">delete a container</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#see-all-images"><span class="nav-number">3.</span> <span class="nav-text">see all images</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#remove-an-image"><span class="nav-number">4.</span> <span class="nav-text">remove an image</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stop-all-running-containers"><span class="nav-number">5.</span> <span class="nav-text">Stop all running containers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#commit-container-as-a-new-image"><span class="nav-number">6.</span> <span class="nav-text">commit container as a new image</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mount-host-directory-in-docker-container"><span class="nav-number">7.</span> <span class="nav-text">mount host directory in docker container</span></a></li></ol></div>
             
 
           </div>

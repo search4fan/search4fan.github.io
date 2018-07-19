@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="Search For Fun">
 <meta property="og:description" content="description: run sql server through docker  start open and start docker service open Powershell  download sql server imageput following commend in powerhell1docker pull microsoft/mssql-server-linux:20">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-18T01:24:03.828Z">
+<meta property="og:updated_time" content="2018-07-19T08:38:17.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="run sql server through docker in Windows">
 <meta name="twitter:description" content="description: run sql server through docker  start open and start docker service open Powershell  download sql server imageput following commend in powerhell1docker pull microsoft/mssql-server-linux:20">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-18 11:24:03" itemprop="dateModified" datetime="2018-07-18T11:24:03+10:00">2018-07-18</time>
+                <time title="Modified: 2018-07-19 18:38:17" itemprop="dateModified" datetime="2018-07-19T18:38:17+10:00">2018-07-19</time>
               
             
           </span>
@@ -487,6 +487,7 @@
 <h1 id="test-acquire-database"><a href="#test-acquire-database" class="headerlink" title="test acquire database"></a>test acquire database</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USE</span> TestDB</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">new</span> <span class="keyword">table</span> named Inventory:</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Inventory (<span class="keyword">id</span> <span class="built_in">INT</span>, <span class="keyword">name</span> <span class="keyword">NVARCHAR</span>(<span class="number">50</span>), quantity <span class="built_in">INT</span>)</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Inventory <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">'banana'</span>, <span class="number">150</span>); <span class="keyword">INSERT</span> <span class="keyword">INTO</span> Inventory <span class="keyword">VALUES</span> (<span class="number">2</span>, <span class="string">'orange'</span>, <span class="number">154</span>);</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Inventory <span class="keyword">WHERE</span> quantity &gt; <span class="number">152</span>;</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
 <h1 id="connect-from-external-tools"><a href="#connect-from-external-tools" class="headerlink" title="connect from external tools"></a>connect from external tools</h1><p>outside the container<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlcmd -S 10.3.2.4,1433 -U SA -P <span class="string">"Asdfgh123"</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="Stop-and-remove-container"><a href="#Stop-and-remove-container" class="headerlink" title="Stop and remove container"></a>Stop and remove container</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop sql1</span><br><span class="line">docker rm sql1</span><br></pre></td></tr></table></figure>
+<h1 id="run-sql-server-with-external-folder"><a href="#run-sql-server-with-external-folder" class="headerlink" title="run sql server with external folder"></a>run sql server with external folder</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"ACCEPT_EULA=Y"</span> -e <span class="string">"SA_PASSWORD=Asdfgh123"</span> `</span><br><span class="line">   -v <span class="variable">$PWD</span>/:/data `</span><br><span class="line">   -p 1433:1433 --name sql2 `</span><br><span class="line">   -d microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure>
 <hr>
 <p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
 
@@ -527,9 +528,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
-          
             <a href="/tags/sql-server/" rel="tag"><i class="fa fa-tag"></i> sql server</a>
+          
+            <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
           
         </div>
       
@@ -765,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#start"><span class="nav-number">1.</span> <span class="nav-text">start</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#download-sql-server-image"><span class="nav-number">2.</span> <span class="nav-text">download sql server image</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#start-sql-server"><span class="nav-number">3.</span> <span class="nav-text">start sql server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#connect-to-server"><span class="nav-number">4.</span> <span class="nav-text">connect to server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#start-sqlcmd-tool"><span class="nav-number">5.</span> <span class="nav-text">start sqlcmd tool</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#test-create-database"><span class="nav-number">6.</span> <span class="nav-text">test create database</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#test-acquire-database"><span class="nav-number">7.</span> <span class="nav-text">test acquire database</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#connect-from-external-tools"><span class="nav-number">8.</span> <span class="nav-text">connect from external tools</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stop-and-remove-container"><span class="nav-number">9.</span> <span class="nav-text">Stop and remove container</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#start"><span class="nav-number">1.</span> <span class="nav-text">start</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#download-sql-server-image"><span class="nav-number">2.</span> <span class="nav-text">download sql server image</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#start-sql-server"><span class="nav-number">3.</span> <span class="nav-text">start sql server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#connect-to-server"><span class="nav-number">4.</span> <span class="nav-text">connect to server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#start-sqlcmd-tool"><span class="nav-number">5.</span> <span class="nav-text">start sqlcmd tool</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#test-create-database"><span class="nav-number">6.</span> <span class="nav-text">test create database</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#test-acquire-database"><span class="nav-number">7.</span> <span class="nav-text">test acquire database</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#connect-from-external-tools"><span class="nav-number">8.</span> <span class="nav-text">connect from external tools</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stop-and-remove-container"><span class="nav-number">9.</span> <span class="nav-text">Stop and remove container</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#run-sql-server-with-external-folder"><span class="nav-number">10.</span> <span class="nav-text">run sql server with external folder</span></a></li></ol></div>
             
 
           </div>
