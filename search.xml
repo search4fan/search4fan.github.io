@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>python iterate or loop each row of a dataframe</title>
+      <link href="/post/python_dataframe_loop_rows.html"/>
+      <url>/post/python_dataframe_loop_rows.html</url>
+      <content type="html"><![CDATA[<p>description: python iterate a dataframe </p><h1 id="loop-each-row-of-a-dataframe"><a href="#loop-each-row-of-a-dataframe" class="headerlink" title="loop each row of a dataframe"></a>loop each row of a dataframe</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line">data = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> data.values:</span><br><span class="line">    print(row)</span><br><span class="line"><span class="comment"># output </span></span><br><span class="line"><span class="comment"># [1 2 3]</span></span><br><span class="line"><span class="comment"># [4 5 6]</span></span><br><span class="line"><span class="comment"># [7 8 9]</span></span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> dataframe </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>python resign headers to a dataframe</title>
       <link href="/post/python_dataframe_resign_headers.html"/>
       <url>/post/python_dataframe_resign_headers.html</url>
@@ -229,9 +252,9 @@
       
         <tags>
             
-            <tag> sql server </tag>
-            
             <tag> ssms </tag>
+            
+            <tag> sql server </tag>
             
             <tag> sql </tag>
             
@@ -367,9 +390,9 @@
             
             <tag> hexo </tag>
             
-            <tag> seo </tag>
-            
             <tag> blog </tag>
+            
+            <tag> seo </tag>
             
         </tags>
       

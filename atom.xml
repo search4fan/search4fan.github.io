@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-19T11:42:29.382Z</updated>
+  <updated>2018-07-19T13:42:49.997Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python iterate or loop each row of a dataframe</title>
+    <link href="http://search4fan.github.io/post/python_dataframe_loop_rows.html"/>
+    <id>http://search4fan.github.io/post/python_dataframe_loop_rows.html</id>
+    <published>2018-07-19T13:41:04.925Z</published>
+    <updated>2018-07-19T13:42:49.997Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python iterate a dataframe &lt;/p&gt;
+&lt;h1 id=&quot;loop-each-row-of-a-dataframe&quot;&gt;&lt;a href=&quot;#loop-each-row-of-a-dataframe&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
+    
+  </entry>
   
   <entry>
     <title>python resign headers to a dataframe</title>
@@ -317,9 +346,9 @@
       <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
-      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
-    
       <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
     
       <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
     
@@ -490,9 +519,9 @@
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
-    
       <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
+    
+      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
     
   </entry>
   
@@ -555,36 +584,6 @@
       <category term="nodejs" scheme="http://search4fan.github.io/tags/nodejs/"/>
     
       <category term="local tunnel" scheme="http://search4fan.github.io/tags/local-tunnel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>add rss feed into hexo blog - install feed plugin in hexo blog</title>
-    <link href="http://search4fan.github.io/post/hexo_rss_feed.html"/>
-    <id>http://search4fan.github.io/post/hexo_rss_feed.html</id>
-    <published>2018-07-13T06:04:44.852Z</published>
-    <updated>2018-07-14T06:47:26.057Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;install-hexo-generator-feed&quot;&gt;&lt;a href=&quot;#install-hexo-generator-feed&quot; class=&quot;headerlink&quot; title=&quot;install
-        
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
-    
-      <category term="feed" scheme="http://search4fan.github.io/tags/feed/"/>
-    
-      <category term="rss" scheme="http://search4fan.github.io/tags/rss/"/>
     
   </entry>
   
