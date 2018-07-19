@@ -3,6 +3,23 @@
   
     
     <entry>
+      <title>python resign headers to a dataframe</title>
+      <link href="/post/python_dataframe_resign_headers.html"/>
+      <url>/post/python_dataframe_resign_headers.html</url>
+      <content type="html"><![CDATA[<p>description: python pandas rename or change column names</p><h1 id="python-rename-column-headers"><a href="#python-rename-column-headers" class="headerlink" title="python rename column headers"></a>python rename column headers</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas </span><br><span class="line">d1 = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]])</span><br><span class="line"><span class="comment"># d1</span></span><br><span class="line"><span class="comment">#    0  1  2</span></span><br><span class="line"><span class="comment"># 0  1  2  3</span></span><br><span class="line"></span><br><span class="line">d2 = pandas.DataFrame(d1.values, columns = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>])</span><br><span class="line"><span class="comment"># d2</span></span><br><span class="line"><span class="comment">#    a  b  c</span></span><br><span class="line"><span class="comment"># 0  1  2  3</span></span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> dataframe </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>get list of modules name in Excel vba</title>
       <link href="/post/vba_get_list_of_modules_name.html"/>
       <url>/post/vba_get_list_of_modules_name.html</url>
@@ -258,9 +275,9 @@
       
         <tags>
             
-            <tag> sql server </tag>
-            
             <tag> docker </tag>
+            
+            <tag> sql server </tag>
             
         </tags>
       
@@ -439,7 +456,7 @@
       <title>add google adsense into hexo blog in next theme</title>
       <link href="/post/hexo_next_google_adsense.html"/>
       <url>/post/hexo_next_google_adsense.html</url>
-      <content type="html"><![CDATA[<h1 id="build-a-new-adsense-template-under-next-theme-in-layout-custom"><a href="#build-a-new-adsense-template-under-next-theme-in-layout-custom" class="headerlink" title="build a new adsense template under next theme in layout/_custom"></a>build a new adsense template under <code>next</code> theme in <code>layout/_custom</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/layout/_custom/google_adsense.ejs</span><br></pre></td></tr></table></figure><h1 id="put-the-google-adsense-codes-into-google-adsense-ejs"><a href="#put-the-google-adsense-codes-into-google-adsense-ejs" class="headerlink" title="put the google adsense codes into google_adsense.ejs"></a>put the google adsense codes into <code>google_adsense.ejs</code></h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  (adsbygoogle = window.adsbygoogle || []).push(&#123;</span></span><br><span class="line"><span class="undefined">    google_ad_client: "ca-pub-5817381835091099",</span></span><br><span class="line"><span class="undefined">    enable_page_level_ads: true</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="add-following-codes-in-layout-swig-under-theme-folder"><a href="#add-following-codes-in-layout-swig-under-theme-folder" class="headerlink" title="add following codes in _layout.swig under theme folder"></a>add following codes in <code>_layout.swig</code> under theme folder</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google AdSense start --&gt;</span></span><br><span class="line">&#123;% include '_custom/google_adsense.ejs' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Google AdSense end --&gt;</span></span><br></pre></td></tr></table></figure><h1 id="generate-web-page-and-check-source-file-to-see-the-google-code-in-there"><a href="#generate-web-page-and-check-source-file-to-see-the-google-code-in-there" class="headerlink" title="generate web page and check source file to see the google code in there"></a>generate web page and check source file to see the google code in there</h1><hr><p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">searchfor.space</a></p>]]></content>
+      <content type="html"><![CDATA[<h1 id="build-a-new-adsense-template-under-next-theme-in-layout-custom"><a href="#build-a-new-adsense-template-under-next-theme-in-layout-custom" class="headerlink" title="build a new adsense template under next theme in layout/_custom"></a>build a new adsense template under <code>next</code> theme in <code>layout/_custom</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/layout/_custom/google_adsense.ejs</span><br></pre></td></tr></table></figure><h1 id="put-the-google-adsense-codes-into-google-adsense-ejs"><a href="#put-the-google-adsense-codes-into-google-adsense-ejs" class="headerlink" title="put the google adsense codes into google_adsense.ejs"></a>put the google adsense codes into <code>google_adsense.ejs</code></h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  (adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;</span></span><br><span class="line"><span class="javascript">    google_ad_client: <span class="string">"ca-pub-5817381835091099"</span>,</span></span><br><span class="line"><span class="javascript">    enable_page_level_ads: <span class="literal">true</span></span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="add-following-codes-in-layout-swig-under-theme-folder"><a href="#add-following-codes-in-layout-swig-under-theme-folder" class="headerlink" title="add following codes in _layout.swig under theme folder"></a>add following codes in <code>_layout.swig</code> under theme folder</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google AdSense start --&gt;</span></span><br><span class="line">&#123;% include '_custom/google_adsense.ejs' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Google AdSense end --&gt;</span></span><br></pre></td></tr></table></figure><h1 id="generate-web-page-and-check-source-file-to-see-the-google-code-in-there"><a href="#generate-web-page-and-check-source-file-to-see-the-google-code-in-there" class="headerlink" title="generate web page and check source file to see the google code in there"></a>generate web page and check source file to see the google code in there</h1><hr><p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">searchfor.space</a></p>]]></content>
       
       <categories>
           
@@ -450,9 +467,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> google </tag>
+            
+            <tag> hexo </tag>
             
             <tag> adsense </tag>
             

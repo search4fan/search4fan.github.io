@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-18T08:51:36.318Z</updated>
+  <updated>2018-07-19T11:42:29.382Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python resign headers to a dataframe</title>
+    <link href="http://search4fan.github.io/post/python_dataframe_resign_headers.html"/>
+    <id>http://search4fan.github.io/post/python_dataframe_resign_headers.html</id>
+    <published>2018-07-19T11:39:03.475Z</published>
+    <updated>2018-07-19T11:42:29.382Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python pandas rename or change column names&lt;/p&gt;
+&lt;h1 id=&quot;python-rename-column-headers&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
+    
+  </entry>
   
   <entry>
     <title>get list of modules name in Excel vba</title>
@@ -348,9 +375,9 @@
       <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
-      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
-    
       <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
     
   </entry>
   
@@ -558,38 +585,6 @@
       <category term="feed" scheme="http://search4fan.github.io/tags/feed/"/>
     
       <category term="rss" scheme="http://search4fan.github.io/tags/rss/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>add google adsense into hexo blog in next theme</title>
-    <link href="http://search4fan.github.io/post/hexo_next_google_adsense.html"/>
-    <id>http://search4fan.github.io/post/hexo_next_google_adsense.html</id>
-    <published>2018-07-13T01:54:57.816Z</published>
-    <updated>2018-07-14T06:47:26.116Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;build-a-new-adsense-template-under-next-theme-in-layout-custom&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
-    
-      <category term="google" scheme="http://search4fan.github.io/tags/google/"/>
-    
-      <category term="adsense" scheme="http://search4fan.github.io/tags/adsense/"/>
-    
-      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
     
   </entry>
   
