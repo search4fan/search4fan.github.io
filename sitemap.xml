@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://search4fan.github.io/post/python_datetime_add_day.html</loc>
+    
+    <lastmod>2018-07-20T10:30:58.486Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/python_string_to_datetime.html</loc>
+    
+    <lastmod>2018-07-20T10:17:44.162Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://search4fan.github.io/post/python_dataframe_loop_set.html</loc>
     
     <lastmod>2018-07-20T10:06:03.740Z</lastmod>

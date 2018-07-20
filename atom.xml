@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-20T10:06:03.740Z</updated>
+  <updated>2018-07-20T10:30:58.486Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python add one day to a date</title>
+    <link href="http://search4fan.github.io/post/python_datetime_add_day.html"/>
+    <id>http://search4fan.github.io/post/python_datetime_add_day.html</id>
+    <published>2018-07-20T10:29:22.435Z</published>
+    <updated>2018-07-20T10:30:58.486Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python add one day to a date &lt;/p&gt;
+&lt;h1 id=&quot;python-datetime-date-add-one-day&quot;&gt;&lt;a href=&quot;#python-datetime-date-add-one-day&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="date" scheme="http://search4fan.github.io/tags/date/"/>
+    
+      <category term="datetime" scheme="http://search4fan.github.io/tags/datetime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python parse string into datetime</title>
+    <link href="http://search4fan.github.io/post/python_string_to_datetime.html"/>
+    <id>http://search4fan.github.io/post/python_string_to_datetime.html</id>
+    <published>2018-07-20T10:16:33.020Z</published>
+    <updated>2018-07-20T10:17:44.162Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python parse string into datetime&lt;/p&gt;
+&lt;h1 id=&quot;parse-string-into-datetime&quot;&gt;&lt;a href=&quot;#parse-string-into-datetime&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python change dataframe column into set and loop the set</title>
@@ -521,66 +577,6 @@
       <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>optimze hexo blog title for seo</title>
-    <link href="http://search4fan.github.io/post/hexo_title_seo_optimization.html"/>
-    <id>http://search4fan.github.io/post/hexo_title_seo_optimization.html</id>
-    <published>2018-07-13T23:57:04.617Z</published>
-    <updated>2018-07-14T06:47:26.216Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;change-index-swig-file&quot;&gt;&lt;a href=&quot;#change-index-swig-file&quot; class=&quot;headerlink&quot; title=&quot;change index.swig file&quot;&gt;&lt;/a&gt;change index.swig
-        
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
-    
-      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
-    
-      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>add sitemap into hexo blog</title>
-    <link href="http://search4fan.github.io/post/hexo_add_sitemap.html"/>
-    <id>http://search4fan.github.io/post/hexo_add_sitemap.html</id>
-    <published>2018-07-13T23:44:06.358Z</published>
-    <updated>2018-07-14T06:47:25.976Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;install-plugin-for-SEO-sitemap&quot;&gt;&lt;a href=&quot;#install-plugin-for-SEO-sitemap&quot; class=&quot;headerlink&quot; title=&quot;install plugin for SEO
-        
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
-    
-      <category term="sitemap" scheme="http://search4fan.github.io/tags/sitemap/"/>
-    
-      <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
     
   </entry>
   

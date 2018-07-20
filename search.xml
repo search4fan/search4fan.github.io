@@ -3,6 +3,46 @@
   
     
     <entry>
+      <title>python add one day to a date</title>
+      <link href="/post/python_datetime_add_day.html"/>
+      <url>/post/python_datetime_add_day.html</url>
+      <content type="html"><![CDATA[<p>description: python add one day to a date </p><h1 id="python-datetime-date-add-one-day"><a href="#python-datetime-date-add-one-day" class="headerlink" title="python datetime date add one day"></a>python datetime date add one day</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">d = datetime.datetime.strptime(<span class="string">'2018-02-01'</span>, <span class="string">'%Y-%m-%d'</span>)</span><br><span class="line"><span class="comment"># d</span></span><br><span class="line"><span class="comment"># datetime.datetime(2018, 2, 1, 0, 0)</span></span><br><span class="line">d + datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># datetime.datetime(2018, 2, 2, 0, 0)</span></span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> date </tag>
+            
+            <tag> datetime </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>python parse string into datetime</title>
+      <link href="/post/python_string_to_datetime.html"/>
+      <url>/post/python_string_to_datetime.html</url>
+      <content type="html"><![CDATA[<p>description: python parse string into datetime</p><h1 id="parse-string-into-datetime"><a href="#parse-string-into-datetime" class="headerlink" title="parse string into datetime"></a>parse string into datetime</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime </span><br><span class="line">datetime.datetime.strptime(<span class="string">'2018-01-01'</span>, <span class="string">"%Y-%m-%d"</span>)</span><br><span class="line"><span class="comment"># datetime.datetime(2018, 1, 1, 0, 0)</span></span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>python change dataframe column into set and loop the set</title>
       <link href="/post/python_dataframe_loop_set.html"/>
       <url>/post/python_dataframe_loop_set.html</url>
@@ -517,9 +557,9 @@
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
-            
             <tag> adsense </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
