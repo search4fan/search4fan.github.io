@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>python change dataframe column into set and loop the set</title>
+      <link href="/post/python_dataframe_loop_set.html"/>
+      <url>/post/python_dataframe_loop_set.html</url>
+      <content type="html"><![CDATA[<p>description: change dataframe column into set and iterate</p><h1 id="change-dataframe-column-into-a-set"><a href="#change-dataframe-column-into-a-set" class="headerlink" title="change dataframe column into a set"></a>change dataframe column into a set</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line">a = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>]], columns=[<span class="string">'a'</span>,<span class="string">'b'</span>])</span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment">#    a  b</span></span><br><span class="line"><span class="comment"># 0  1  2</span></span><br><span class="line"><span class="comment"># 1  2  3</span></span><br><span class="line">b = a[<span class="string">'a'</span>].unique()</span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># array([1, 2, 4], dtype=int64)</span></span><br><span class="line">b = set(b)</span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># &#123;1, 2, 4&#125;</span></span><br></pre></td></tr></table></figure><h1 id="iterate-dataframe-column-set"><a href="#iterate-dataframe-column-set" class="headerlink" title="iterate dataframe column set"></a>iterate dataframe column set</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> b:</span><br><span class="line">    print(item)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure><h1 id="combine-into-a-single-code"><a href="#combine-into-a-single-code" class="headerlink" title="combine into a single code"></a>combine into a single code</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> a[<span class="string">'a'</span>].unique():</span><br><span class="line">    print(item)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> dataframe </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>python iterate or loop each row of a dataframe</title>
       <link href="/post/python_dataframe_loop_rows.html"/>
       <url>/post/python_dataframe_loop_rows.html</url>
@@ -390,9 +413,9 @@
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
-            
             <tag> seo </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
@@ -494,9 +517,9 @@
             
             <tag> hexo </tag>
             
-            <tag> adsense </tag>
-            
             <tag> blog </tag>
+            
+            <tag> adsense </tag>
             
         </tags>
       

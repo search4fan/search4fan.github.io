@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-19T13:42:49.997Z</updated>
+  <updated>2018-07-20T10:06:03.740Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python change dataframe column into set and loop the set</title>
+    <link href="http://search4fan.github.io/post/python_dataframe_loop_set.html"/>
+    <id>http://search4fan.github.io/post/python_dataframe_loop_set.html</id>
+    <published>2018-07-20T09:59:47.417Z</published>
+    <updated>2018-07-20T10:06:03.740Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: change dataframe column into set and iterate&lt;/p&gt;
+&lt;h1 id=&quot;change-dataframe-column-into-a-set&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
+    
+  </entry>
   
   <entry>
     <title>python iterate or loop each row of a dataframe</title>
@@ -519,9 +548,9 @@
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
-      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
-    
       <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
+    
+      <category term="blog" scheme="http://search4fan.github.io/tags/blog/"/>
     
   </entry>
   
@@ -552,38 +581,6 @@
       <category term="sitemap" scheme="http://search4fan.github.io/tags/sitemap/"/>
     
       <category term="seo" scheme="http://search4fan.github.io/tags/seo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Home links to Local Host through localtunnel</title>
-    <link href="http://search4fan.github.io/post/google_home.html"/>
-    <id>http://search4fan.github.io/post/google_home.html</id>
-    <published>2018-07-13T13:26:06.817Z</published>
-    <updated>2018-07-14T06:46:28.736Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;nodejs-localhost&quot;&gt;&lt;a href=&quot;#nodejs-localhost&quot; class=&quot;headerlink&quot; title=&quot;nodejs localhost&quot;&gt;&lt;/a&gt;nodejs localhost&lt;/h1&gt;&lt;p&gt;Google home
-        
-      
-    
-    </summary>
-    
-      <category term="nodejs" scheme="http://search4fan.github.io/categories/nodejs/"/>
-    
-    
-      <category term="google" scheme="http://search4fan.github.io/tags/google/"/>
-    
-      <category term="google home" scheme="http://search4fan.github.io/tags/google-home/"/>
-    
-      <category term="nodejs" scheme="http://search4fan.github.io/tags/nodejs/"/>
-    
-      <category term="local tunnel" scheme="http://search4fan.github.io/tags/local-tunnel/"/>
     
   </entry>
   

@@ -361,6 +361,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_dataframe_loop_set.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_dataframe_loop_set.html" itemprop="url">
+                  python change dataframe column into set and loop the set
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-20 19:59:47 / Modified: 20:06:03" itemprop="dateCreated datePublished" datetime="2018-07-20T19:59:47+10:00">2018-07-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: change dataframe column into set and iterate</p>
+<h1 id="change-dataframe-column-into-a-set"><a href="#change-dataframe-column-into-a-set" class="headerlink" title="change dataframe column into a set"></a>change dataframe column into a set</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line">a = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>]], columns=[<span class="string">'a'</span>,<span class="string">'b'</span>])</span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment">#    a  b</span></span><br><span class="line"><span class="comment"># 0  1  2</span></span><br><span class="line"><span class="comment"># 1  2  3</span></span><br><span class="line">b = a[<span class="string">'a'</span>].unique()</span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># array([1, 2, 4], dtype=int64)</span></span><br><span class="line">b = set(b)</span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># &#123;1, 2, 4&#125;</span></span><br></pre></td></tr></table></figure>
+<h1 id="iterate-dataframe-column-set"><a href="#iterate-dataframe-column-set" class="headerlink" title="iterate dataframe column set"></a>iterate dataframe column set</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> b:</span><br><span class="line">    print(item)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
+<h1 id="combine-into-a-single-code"><a href="#combine-into-a-single-code" class="headerlink" title="combine into a single code"></a>combine into a single code</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> a[<span class="string">'a'</span>].unique():</span><br><span class="line">    print(item)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_dataframe_loop_rows.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1879,173 +2046,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/docker_error_response_from_daemon.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/docker_error_response_from_daemon.html" itemprop="url">
-                  Error response from daemon driver failed programming external connectivity on endpoint sql1
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-16 17:16:53 / Modified: 20:49:37" itemprop="dateCreated datePublished" datetime="2018-07-16T17:16:53+10:00">2018-07-16</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description:</p>
-<h1 id="error-description-1"><a href="#error-description-1" class="headerlink" title="error description 1"></a>error description 1</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\Administrator&gt; docker start sql1</span><br><span class="line">Error response from daemon: driver failed programming external connectivity on endpoint sql1 (5738a464113f88069be0239c3fd73eaa58fc4d5a7fc63d83d912e3d9424f6b55): Error starting userland proxy: mkdir /port/tcp:0.0.0.0:1433:tcp:172.17.0.2:1433: input/output error</span><br><span class="line">Error: failed to start containers: sql1</span><br></pre></td></tr></table></figure>
-<h1 id="error-description-2"><a href="#error-description-2" class="headerlink" title="error description 2"></a>error description 2</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\Administrator&gt; docker run -p 1443:1443 -d sql2</span><br><span class="line">90d3d1f460f1dfd11a684a37a9278db78f345c1a85cc55d68e1f3c313721c2e0</span><br><span class="line">C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: driver failed programming external connectivity on endpoint sad_ritchie (b5a71d797addfd55b7683151e8a6b9fbacbd35792dbe1f020170190b500778b6): Error starting userland proxy: mkdir /port/tcp:0.0.0.0:1443:tcp:172.17.0.2:1443: input/output error.</span><br></pre></td></tr></table></figure>
-<h1 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h1><p>restart system and docker then restart service </p>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2093,7 +2093,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

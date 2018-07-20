@@ -361,6 +361,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/docker_error_response_from_daemon.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/docker_error_response_from_daemon.html" itemprop="url">
+                  Error response from daemon driver failed programming external connectivity on endpoint sql1
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-16 17:16:53 / Modified: 20:49:37" itemprop="dateCreated datePublished" datetime="2018-07-16T17:16:53+10:00">2018-07-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description:</p>
+<h1 id="error-description-1"><a href="#error-description-1" class="headerlink" title="error description 1"></a>error description 1</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\Administrator&gt; docker start sql1</span><br><span class="line">Error response from daemon: driver failed programming external connectivity on endpoint sql1 (5738a464113f88069be0239c3fd73eaa58fc4d5a7fc63d83d912e3d9424f6b55): Error starting userland proxy: mkdir /port/tcp:0.0.0.0:1433:tcp:172.17.0.2:1433: input/output error</span><br><span class="line">Error: failed to start containers: sql1</span><br></pre></td></tr></table></figure>
+<h1 id="error-description-2"><a href="#error-description-2" class="headerlink" title="error description 2"></a>error description 2</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\Administrator&gt; docker run -p 1443:1443 -d sql2</span><br><span class="line">90d3d1f460f1dfd11a684a37a9278db78f345c1a85cc55d68e1f3c313721c2e0</span><br><span class="line">C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: driver failed programming external connectivity on endpoint sad_ritchie (b5a71d797addfd55b7683151e8a6b9fbacbd35792dbe1f020170190b500778b6): Error starting userland proxy: mkdir /port/tcp:0.0.0.0:1443:tcp:172.17.0.2:1443: input/output error.</span><br></pre></td></tr></table></figure>
+<h1 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h1><p>restart system and docker then restart service </p>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/docker_resign_port_to_exist_image.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1890,194 +2057,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/google_home.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/google_home.html" itemprop="url">
-                  Google Home links to Local Host through localtunnel
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-13 23:26:06" itemprop="dateCreated datePublished" datetime="2018-07-13T23:26:06+10:00">2018-07-13</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-14 16:46:28" itemprop="dateModified" datetime="2018-07-14T16:46:28+10:00">2018-07-14</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/nodejs/" itemprop="url" rel="index"><span itemprop="name">nodejs</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="nodejs-localhost"><a href="#nodejs-localhost" class="headerlink" title="nodejs localhost"></a>nodejs localhost</h1><p>Google home request -&gt; index.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">	app = express(),</span><br><span class="line">	bodyparser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>),</span><br><span class="line">	assistant = <span class="built_in">require</span>(<span class="string">'./assistant.js'</span>),</span><br><span class="line">	util = <span class="built_in">require</span>(<span class="string">'util'</span>);</span><br><span class="line">app.use(bodyparser.json())</span><br><span class="line"></span><br><span class="line"><span class="comment">// GET method route</span></span><br><span class="line">app.all(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  	<span class="built_in">console</span>.log(<span class="string">'index.js/'</span>);</span><br><span class="line">  	assistant.assistantHandler(req,res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.all(<span class="string">'/test'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'index.js/test'</span>);</span><br><span class="line">	res.send(<span class="string">'helloworld'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure></p>
-<p>index.js -&gt; Google actions sdk<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ActionsSdkApp = <span class="built_in">require</span>(<span class="string">'actions-on-google'</span>).ActionsSdkApp;</span><br><span class="line"></span><br><span class="line">exports.assistantHandler = <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'assistantHandler'</span>);</span><br><span class="line">    <span class="keyword">const</span> app = <span class="keyword">new</span> ActionsSdkApp(&#123;</span><br><span class="line">        request: req,</span><br><span class="line">        response: res</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">var</span> str = <span class="string">'Sorry. I don\'t understand what you say'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Create functions to handle requests here</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">mainIntent</span>(<span class="params">app</span>) </span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">'assistant.js/mainIntent'</span>);</span><br><span class="line">        voiceResponse(<span class="string">'welcome'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">respond</span>(<span class="params">app</span>) </span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">'assistant.js/respond'</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (app.getRawInput() == <span class="string">'hello'</span>) &#123;</span><br><span class="line">			str = <span class="string">'hello'</span></span><br><span class="line">		&#125;</span><br><span class="line">        voiceResponse(str)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">voiceResponse</span>(<span class="params">strIn</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> inputPrompt = app.buildInputPrompt(<span class="literal">false</span>,strIn);</span><br><span class="line">        app.ask(inputPrompt);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> actionMap = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">    actionMap.set(app.StandardIntents.MAIN, mainIntent);</span><br><span class="line">    actionMap.set(app.StandardIntents.TEXT, respond);</span><br><span class="line"></span><br><span class="line">    app.handleRequest(actionMap);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="localtunnel"><a href="#localtunnel" class="headerlink" title="localtunnel"></a>localtunnel</h1><p>acquire the URL to access localhost : <a href="https://localtunnel.github.io/www/" target="_blank" rel="noopener">https://localtunnel.github.io/www/</a><br>    -&gt; installation: <code>npm install -g localtunnel</code><br>    -&gt; running: <code>lt --port 8000</code><br>    -&gt; copy the url</p>
-<h1 id="Google-Actions-SDK"><a href="#Google-Actions-SDK" class="headerlink" title="Google Actions SDK"></a>Google Actions SDK</h1><ol>
-<li><p>Apply for account: <a href="https://developers.google.com/actions/sdk/" target="_blank" rel="noopener">https://developers.google.com/actions/sdk/</a><br> -&gt; Add project<br> -&gt; fill the form<br> -&gt; get the update code as follow </p>
-<pre><code>`gactions update --action_package PACKAGE_NAME --project PROJECT_NAME`
-</code></pre></li>
-<li><p>gactions Cli : <a href="https://developers.google.com/actions/tools/gactions-cli" target="_blank" rel="noopener">https://developers.google.com/actions/tools/gactions-cli</a><br> -&gt; download<br> -&gt; Run <code>chmod +x gactions</code> to make the binary executable<br> -&gt; get the actions json sample <code>gactions init</code><br> -&gt; change the actions:add the url in the json file<br> -&gt; update </p>
-<pre><code>`gactions update --action_package PACKAGE_NAME --project PROJECT_ID`
-</code></pre></li>
-<li><p>test google actions:<a href="https://developers.google.com/actions/tools/simulator" target="_blank" rel="noopener">https://developers.google.com/actions/tools/simulator</a></p>
-</li>
-</ol>
-<hr>
-<p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">http://searchfor.space</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2125,7 +2104,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
