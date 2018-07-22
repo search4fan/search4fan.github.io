@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>python extract columns from dataframe</title>
+      <link href="/post/python_extract_columns.html"/>
+      <url>/post/python_extract_columns.html</url>
+      <content type="html"><![CDATA[<p>description: pandas select columns by name</p><h1 id="python-select-columns-from-dataframe-by-name"><a href="#python-select-columns-from-dataframe-by-name" class="headerlink" title="python select columns from dataframe by name"></a>python select columns from dataframe by name</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas </span><br><span class="line">d = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]], columns=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>])</span><br><span class="line"><span class="comment"># d</span></span><br><span class="line"><span class="comment">#    a  b  c  d</span></span><br><span class="line"><span class="comment"># 0  1  2  3  4</span></span><br><span class="line">d2 = d[[<span class="string">'b'</span>,<span class="string">'c'</span>]]</span><br><span class="line"><span class="comment"># d2</span></span><br><span class="line"><span class="comment">#    b  c</span></span><br><span class="line"><span class="comment"># 0  2  3</span></span><br></pre></td></tr></table></figure><hr><p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>]]></content>
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>TortoiseGit set ssh for github</title>
       <link href="/post/git_set_ssh_for_tortoisegit.html"/>
       <url>/post/git_set_ssh_for_tortoisegit.html</url>
@@ -378,9 +399,9 @@
       
         <tags>
             
-            <tag> sql server </tag>
-            
             <tag> ssms </tag>
+            
+            <tag> sql server </tag>
             
             <tag> sql </tag>
             
@@ -424,9 +445,9 @@
       
         <tags>
             
-            <tag> docker </tag>
-            
             <tag> sql server </tag>
+            
+            <tag> docker </tag>
             
         </tags>
       
