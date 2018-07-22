@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-22T11:19:47.398Z</updated>
+  <updated>2018-07-22T23:29:59.819Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo deploy to github with ssh</title>
+    <link href="http://search4fan.github.io/post/hexo_deploy_ssh.html"/>
+    <id>http://search4fan.github.io/post/hexo_deploy_ssh.html</id>
+    <published>2018-07-22T23:27:02.245Z</published>
+    <updated>2018-07-22T23:29:59.819Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: hexo deploy github pages through ssh&lt;/p&gt;
+&lt;h1 id=&quot;configuration-for-deploying-to-github-with-ssh&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>python extract columns from dataframe</title>
@@ -544,33 +571,6 @@
       <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
     
       <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker</title>
-    <link href="http://search4fan.github.io/post/docker_unauthorized_username_password.html"/>
-    <id>http://search4fan.github.io/post/docker_unauthorized_username_password.html</id>
-    <published>2018-07-15T07:11:54.912Z</published>
-    <updated>2018-07-15T07:17:14.096Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: solve problem of unauthorized username or password in terminal&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
-    
-    
-      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
     
   </entry>
   
