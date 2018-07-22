@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-21T12:02:11.551Z</updated>
+  <updated>2018-07-22T05:21:27.988Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TortoiseGit set ssh for github</title>
+    <link href="http://search4fan.github.io/post/git_set_ssh_for_tortoisegit.html"/>
+    <id>http://search4fan.github.io/post/git_set_ssh_for_tortoisegit.html</id>
+    <published>2018-07-22T05:14:52.487Z</published>
+    <updated>2018-07-22T05:21:27.988Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: tortoisegit ssh key windows&lt;/p&gt;
+&lt;h1 id=&quot;tortoisegit-ssh-key-setup&quot;&gt;&lt;a href=&quot;#tortoisegit-ssh-key-setup&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://search4fan.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://search4fan.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Switch between ssh and HTTPS</title>
+    <link href="http://search4fan.github.io/post/git_switch_https_ssh.html"/>
+    <id>http://search4fan.github.io/post/git_switch_https_ssh.html</id>
+    <published>2018-07-22T04:55:55.881Z</published>
+    <updated>2018-07-22T05:16:04.500Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: git change remote from https to ssh&lt;/p&gt;
+&lt;h1 id=&quot;change-from-HTTPS-into-ssh&quot;&gt;&lt;a href=&quot;#change-from-HTTPS-into-ssh&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://search4fan.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://search4fan.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>python print format string example</title>
@@ -458,9 +512,9 @@
       <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
-      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
-    
       <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
     
       <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
     
@@ -519,62 +573,6 @@
       <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
     
       <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Microsoft Visual Studio Code insert date time variables into snippet template</title>
-    <link href="http://search4fan.github.io/post/vs_code_datetime_snippet.html"/>
-    <id>http://search4fan.github.io/post/vs_code_datetime_snippet.html</id>
-    <published>2018-07-15T06:52:14.159Z</published>
-    <updated>2018-07-15T06:58:18.738Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: make a snippet with current datetime &lt;/p&gt;
-&lt;h1 id=&quot;open-snippet-file-to-edit&quot;&gt;&lt;a href=&quot;#open-snippet-file-to-edit&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="VS code" scheme="http://search4fan.github.io/categories/VS-code/"/>
-    
-    
-      <category term="VS code" scheme="http://search4fan.github.io/tags/VS-code/"/>
-    
-      <category term="snippet" scheme="http://search4fan.github.io/tags/snippet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo add local search</title>
-    <link href="http://search4fan.github.io/post/hexo_add_local_search.html"/>
-    <id>http://search4fan.github.io/post/hexo_add_local_search.html</id>
-    <published>2018-07-14T07:57:30.434Z</published>
-    <updated>2018-07-14T08:28:43.641Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: add a local search for hexo blog &lt;/p&gt;
-&lt;h1 id=&quot;install-hexo-generator-search&quot;&gt;&lt;a href=&quot;#install-hexo-generator-search&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://search4fan.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
     
   </entry>
   
