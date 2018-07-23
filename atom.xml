@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-23T10:27:51.922Z</updated>
+  <updated>2018-07-23T11:06:24.108Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>R language to build ANN network for wine data</title>
+    <link href="http://search4fan.github.io/post/r_AI_ann_for_wine_data.html"/>
+    <id>http://search4fan.github.io/post/r_AI_ann_for_wine_data.html</id>
+    <published>2018-07-23T10:57:04.791Z</published>
+    <updated>2018-07-23T11:06:24.108Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: build ANN network from wine data in r language&lt;/p&gt;
+&lt;h1 id=&quot;read-table-data&quot;&gt;&lt;a href=&quot;#read-table-data&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+      <category term="r language" scheme="http://search4fan.github.io/tags/r-language/"/>
+    
+  </entry>
   
   <entry>
     <title>R language to build Decision Tree for wine dataset</title>
@@ -563,33 +594,6 @@
       <category term="vba" scheme="http://search4fan.github.io/tags/vba/"/>
     
       <category term="excel" scheme="http://search4fan.github.io/tags/excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Microsoft Sql server installation with 1638 error</title>
-    <link href="http://search4fan.github.io/post/mssql_install_error_1638.html"/>
-    <id>http://search4fan.github.io/post/mssql_install_error_1638.html</id>
-    <published>2018-07-17T23:33:38.321Z</published>
-    <updated>2018-07-17T23:39:53.576Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: unable to install Sql Server with exit code 1638 &lt;/p&gt;
-&lt;h1 id=&quot;solution&quot;&gt;&lt;a href=&quot;#solution&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
-    
-    
-      <category term="mssql" scheme="http://search4fan.github.io/tags/mssql/"/>
     
   </entry>
   
