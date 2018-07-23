@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html</loc>
+    
+    <lastmod>2018-07-23T09:40:39.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/python_AI_forward_propagate.html</loc>
+    
+    <lastmod>2018-07-23T09:36:47.816Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://search4fan.github.io/post/python_AI_small_network_example.html</loc>
+    
+    <lastmod>2018-07-23T09:31:41.235Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://search4fan.github.io/post/hexo_deploy_ssh.html</loc>
     
     <lastmod>2018-07-22T23:29:59.819Z</lastmod>

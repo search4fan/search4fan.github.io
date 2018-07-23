@@ -3,6 +3,79 @@
   
     
     <entry>
+      <title>python create simple MLP in Keras</title>
+      <link href="/post/python_AI_simple_MLP_in_Keras.html"/>
+      <url>/post/python_AI_simple_MLP_in_Keras.html</url>
+      <content type="html"><![CDATA[<p>description: create simple MLP in Keras</p><h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">import</span> numpy</span><br></pre></td></tr></table></figure><h1 id="fix-random-seed-for-reproducibility"><a href="#fix-random-seed-for-reproducibility" class="headerlink" title="fix random seed for reproducibility"></a>fix random seed for reproducibility</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.seed(<span class="number">7</span>)</span><br></pre></td></tr></table></figure><h1 id="load-pima-indians-dataset"><a href="#load-pima-indians-dataset" class="headerlink" title="load pima indians dataset"></a>load pima indians dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataset = numpy.loadtxt(<span class="string">"pima-indians-diabetes.csv"</span>, delimiter=<span class="string">","</span>)</span><br></pre></td></tr></table></figure><h1 id="split-into-input-X-and-output-Y-variables"><a href="#split-into-input-X-and-output-Y-variables" class="headerlink" title="split into input (X) and output (Y) variables"></a>split into input (X) and output (Y) variables</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = dataset[:,<span class="number">0</span>:<span class="number">8</span>]</span><br><span class="line">Y = dataset[:,<span class="number">8</span>]</span><br></pre></td></tr></table></figure><h1 id="create-model"><a href="#create-model" class="headerlink" title="create model"></a>create model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(<span class="number">12</span>, input_dim=<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">1</span>, activation=<span class="string">'sigmoid'</span>))</span><br></pre></td></tr></table></figure><h1 id="Compile-model"><a href="#Compile-model" class="headerlink" title="Compile model"></a>Compile model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.compile(loss=<span class="string">'binary_crossentropy'</span>, optimizer=<span class="string">'adam'</span>, metrics=[<span class="string">'accuracy'</span>])</span><br></pre></td></tr></table></figure><h1 id="Fit-the-model"><a href="#Fit-the-model" class="headerlink" title="Fit the model"></a>Fit the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(X, Y, epochs=<span class="number">150</span>, batch_size=<span class="number">10</span>)</span><br></pre></td></tr></table></figure><h1 id="evaluate-the-model"><a href="#evaluate-the-model" class="headerlink" title="evaluate the model"></a>evaluate the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scores = model.evaluate(X, Y)</span><br><span class="line">print(<span class="string">"\n%s: %.2f%%"</span> % (model.metrics_names[<span class="number">1</span>], scores[<span class="number">1</span>]*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> machine learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> machine learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>python ANN forward Propagate</title>
+      <link href="/post/python_AI_forward_propagate.html"/>
+      <url>/post/python_AI_forward_propagate.html</url>
+      <content type="html"><![CDATA[<h1 id="Calculate-neuron-activation-for-an-input"><a href="#Calculate-neuron-activation-for-an-input" class="headerlink" title="Calculate neuron activation for an input"></a>Calculate neuron activation for an input</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">activate</span><span class="params">(weights, inputs)</span>:</span></span><br><span class="line">activation = weights[<span class="number">-1</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(weights)<span class="number">-1</span>):</span><br><span class="line">activation += weights[i] * inputs[i]</span><br><span class="line"><span class="keyword">return</span> activation</span><br></pre></td></tr></table></figure><h1 id="Transfer-neuron-activation"><a href="#Transfer-neuron-activation" class="headerlink" title="Transfer neuron activation"></a>Transfer neuron activation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> exp</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transfer</span><span class="params">(activation)</span>:</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">1.0</span> / (<span class="number">1.0</span> + exp(-activation))</span><br></pre></td></tr></table></figure><h1 id="Forward-propagate-input-to-a-network-output"><a href="#Forward-propagate-input-to-a-network-output" class="headerlink" title="Forward propagate input to a network output"></a>Forward propagate input to a network output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_propagate</span><span class="params">(network, row)</span>:</span></span><br><span class="line">inputs = row</span><br><span class="line"><span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">new_inputs = []</span><br><span class="line"><span class="keyword">for</span> neuron <span class="keyword">in</span> layer:</span><br><span class="line">activation = activate(neuron[<span class="string">'weights'</span>], inputs)</span><br><span class="line">neuron[<span class="string">'output'</span>] = transfer(activation)</span><br><span class="line">new_inputs.append(neuron[<span class="string">'output'</span>])</span><br><span class="line">inputs = new_inputs</span><br><span class="line"><span class="keyword">return</span> inputs</span><br></pre></td></tr></table></figure><h1 id="test-forward-propagation"><a href="#test-forward-propagation" class="headerlink" title="test forward propagation"></a>test forward propagation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network = [[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;],</span><br><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]]</span><br><span class="line">row = [<span class="number">1</span>, <span class="number">0</span>, <span class="keyword">None</span>]</span><br><span class="line">output = forward_propagate(network, row)</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure><h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0.6629970129852887</span>, <span class="number">0.7253160725279748</span>]</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> machine learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> machine learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>python build small network example for ANN</title>
+      <link href="/post/python_AI_small_network_example.html"/>
+      <url>/post/python_AI_small_network_example.html</url>
+      <content type="html"><![CDATA[<p>description: build small network example in python </p><h1 id="initial-a-network"><a href="#initial-a-network" class="headerlink" title="initial a network"></a>initial a network</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">initialize_network</span><span class="params">(n_inputs, n_hidden, n_outputs)</span>:</span></span><br><span class="line">network = list()</span><br><span class="line">hidden_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_inputs + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden)]</span><br><span class="line">network.append(hidden_layer)</span><br><span class="line">output_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_outputs)]</span><br><span class="line">network.append(output_layer)</span><br><span class="line"><span class="keyword">return</span> network</span><br></pre></td></tr></table></figure><h1 id="test-network"><a href="#test-network" class="headerlink" title="test network"></a>test network</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">seed(<span class="number">1</span>)</span><br><span class="line">network = initialize_network(<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">print(layer)</span><br></pre></td></tr></table></figure><h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;]</span><br><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> machine learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>hexo deploy to github with ssh</title>
       <link href="/post/hexo_deploy_ssh.html"/>
       <url>/post/hexo_deploy_ssh.html</url>
@@ -658,9 +731,9 @@
       
         <tags>
             
-            <tag> google </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> google </tag>
             
             <tag> adsense </tag>
             

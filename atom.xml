@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-22T23:29:59.819Z</updated>
+  <updated>2018-07-23T09:40:39.846Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python create simple MLP in Keras</title>
+    <link href="http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html"/>
+    <id>http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html</id>
+    <published>2018-07-23T09:38:02.371Z</published>
+    <updated>2018-07-23T09:40:39.846Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: create simple MLP in Keras&lt;/p&gt;
+&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot; title=&quot;import
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python ANN forward Propagate</title>
+    <link href="http://search4fan.github.io/post/python_AI_forward_propagate.html"/>
+    <id>http://search4fan.github.io/post/python_AI_forward_propagate.html</id>
+    <published>2018-07-23T09:33:29.104Z</published>
+    <updated>2018-07-23T09:36:47.816Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Calculate-neuron-activation-for-an-input&quot;&gt;&lt;a href=&quot;#Calculate-neuron-activation-for-an-input&quot; class=&quot;headerlink&quot; title=&quot;Calculate
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python build small network example for ANN</title>
+    <link href="http://search4fan.github.io/post/python_AI_small_network_example.html"/>
+    <id>http://search4fan.github.io/post/python_AI_small_network_example.html</id>
+    <published>2018-07-23T09:27:55.626Z</published>
+    <updated>2018-07-23T09:31:41.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: build small network example in python &lt;/p&gt;
+&lt;h1 id=&quot;initial-a-network&quot;&gt;&lt;a href=&quot;#initial-a-network&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo deploy to github with ssh</title>
@@ -484,93 +574,6 @@
     
     
       <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Error response from daemon driver failed programming external connectivity on endpoint sql1</title>
-    <link href="http://search4fan.github.io/post/docker_error_response_from_daemon.html"/>
-    <id>http://search4fan.github.io/post/docker_error_response_from_daemon.html</id>
-    <published>2018-07-16T07:16:53.997Z</published>
-    <updated>2018-07-16T10:49:37.520Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description:&lt;/p&gt;
-&lt;h1 id=&quot;error-description-1&quot;&gt;&lt;a href=&quot;#error-description-1&quot; class=&quot;headerlink&quot; title=&quot;error description 1&quot;&gt;&lt;/a&gt;error
-        
-      
-    
-    </summary>
-    
-      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
-    
-    
-      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
-    
-      <category term="error" scheme="http://search4fan.github.io/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker change port of an exist image container</title>
-    <link href="http://search4fan.github.io/post/docker_resign_port_to_exist_image.html"/>
-    <id>http://search4fan.github.io/post/docker_resign_port_to_exist_image.html</id>
-    <published>2018-07-16T07:10:41.575Z</published>
-    <updated>2018-07-16T07:14:06.046Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: Docker Change Port Mapping for an Existing Container&lt;/p&gt;
-&lt;h1 id=&quot;Stop-the-running-image&quot;&gt;&lt;a href=&quot;#Stop-the-running-image&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
-    
-    
-      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>connect sql server from Microsoft Sql Server Management Studio</title>
-    <link href="http://search4fan.github.io/post/docker_sql_server_connect_from_ssms.html"/>
-    <id>http://search4fan.github.io/post/docker_sql_server_connect_from_ssms.html</id>
-    <published>2018-07-15T11:51:00.484Z</published>
-    <updated>2018-07-18T01:23:34.888Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: codes for connecting sql server from Microsoft sql server management studio &lt;/p&gt;
-&lt;h1 id=&quot;start-sql-server&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
-    
-    
-      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
-    
-      <category term="sql server" scheme="http://search4fan.github.io/tags/sql-server/"/>
-    
-      <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
     
   </entry>
   
