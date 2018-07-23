@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-23T10:11:19.440Z</updated>
+  <updated>2018-07-23T10:27:51.922Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>R language to build Decision Tree for wine dataset</title>
+    <link href="http://search4fan.github.io/post/r_build_DecisionTree.html"/>
+    <id>http://search4fan.github.io/post/r_build_DecisionTree.html</id>
+    <published>2018-07-23T10:23:53.362Z</published>
+    <updated>2018-07-23T10:27:51.922Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: build Decision Tree for wine dataset in R language &lt;/p&gt;
+&lt;h1 id=&quot;read-data-From-File&quot;&gt;&lt;a href=&quot;#read-data-From-File&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+      <category term="r language" scheme="http://search4fan.github.io/tags/r-language/"/>
+    
+  </entry>
   
   <entry>
     <title>python to use LSTM for predicting words in Txt</title>
@@ -559,35 +590,6 @@
     
     
       <category term="mssql" scheme="http://search4fan.github.io/tags/mssql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>basic frequent Sql commends in sql server</title>
-    <link href="http://search4fan.github.io/post/ssms_basic_frequent_commends.html"/>
-    <id>http://search4fan.github.io/post/ssms_basic_frequent_commends.html</id>
-    <published>2018-07-17T10:10:57.053Z</published>
-    <updated>2018-07-18T01:24:26.373Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: sql comments for basic query &lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
-    
-    
-      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
-    
-      <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
     
   </entry>
   
