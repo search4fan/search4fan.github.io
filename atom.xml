@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-23T10:02:42.877Z</updated>
+  <updated>2018-07-23T10:11:19.440Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python to use LSTM for predicting words in Txt</title>
+    <link href="http://search4fan.github.io/post/python_AI_LSTM_for_txt.html"/>
+    <id>http://search4fan.github.io/post/python_AI_LSTM_for_txt.html</id>
+    <published>2018-07-23T10:06:54.724Z</published>
+    <updated>2018-07-23T10:11:19.440Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: use LSTM to predict words in Text in python&lt;/p&gt;
+&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>a example for RL in python</title>
     <link href="http://search4fan.github.io/post/python_AI_rl_example.html"/>
     <id>http://search4fan.github.io/post/python_AI_rl_example.html</id>
     <published>2018-07-23T10:01:26.630Z</published>
-    <updated>2018-07-23T10:02:42.877Z</updated>
+    <updated>2018-07-23T10:05:57.363Z</updated>
     
     <summary type="html">
     
@@ -557,35 +588,6 @@
       <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
     
       <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>display line number in sql server management studio</title>
-    <link href="http://search4fan.github.io/post/ssms_display_line_number.html"/>
-    <id>http://search4fan.github.io/post/ssms_display_line_number.html</id>
-    <published>2018-07-17T10:06:35.565Z</published>
-    <updated>2018-07-18T01:24:35.463Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: display line number in mssql editor&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;tools -&amp;gt; options &lt;/li&gt;
-&lt;li&gt;Text Editor -&amp;gt; Transact-SQL -&amp;gt; line
-        
-      
-    
-    </summary>
-    
-      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
-    
-    
-      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
     
   </entry>
   
