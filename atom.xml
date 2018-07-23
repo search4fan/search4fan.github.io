@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-23T09:40:39.846Z</updated>
+  <updated>2018-07-23T10:02:42.877Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,99 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>a example for RL in python</title>
+    <link href="http://search4fan.github.io/post/python_AI_rl_example.html"/>
+    <id>http://search4fan.github.io/post/python_AI_rl_example.html</id>
+    <published>2018-07-23T10:01:26.630Z</published>
+    <updated>2018-07-23T10:02:42.877Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: a small example for reinforcement learning in python&lt;/p&gt;
+&lt;h1 id=&quot;import-packages-and-set-seed&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python build Decision Tree on bank note dataset</title>
+    <link href="http://search4fan.github.io/post/python_AI_DecisionTree_on_BankNoteDataset.html"/>
+    <id>http://search4fan.github.io/post/python_AI_DecisionTree_on_BankNoteDataset.html</id>
+    <published>2018-07-23T09:53:56.976Z</published>
+    <updated>2018-07-23T09:59:20.024Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: build Decision Tree from bank note dataset in python&lt;/p&gt;
+&lt;h1 id=&quot;CART-on-the-Bank-Note-dataset&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python simple convolutional neural network for MNIST dataset</title>
+    <link href="http://search4fan.github.io/post/python_AI_simple_CNN_forMNIST.html"/>
+    <id>http://search4fan.github.io/post/python_AI_simple_CNN_forMNIST.html</id>
+    <published>2018-07-23T09:48:30.152Z</published>
+    <updated>2018-07-23T09:52:42.946Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: simple CNN example for MNIST dataset&lt;/p&gt;
+&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>python create simple MLP in Keras</title>
@@ -493,87 +586,6 @@
     
     
       <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java change array into a list</title>
-    <link href="http://search4fan.github.io/post/java_array_to_list.html"/>
-    <id>http://search4fan.github.io/post/java_array_to_list.html</id>
-    <published>2018-07-17T04:54:26.156Z</published>
-    <updated>2018-07-17T04:55:31.378Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: convert array into a list in java &lt;/p&gt;
-&lt;h1 id=&quot;convert-array-into-list&quot;&gt;&lt;a href=&quot;#convert-array-into-list&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://search4fan.github.io/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://search4fan.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ssms save changes not permitted</title>
-    <link href="http://search4fan.github.io/post/ssms_not_permit_change.html"/>
-    <id>http://search4fan.github.io/post/ssms_not_permit_change.html</id>
-    <published>2018-07-16T11:26:11.151Z</published>
-    <updated>2018-07-18T01:24:49.025Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: Sql Server ‘Saving changes is not permitted’&lt;/p&gt;
-&lt;h1 id=&quot;problem-description&quot;&gt;&lt;a href=&quot;#problem-description&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
-    
-    
-      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker frequent used commends</title>
-    <link href="http://search4fan.github.io/post/docker_commends.html"/>
-    <id>http://search4fan.github.io/post/docker_commends.html</id>
-    <published>2018-07-16T07:22:45.815Z</published>
-    <updated>2018-07-18T11:03:02.755Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: docker commends - not finished yet&lt;/p&gt;
-&lt;h1 id=&quot;check-all-running-proceses-containers&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
-    
-    
-      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
     
   </entry>
   
