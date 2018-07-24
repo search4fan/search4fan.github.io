@@ -361,6 +361,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_small_network_example.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_small_network_example.html" itemprop="url">
+                  python build small network example for ANN
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-23 19:27:55 / Modified: 19:31:41" itemprop="dateCreated datePublished" datetime="2018-07-23T19:27:55+10:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: build small network example in python </p>
+<h1 id="initial-a-network"><a href="#initial-a-network" class="headerlink" title="initial a network"></a>initial a network</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">initialize_network</span><span class="params">(n_inputs, n_hidden, n_outputs)</span>:</span></span><br><span class="line">	network = list()</span><br><span class="line">	hidden_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_inputs + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden)]</span><br><span class="line">	network.append(hidden_layer)</span><br><span class="line">	output_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_outputs)]</span><br><span class="line">	network.append(output_layer)</span><br><span class="line">	<span class="keyword">return</span> network</span><br></pre></td></tr></table></figure>
+<h1 id="test-network"><a href="#test-network" class="headerlink" title="test network"></a>test network</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">seed(<span class="number">1</span>)</span><br><span class="line">network = initialize_network(<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">	print(layer)</span><br></pre></td></tr></table></figure>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;]</span><br><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_deploy_ssh.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1826,153 +1990,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_dataframe_resign_headers.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_dataframe_resign_headers.html" itemprop="url">
-                  python resign headers to a dataframe
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-19 21:39:03 / Modified: 21:42:29" itemprop="dateCreated datePublished" datetime="2018-07-19T21:39:03+10:00">2018-07-19</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: python pandas rename or change column names</p>
-<h1 id="python-rename-column-headers"><a href="#python-rename-column-headers" class="headerlink" title="python rename column headers"></a>python rename column headers</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas </span><br><span class="line">d1 = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]])</span><br><span class="line"><span class="comment"># d1</span></span><br><span class="line"><span class="comment">#    0  1  2</span></span><br><span class="line"><span class="comment"># 0  1  2  3</span></span><br><span class="line"></span><br><span class="line">d2 = pandas.DataFrame(d1.values, columns = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>])</span><br><span class="line"><span class="comment"># d2</span></span><br><span class="line"><span class="comment">#    a  b  c</span></span><br><span class="line"><span class="comment"># 0  1  2  3</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2020,7 +2037,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

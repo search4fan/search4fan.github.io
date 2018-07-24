@@ -127,20 +127,20 @@
 
 
 
-  <meta name="description" content="description: cluster flower images through k-means  downloading and reading image file1234library(&quot;jpeg&quot;)imageurl&amp;lt;-&quot;https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/https://publi">
+  <meta name="description" content="description: cluster colors in a flower image through k-means  downloading and reading image file1234library(&quot;jpeg&quot;)imageurl&amp;lt;-&quot;https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/ht">
 <meta name="keywords" content="r k-means cluster">
 <meta property="og:type" content="article">
-<meta property="og:title" content="R language to cluster images by using k-means clustering">
+<meta property="og:title" content="R language to cluster image colors by using k-means clustering">
 <meta property="og:url" content="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html">
 <meta property="og:site_name" content="Search For Fun">
-<meta property="og:description" content="description: cluster flower images through k-means  downloading and reading image file1234library(&quot;jpeg&quot;)imageurl&amp;lt;-&quot;https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/https://publi">
+<meta property="og:description" content="description: cluster colors in a flower image through k-means  downloading and reading image file1234library(&quot;jpeg&quot;)imageurl&amp;lt;-&quot;https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/ht">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://search4fan.github.io/post/2018-07-24-10-52-38.png">
 <meta property="og:image" content="http://search4fan.github.io/post/2018-07-24-10-54-06.png">
-<meta property="og:updated_time" content="2018-07-24T00:54:22.830Z">
+<meta property="og:updated_time" content="2018-07-24T00:56:43.862Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="R language to cluster images by using k-means clustering">
-<meta name="twitter:description" content="description: cluster flower images through k-means  downloading and reading image file1234library(&quot;jpeg&quot;)imageurl&amp;lt;-&quot;https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/https://publi">
+<meta name="twitter:title" content="R language to cluster image colors by using k-means clustering">
+<meta name="twitter:description" content="description: cluster colors in a flower image through k-means  downloading and reading image file1234library(&quot;jpeg&quot;)imageurl&amp;lt;-&quot;https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/ht">
 <meta name="twitter:image" content="http://search4fan.github.io/post/2018-07-24-10-52-38.png">
 
 
@@ -160,7 +160,7 @@
   };
 </script>
 
-  <title>R language to cluster images by using k-means clustering | Search For Fun</title>
+  <title>R language to cluster image colors by using k-means clustering | Search For Fun</title>
   
 
 
@@ -382,7 +382,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">R language to cluster images by using k-means clustering
+          <h2 class="post-title" itemprop="name headline">R language to cluster image colors by using k-means clustering
               
             
           </h2>
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="Created: 2018-07-24 10:27:52 / Modified: 10:54:22" itemprop="dateCreated datePublished" datetime="2018-07-24T10:27:52+10:00">2018-07-24</time>
+              <time title="Created: 2018-07-24 10:27:52 / Modified: 10:56:43" itemprop="dateCreated datePublished" datetime="2018-07-24T10:27:52+10:00">2018-07-24</time>
             
 
             
@@ -463,7 +463,7 @@
       
 
       
-        <p>description: cluster flower images through k-means </p>
+        <p>description: cluster colors in a flower image through k-means </p>
 <h1 id="downloading-and-reading-image-file"><a href="#downloading-and-reading-image-file" class="headerlink" title="downloading and reading image file"></a>downloading and reading image file</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(<span class="string">"jpeg"</span>)</span><br><span class="line">imageurl&lt;-<span class="string">"https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/https://public-media.smithsonianmag.com/accounts/avatars/IMG_E1531.JPG"</span></span><br><span class="line">dFile &lt;- download.file(imageurl, <span class="string">"lotus.jpg"</span>) <span class="comment"># download file to workspace</span></span><br><span class="line">img &lt;- readJPEG(<span class="string">"lotus.jpg"</span>) <span class="comment"># read local image</span></span><br></pre></td></tr></table></figure>
 <h1 id="processing-image-data"><a href="#processing-image-data" class="headerlink" title="processing image data"></a>processing image data</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">imgDm &lt;- dim(img)</span><br><span class="line">imgDm <span class="comment"># [1]  879 1200    3</span></span><br><span class="line">imgRGB &lt;- data.frame(</span><br><span class="line">  x = rep(<span class="number">1</span>:imgDm[<span class="number">2</span>], each = imgDm[<span class="number">1</span>]), </span><br><span class="line">  y = rep(imgDm[<span class="number">1</span>]:<span class="number">1</span>, imgDm[<span class="number">2</span>]), </span><br><span class="line">  R = as.vector(img[,,<span class="number">1</span>]),</span><br><span class="line">  G = as.vector(img[,,<span class="number">2</span>]),</span><br><span class="line">  B = as.vector(img[,,<span class="number">3</span>])</span><br><span class="line">)</span><br><span class="line">imgRGB <span class="comment"># X 1 y 879 R .. G .. B ..</span></span><br></pre></td></tr></table></figure>
 <h1 id="set-a-theme-for-drawing-the-image"><a href="#set-a-theme-for-drawing-the-image" class="headerlink" title="set a theme for drawing the image"></a>set a theme for drawing the image</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">plotTheme &lt;- <span class="keyword">function</span>()&#123;</span><br><span class="line">  theme(</span><br><span class="line">    panel.background = element_rect(</span><br><span class="line">      size = <span class="number">3</span>,</span><br><span class="line">      colour = <span class="string">"black"</span>,</span><br><span class="line">      fill = <span class="string">"white"</span></span><br><span class="line">    ),</span><br><span class="line">    axis.ticks = element_line(</span><br><span class="line">      size = <span class="number">2</span></span><br><span class="line">    ),</span><br><span class="line">    panel.grid.major = element_line(</span><br><span class="line">      colour = <span class="string">"gray80"</span>,</span><br><span class="line">      linetype = <span class="string">"dotted"</span></span><br><span class="line">    ),</span><br><span class="line">    panel.grid.minor = element_line(</span><br><span class="line">      colour = <span class="string">"gray90"</span>,</span><br><span class="line">      linetype = <span class="string">"dashed"</span></span><br><span class="line">    ),</span><br><span class="line">    axis.title.x = element_text(</span><br><span class="line">      size = rel(<span class="number">1.2</span>),</span><br><span class="line">      face = <span class="string">"bold"</span></span><br><span class="line">    ),</span><br><span class="line">    axis.title.y = element_text(</span><br><span class="line">      size = rel(<span class="number">1.2</span>),</span><br><span class="line">      face = <span class="string">"bold"</span></span><br><span class="line">    ),</span><br><span class="line">    plot.title = element_text(</span><br><span class="line">      size = <span class="number">20</span>,</span><br><span class="line">      face = <span class="string">"bold"</span>,</span><br><span class="line">      vjust = <span class="number">1.5</span></span><br><span class="line">    )</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -495,7 +495,7 @@
     <strong>Post author:  </strong>killfun</li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html" title="R language to cluster images by using k-means clustering">http://search4fan.github.io/post/r_AI_cluster_by_k-means.html</a>
+    <a href="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html" title="R language to cluster image colors by using k-means clustering">http://search4fan.github.io/post/r_AI_cluster_by_k-means.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</li>
@@ -534,6 +534,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/r_AI_kmeans_hcluster.html" rel="prev" title="r language to cluster iris dataset through k-means and hierarchical clustering">
+                r language to cluster iris dataset through k-means and hierarchical clustering <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -607,7 +611,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

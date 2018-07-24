@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-24T00:54:22.830Z</updated>
+  <updated>2018-07-24T01:14:37.923Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>R language to cluster images by using k-means clustering</title>
-    <link href="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html"/>
-    <id>http://search4fan.github.io/post/r_AI_cluster_by_k-means.html</id>
-    <published>2018-07-24T00:27:52.058Z</published>
-    <updated>2018-07-24T00:54:22.830Z</updated>
+    <title>r language to cluster iris dataset through k-means and hierarchical clustering</title>
+    <link href="http://search4fan.github.io/post/r_AI_kmeans_hcluster.html"/>
+    <id>http://search4fan.github.io/post/r_AI_kmeans_hcluster.html</id>
+    <published>2018-07-24T00:58:42.848Z</published>
+    <updated>2018-07-24T01:14:37.923Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,38 @@
       
         
         
-          &lt;p&gt;description: cluster flower images through k-means &lt;/p&gt;
+          &lt;p&gt;description: cluster iris data set by hierarchical clustering and k-means&lt;/p&gt;
+&lt;h1 id=&quot;iris-data-set&quot;&gt;&lt;a href=&quot;#iris-data-set&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+      <category term="r language" scheme="http://search4fan.github.io/tags/r-language/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>R language to cluster image colors by using k-means clustering</title>
+    <link href="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html"/>
+    <id>http://search4fan.github.io/post/r_AI_cluster_by_k-means.html</id>
+    <published>2018-07-24T00:27:52.058Z</published>
+    <updated>2018-07-24T00:56:43.862Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: cluster colors in a flower image through k-means &lt;/p&gt;
 &lt;h1 id=&quot;downloading-and-reading-image-file&quot;&gt;&lt;a
         
       
@@ -564,33 +595,6 @@
     </summary>
     
       <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python resign headers to a dataframe</title>
-    <link href="http://search4fan.github.io/post/python_dataframe_resign_headers.html"/>
-    <id>http://search4fan.github.io/post/python_dataframe_resign_headers.html</id>
-    <published>2018-07-19T11:39:03.475Z</published>
-    <updated>2018-07-19T11:42:29.382Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python pandas rename or change column names&lt;/p&gt;
-&lt;h1 id=&quot;python-rename-column-headers&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
     
     
       <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
