@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-23T11:06:24.108Z</updated>
+  <updated>2018-07-24T00:54:22.830Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>R language to cluster images by using k-means clustering</title>
+    <link href="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html"/>
+    <id>http://search4fan.github.io/post/r_AI_cluster_by_k-means.html</id>
+    <published>2018-07-24T00:27:52.058Z</published>
+    <updated>2018-07-24T00:54:22.830Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: cluster flower images through k-means &lt;/p&gt;
+&lt;h1 id=&quot;downloading-and-reading-image-file&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+      <category term="r language" scheme="http://search4fan.github.io/tags/r-language/"/>
+    
+  </entry>
   
   <entry>
     <title>R language to build ANN network for wine data</title>
@@ -565,35 +596,6 @@
       <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>get list of modules name in Excel vba</title>
-    <link href="http://search4fan.github.io/post/vba_get_list_of_modules_name.html"/>
-    <id>http://search4fan.github.io/post/vba_get_list_of_modules_name.html</id>
-    <published>2018-07-18T08:49:46.508Z</published>
-    <updated>2018-07-18T08:51:36.318Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: vba to get list of modules name &lt;/p&gt;
-&lt;h1 id=&quot;code-of-vba-to-get-list-of-module-names&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="vba" scheme="http://search4fan.github.io/categories/vba/"/>
-    
-    
-      <category term="vba" scheme="http://search4fan.github.io/tags/vba/"/>
-    
-      <category term="excel" scheme="http://search4fan.github.io/tags/excel/"/>
     
   </entry>
   

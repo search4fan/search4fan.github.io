@@ -361,6 +361,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/r_AI_cluster_by_k-means.html" itemprop="url">
+                  R language to cluster images by using k-means clustering
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-24 10:27:52 / Modified: 10:54:22" itemprop="dateCreated datePublished" datetime="2018-07-24T10:27:52+10:00">2018-07-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: cluster flower images through k-means </p>
+<h1 id="downloading-and-reading-image-file"><a href="#downloading-and-reading-image-file" class="headerlink" title="downloading and reading image file"></a>downloading and reading image file</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(<span class="string">"jpeg"</span>)</span><br><span class="line">imageurl&lt;-<span class="string">"https://thumbs-prod.si-cdn.com/WRp3AC1A1q3d4_lCe_fzfMmIu0o=/256x256/https://public-media.smithsonianmag.com/accounts/avatars/IMG_E1531.JPG"</span></span><br><span class="line">dFile &lt;- download.file(imageurl, <span class="string">"lotus.jpg"</span>) <span class="comment"># download file to workspace</span></span><br><span class="line">img &lt;- readJPEG(<span class="string">"lotus.jpg"</span>) <span class="comment"># read local image</span></span><br></pre></td></tr></table></figure>
+<h1 id="processing-image-data"><a href="#processing-image-data" class="headerlink" title="processing image data"></a>processing image data</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">imgDm &lt;- dim(img)</span><br><span class="line">imgDm <span class="comment"># [1]  879 1200    3</span></span><br><span class="line">imgRGB &lt;- data.frame(</span><br><span class="line">  x = rep(<span class="number">1</span>:imgDm[<span class="number">2</span>], each = imgDm[<span class="number">1</span>]), </span><br><span class="line">  y = rep(imgDm[<span class="number">1</span>]:<span class="number">1</span>, imgDm[<span class="number">2</span>]), </span><br><span class="line">  R = as.vector(img[,,<span class="number">1</span>]),</span><br><span class="line">  G = as.vector(img[,,<span class="number">2</span>]),</span><br><span class="line">  B = as.vector(img[,,<span class="number">3</span>])</span><br><span class="line">)</span><br><span class="line">imgRGB <span class="comment"># X 1 y 879 R .. G .. B ..</span></span><br></pre></td></tr></table></figure>
+<h1 id="set-a-theme-for-drawing-the-image"><a href="#set-a-theme-for-drawing-the-image" class="headerlink" title="set a theme for drawing the image"></a>set a theme for drawing the image</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line">plotTheme &lt;- <span class="keyword">function</span>()&#123;</span><br><span class="line">  theme(</span><br><span class="line">    panel.background = element_rect(</span><br><span class="line">      size = <span class="number">3</span>,</span><br><span class="line">      colour = <span class="string">"black"</span>,</span><br><span class="line">      fill = <span class="string">"white"</span></span><br><span class="line">    ),</span><br><span class="line">    axis.ticks = element_line(</span><br><span class="line">      size = <span class="number">2</span></span><br><span class="line">    ),</span><br><span class="line">    panel.grid.major = element_line(</span><br><span class="line">      colour = <span class="string">"gray80"</span>,</span><br><span class="line">      linetype = <span class="string">"dotted"</span></span><br><span class="line">    ),</span><br><span class="line">    panel.grid.minor = element_line(</span><br><span class="line">      colour = <span class="string">"gray90"</span>,</span><br><span class="line">      linetype = <span class="string">"dashed"</span></span><br><span class="line">    ),</span><br><span class="line">    axis.title.x = element_text(</span><br><span class="line">      size = rel(<span class="number">1.2</span>),</span><br><span class="line">      face = <span class="string">"bold"</span></span><br><span class="line">    ),</span><br><span class="line">    axis.title.y = element_text(</span><br><span class="line">      size = rel(<span class="number">1.2</span>),</span><br><span class="line">      face = <span class="string">"bold"</span></span><br><span class="line">    ),</span><br><span class="line">    plot.title = element_text(</span><br><span class="line">      size = <span class="number">20</span>,</span><br><span class="line">      face = <span class="string">"bold"</span>,</span><br><span class="line">      vjust = <span class="number">1.5</span></span><br><span class="line">    )</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="image-clustering-using-K-means-clustering"><a href="#image-clustering-using-K-means-clustering" class="headerlink" title="image clustering using K-means clustering"></a>image clustering using K-means clustering</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">kClusters &lt;- <span class="number">3</span> </span><br><span class="line">kMeans &lt;- kmeans(imgRGB[,c(<span class="string">"R"</span>,<span class="string">"G"</span>,<span class="string">"B"</span>)], centers  = kCluster)</span><br><span class="line">kColours &lt;- rgb(kMeans$centers[kMeans$cluster,])</span><br><span class="line"></span><br><span class="line">ggplot(data = imgRGB, aes(x = x, y = y)) +</span><br><span class="line">  geom_point(colour = kColours) + </span><br><span class="line">  labs(title = paste(<span class="string">"k-Means Clustering of"</span>, kClusters, <span class="string">"Colours"</span>)) + </span><br><span class="line">  xlab(<span class="string">"x"</span>) + </span><br><span class="line">  ylab(<span class="string">"y"</span>) + </span><br><span class="line">  plotTheme()</span><br></pre></td></tr></table></figure>
+<p><img src="2018-07-24-10-52-38.png" alt=""></p>
+<h1 id="outcome"><a href="#outcome" class="headerlink" title="outcome"></a>outcome</h1><p><img src="2018-07-24-10-54-06.png" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/r_AI_ann_for_wine_data.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1872,171 +2040,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_deploy_ssh.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/hexo_deploy_ssh.html" itemprop="url">
-                  hexo deploy to github with ssh
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 09:27:02 / Modified: 09:29:59" itemprop="dateCreated datePublished" datetime="2018-07-23T09:27:02+10:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: hexo deploy github pages through ssh</p>
-<h1 id="configuration-for-deploying-to-github-with-ssh"><a href="#configuration-for-deploying-to-github-with-ssh" class="headerlink" title="configuration for deploying to github with ssh"></a>configuration for deploying to github with ssh</h1><p>change the configuration in <code>_config.yml</code> under the hexo root folder<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:kelfan/kelfan.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2084,7 +2087,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">44</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
