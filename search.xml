@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>LSTM simplest example in python</title>
+      <link href="/post/lstm_simplest_example.html"/>
+      <url>/post/lstm_simplest_example.html</url>
+      <content type="html"><![CDATA[<p>description: simplest example for LSTM ANN in python</p><h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> LSTM</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure><h1 id="initial-dataset"><a href="#initial-dataset" class="headerlink" title="initial dataset"></a>initial dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test_set = [<span class="number">0.001</span>, <span class="number">0.002</span>, <span class="number">0.003</span>, <span class="number">0.004</span>, <span class="number">0.005</span>, <span class="number">0.006</span>, <span class="number">0.007</span>, <span class="number">0.008</span>]</span><br><span class="line"></span><br><span class="line">dataset = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">1000</span>):</span><br><span class="line">    dataset.append(i / <span class="number">1000</span>)</span><br></pre></td></tr></table></figure><h1 id="transform-data-into-current-data-next-data"><a href="#transform-data-into-current-data-next-data" class="headerlink" title="transform data into [current_data, next_data]"></a>transform data into [current_data, next_data]</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dataX, dataY = [], []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(dataset) - <span class="number">2</span>):</span><br><span class="line">    dataX.append(dataset[i])</span><br><span class="line">    dataY.append(dataset[i + <span class="number">1</span>])</span><br><span class="line">dataX = numpy.array(dataX)</span><br><span class="line">dataY = numpy.array(dataY)</span><br></pre></td></tr></table></figure><h1 id="reshape-data"><a href="#reshape-data" class="headerlink" title="reshape data"></a>reshape data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataX = numpy.reshape(dataX, (dataX.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">1</span>))</span><br></pre></td></tr></table></figure><h1 id="create-and-fit-the-LSTM-network"><a href="#create-and-fit-the-LSTM-network" class="headerlink" title="create and fit the LSTM network"></a>create and fit the LSTM network</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(LSTM(<span class="number">4</span>, input_shape=(<span class="number">1</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(Dense(<span class="number">1</span>))</span><br><span class="line">model.compile(loss=<span class="string">'mean_squared_error'</span>, optimizer=<span class="string">'adam'</span>)</span><br><span class="line">model.fit(dataX, dataY, epochs=<span class="number">10</span>, batch_size=<span class="number">1</span>, verbose=<span class="number">2</span>)</span><br></pre></td></tr></table></figure><h1 id="make-predictions"><a href="#make-predictions" class="headerlink" title="make predictions"></a>make predictions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test = numpy.array(test_set)</span><br><span class="line">test = numpy.reshape(test, (test.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">trainPredict = model.predict(test)</span><br></pre></td></tr></table></figure><h1 id="plot-baseline-and-predictions"><a href="#plot-baseline-and-predictions" class="headerlink" title="plot baseline and predictions"></a>plot baseline and predictions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(test_set)</span><br><span class="line">plt.plot(trainPredict)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> machine learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> machine learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>r language to cluster iris dataset through k-means and hierarchical clustering</title>
       <link href="/post/r_AI_kmeans_hcluster.html"/>
       <url>/post/r_AI_kmeans_hcluster.html</url>
@@ -693,9 +718,9 @@
       
         <tags>
             
-            <tag> sql server </tag>
-            
             <tag> ssms </tag>
+            
+            <tag> sql server </tag>
             
             <tag> sql </tag>
             

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-24T01:25:28.919Z</updated>
+  <updated>2018-07-25T13:03:35.528Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LSTM simplest example in python</title>
+    <link href="http://search4fan.github.io/post/lstm_simplest_example.html"/>
+    <id>http://search4fan.github.io/post/lstm_simplest_example.html</id>
+    <published>2018-07-25T13:00:10.537Z</published>
+    <updated>2018-07-25T13:03:35.528Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: simplest example for LSTM ANN in python&lt;/p&gt;
+&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>r language to cluster iris dataset through k-means and hierarchical clustering</title>
@@ -560,35 +591,6 @@
         
           &lt;p&gt;description: change dataframe column into set and iterate&lt;/p&gt;
 &lt;h1 id=&quot;change-dataframe-column-into-a-set&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python iterate or loop each row of a dataframe</title>
-    <link href="http://search4fan.github.io/post/python_dataframe_loop_rows.html"/>
-    <id>http://search4fan.github.io/post/python_dataframe_loop_rows.html</id>
-    <published>2018-07-19T13:41:04.925Z</published>
-    <updated>2018-07-19T13:42:49.997Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python iterate a dataframe &lt;/p&gt;
-&lt;h1 id=&quot;loop-each-row-of-a-dataframe&quot;&gt;&lt;a href=&quot;#loop-each-row-of-a-dataframe&quot;
         
       
     

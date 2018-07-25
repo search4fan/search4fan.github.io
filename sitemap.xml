@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://search4fan.github.io/post/lstm_simplest_example.html</loc>
+    
+    <lastmod>2018-07-25T13:03:35.528Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://search4fan.github.io/post/r_AI_kmeans_hcluster.html</loc>
     
     <lastmod>2018-07-24T01:25:28.919Z</lastmod>

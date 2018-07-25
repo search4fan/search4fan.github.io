@@ -361,6 +361,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/lstm_simplest_example.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/lstm_simplest_example.html" itemprop="url">
+                  LSTM simplest example in python
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-25 23:00:10 / Modified: 23:03:35" itemprop="dateCreated datePublished" datetime="2018-07-25T23:00:10+10:00">2018-07-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: simplest example for LSTM ANN in python</p>
+<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> LSTM</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<h1 id="initial-dataset"><a href="#initial-dataset" class="headerlink" title="initial dataset"></a>initial dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test_set = [<span class="number">0.001</span>, <span class="number">0.002</span>, <span class="number">0.003</span>, <span class="number">0.004</span>, <span class="number">0.005</span>, <span class="number">0.006</span>, <span class="number">0.007</span>, <span class="number">0.008</span>]</span><br><span class="line"></span><br><span class="line">dataset = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">1000</span>):</span><br><span class="line">    dataset.append(i / <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="transform-data-into-current-data-next-data"><a href="#transform-data-into-current-data-next-data" class="headerlink" title="transform data into [current_data, next_data]"></a>transform data into [current_data, next_data]</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dataX, dataY = [], []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(dataset) - <span class="number">2</span>):</span><br><span class="line">    dataX.append(dataset[i])</span><br><span class="line">    dataY.append(dataset[i + <span class="number">1</span>])</span><br><span class="line">dataX = numpy.array(dataX)</span><br><span class="line">dataY = numpy.array(dataY)</span><br></pre></td></tr></table></figure>
+<h1 id="reshape-data"><a href="#reshape-data" class="headerlink" title="reshape data"></a>reshape data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataX = numpy.reshape(dataX, (dataX.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="create-and-fit-the-LSTM-network"><a href="#create-and-fit-the-LSTM-network" class="headerlink" title="create and fit the LSTM network"></a>create and fit the LSTM network</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(LSTM(<span class="number">4</span>, input_shape=(<span class="number">1</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(Dense(<span class="number">1</span>))</span><br><span class="line">model.compile(loss=<span class="string">'mean_squared_error'</span>, optimizer=<span class="string">'adam'</span>)</span><br><span class="line">model.fit(dataX, dataY, epochs=<span class="number">10</span>, batch_size=<span class="number">1</span>, verbose=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="make-predictions"><a href="#make-predictions" class="headerlink" title="make predictions"></a>make predictions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test = numpy.array(test_set)</span><br><span class="line">test = numpy.reshape(test, (test.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">trainPredict = model.predict(test)</span><br></pre></td></tr></table></figure>
+<h1 id="plot-baseline-and-predictions"><a href="#plot-baseline-and-predictions" class="headerlink" title="plot baseline and predictions"></a>plot baseline and predictions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(test_set)</span><br><span class="line">plt.plot(trainPredict)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/r_AI_kmeans_hcluster.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1888,171 +2057,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_forward_propagate.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_AI_forward_propagate.html" itemprop="url">
-                  python ANN forward Propagate
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 19:33:29 / Modified: 19:36:47" itemprop="dateCreated datePublished" datetime="2018-07-23T19:33:29+10:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Calculate-neuron-activation-for-an-input"><a href="#Calculate-neuron-activation-for-an-input" class="headerlink" title="Calculate neuron activation for an input"></a>Calculate neuron activation for an input</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">activate</span><span class="params">(weights, inputs)</span>:</span></span><br><span class="line">	activation = weights[<span class="number">-1</span>]</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(len(weights)<span class="number">-1</span>):</span><br><span class="line">		activation += weights[i] * inputs[i]</span><br><span class="line">	<span class="keyword">return</span> activation</span><br></pre></td></tr></table></figure>
-<h1 id="Transfer-neuron-activation"><a href="#Transfer-neuron-activation" class="headerlink" title="Transfer neuron activation"></a>Transfer neuron activation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> exp</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transfer</span><span class="params">(activation)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1.0</span> / (<span class="number">1.0</span> + exp(-activation))</span><br></pre></td></tr></table></figure>
-<h1 id="Forward-propagate-input-to-a-network-output"><a href="#Forward-propagate-input-to-a-network-output" class="headerlink" title="Forward propagate input to a network output"></a>Forward propagate input to a network output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_propagate</span><span class="params">(network, row)</span>:</span></span><br><span class="line">	inputs = row</span><br><span class="line">	<span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">		new_inputs = []</span><br><span class="line">		<span class="keyword">for</span> neuron <span class="keyword">in</span> layer:</span><br><span class="line">			activation = activate(neuron[<span class="string">'weights'</span>], inputs)</span><br><span class="line">			neuron[<span class="string">'output'</span>] = transfer(activation)</span><br><span class="line">			new_inputs.append(neuron[<span class="string">'output'</span>])</span><br><span class="line">		inputs = new_inputs</span><br><span class="line">	<span class="keyword">return</span> inputs</span><br></pre></td></tr></table></figure>
-<h1 id="test-forward-propagation"><a href="#test-forward-propagation" class="headerlink" title="test forward propagation"></a>test forward propagation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network = [[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;],</span><br><span class="line">		[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]]</span><br><span class="line">row = [<span class="number">1</span>, <span class="number">0</span>, <span class="keyword">None</span>]</span><br><span class="line">output = forward_propagate(network, row)</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure>
-<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0.6629970129852887</span>, <span class="number">0.7253160725279748</span>]</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2100,7 +2104,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
