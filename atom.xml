@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-25T13:03:35.528Z</updated>
+  <updated>2018-07-27T12:27:51.504Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>simplest example of self-build LSTM in python</title>
+    <link href="http://search4fan.github.io/post/python_AI_LSTM_self_build_example.html"/>
+    <id>http://search4fan.github.io/post/python_AI_LSTM_self_build_example.html</id>
+    <published>2018-07-27T12:20:46.115Z</published>
+    <updated>2018-07-27T12:27:51.504Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: simple lstm example tensorflow&lt;/p&gt;
+&lt;h1 id=&quot;compute-sigmoid-nonlinearity&quot;&gt;&lt;a href=&quot;#compute-sigmoid-nonlinearity&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LSTM simplest example in python</title>
     <link href="http://search4fan.github.io/post/lstm_simplest_example.html"/>
     <id>http://search4fan.github.io/post/lstm_simplest_example.html</id>
     <published>2018-07-25T13:00:10.537Z</published>
-    <updated>2018-07-25T13:03:35.528Z</updated>
+    <updated>2018-07-25T13:25:13.840Z</updated>
     
     <summary type="html">
     
@@ -573,35 +604,6 @@
     
     
       <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python change dataframe column into set and loop the set</title>
-    <link href="http://search4fan.github.io/post/python_dataframe_loop_set.html"/>
-    <id>http://search4fan.github.io/post/python_dataframe_loop_set.html</id>
-    <published>2018-07-20T09:59:47.417Z</published>
-    <updated>2018-07-20T10:06:03.740Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: change dataframe column into set and iterate&lt;/p&gt;
-&lt;h1 id=&quot;change-dataframe-column-into-a-set&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
     
   </entry>
   

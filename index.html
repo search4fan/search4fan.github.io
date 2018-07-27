@@ -361,6 +361,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_LSTM_self_build_example.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_LSTM_self_build_example.html" itemprop="url">
+                  simplest example of self-build LSTM in python
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-27 22:20:46 / Modified: 22:27:51" itemprop="dateCreated datePublished" datetime="2018-07-27T22:20:46+10:00">2018-07-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: simple lstm example tensorflow</p>
+<h1 id="compute-sigmoid-nonlinearity"><a href="#compute-sigmoid-nonlinearity" class="headerlink" title="compute sigmoid nonlinearity"></a>compute sigmoid nonlinearity</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoid</span><span class="params">(x)</span>:</span></span><br><span class="line">    output = <span class="number">1</span> / (<span class="number">1</span> + np.exp(-x))</span><br><span class="line">    <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
+<h1 id="convert-output-of-sigmoid-function-to-its-derivative"><a href="#convert-output-of-sigmoid-function-to-its-derivative" class="headerlink" title="convert output of sigmoid function to its derivative"></a>convert output of sigmoid function to its derivative</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoid_output_to_derivative</span><span class="params">(output)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> output * (<span class="number">1</span> - output)</span><br></pre></td></tr></table></figure>
+<h1 id="training-dataset-generation"><a href="#training-dataset-generation" class="headerlink" title="training dataset generation"></a>training dataset generation</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int2binary = &#123;&#125;</span><br><span class="line">binary_dim = <span class="number">8</span></span><br><span class="line"></span><br><span class="line">largest_number = pow(<span class="number">2</span>, binary_dim)</span><br><span class="line"><span class="comment"># generate binary table</span></span><br><span class="line">binary = np.unpackbits(</span><br><span class="line">    np.array([range(largest_number)], dtype=np.uint8).T, axis=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># int + binary array pair</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(largest_number):</span><br><span class="line">    int2binary[i] = binary[i]</span><br></pre></td></tr></table></figure>
+<h1 id="input-variables"><a href="#input-variables" class="headerlink" title="input variables"></a>input variables</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alpha = <span class="number">0.1</span></span><br><span class="line">input_dim = <span class="number">2</span></span><br><span class="line">hidden_dim = <span class="number">16</span></span><br><span class="line">output_dim = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h1 id="initialize-neural-network-weights"><a href="#initialize-neural-network-weights" class="headerlink" title="initialize neural network weights"></a>initialize neural network weights</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">synapse_0 = <span class="number">2</span> * np.random.random((input_dim, hidden_dim)) - <span class="number">1</span> </span><br><span class="line">synapse_1 = <span class="number">2</span> * np.random.random((hidden_dim, output_dim)) - <span class="number">1</span></span><br><span class="line">synapse_h = <span class="number">2</span> * np.random.random((hidden_dim, hidden_dim)) - <span class="number">1</span> </span><br><span class="line"></span><br><span class="line">synapse_0_update = np.zeros_like(synapse_0)</span><br><span class="line">synapse_1_update = np.zeros_like(synapse_1) </span><br><span class="line">synapse_h_update = np.zeros_like(synapse_h)</span><br></pre></td></tr></table></figure>
+<h1 id="training-logic-训练的次数"><a href="#training-logic-训练的次数" class="headerlink" title="training logic # 训练的次数"></a>training logic # 训练的次数</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">10000</span>):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># generate a simple addition problem (a + b = c)</span></span><br><span class="line">    a_int = np.random.randint(largest_number / <span class="number">2</span>)  <span class="comment"># int version</span></span><br><span class="line">    a = int2binary[a_int]  <span class="comment"># binary encoding like a: [0, 0, 0, 0, 1, 0, 0, 1]</span></span><br><span class="line"></span><br><span class="line">    b_int = np.random.randint(largest_number / <span class="number">2</span>)  <span class="comment"># int version</span></span><br><span class="line">    b = int2binary[b_int]  <span class="comment"># binary encoding like b: [0, 0, 1, 1, 1, 1, 0, 0]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># true answer</span></span><br><span class="line">    c_int = a_int + b_int</span><br><span class="line">    c = int2binary[c_int]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># where we'll store our best guess (binary encoded)</span></span><br><span class="line">    d = np.zeros_like(c)  <span class="comment"># like [0, 0, 0, 0, 0, 0, 0, 0]</span></span><br><span class="line"></span><br><span class="line">    overallError = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    layer_2_deltas = list()</span><br><span class="line">    layer_1_values = list()  <span class="comment"># restore hidden layer for next timestep</span></span><br><span class="line">    layer_1_values.append(np.zeros(hidden_dim))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># moving along the positions in the binary encoding</span></span><br><span class="line">    <span class="keyword">for</span> position <span class="keyword">in</span> range(binary_dim):</span><br><span class="line">        <span class="comment"># generate input and output</span></span><br><span class="line">        X = np.array([[a[binary_dim - position - <span class="number">1</span>], b[binary_dim - position - <span class="number">1</span>]]])  <span class="comment"># like [[1, 0]]</span></span><br><span class="line">        y = np.array([[c[binary_dim - position - <span class="number">1</span>]]]).T  <span class="comment"># [[1]] </span></span><br><span class="line">        <span class="comment"># hidden layer (input ~+ prev_hidden) </span></span><br><span class="line">        layer_1 = sigmoid(np.dot(X, synapse_0) + np.dot(layer_1_values[<span class="number">-1</span>], synapse_h))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># output layer (new binary representation) </span></span><br><span class="line">        layer_2 = sigmoid(np.dot(layer_1, synapse_1)) </span><br><span class="line">        <span class="comment"># calculate the difference and error</span></span><br><span class="line">        layer_2_error = y - layer_2</span><br><span class="line">        layer_2_deltas.append((layer_2_error) * sigmoid_output_to_derivative(layer_2)) </span><br><span class="line">        overallError += np.abs(layer_2_error[<span class="number">0</span>]) </span><br><span class="line">        <span class="comment"># decode estimate so we can print it out</span></span><br><span class="line">        d[binary_dim - position - <span class="number">1</span>] = np.round(layer_2[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># store hidden layer so we can use it in the next timestep</span></span><br><span class="line">        layer_1_values.append(copy.deepcopy(layer_1))</span><br><span class="line"></span><br><span class="line">    future_layer_1_delta = np.zeros(hidden_dim)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># update weights</span></span><br><span class="line">    <span class="keyword">for</span> position <span class="keyword">in</span> range(binary_dim):  </span><br><span class="line">        X = np.array([[a[position], b[position]]])</span><br><span class="line">        layer_1 = layer_1_values[-position - <span class="number">1</span>]</span><br><span class="line">        prev_layer_1 = layer_1_values[-position - <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># error at output layer</span></span><br><span class="line">        layer_2_delta = layer_2_deltas[-position - <span class="number">1</span>]</span><br><span class="line">        <span class="comment"># error at hidden layer</span></span><br><span class="line">        layer_1_delta = (future_layer_1_delta.dot(synapse_h.T) + \</span><br><span class="line">                         layer_2_delta.dot(synapse_1.T)) * sigmoid_output_to_derivative(layer_1)</span><br><span class="line">        <span class="comment"># let's update all our weights so we can try again</span></span><br><span class="line">        synapse_1_update += np.atleast_2d(layer_1).T.dot(layer_2_delta)</span><br><span class="line">        synapse_h_update += np.atleast_2d(prev_layer_1).T.dot(layer_1_delta)</span><br><span class="line">        synapse_0_update += X.T.dot(layer_1_delta)</span><br><span class="line"></span><br><span class="line">        future_layer_1_delta = layer_1_delta</span><br><span class="line"></span><br><span class="line">    synapse_0 += synapse_0_update * alpha</span><br><span class="line">    synapse_1 += synapse_1_update * alpha</span><br><span class="line">    synapse_h += synapse_h_update * alpha</span><br><span class="line"></span><br><span class="line">    synapse_0_update *= <span class="number">0</span></span><br><span class="line">    synapse_1_update *= <span class="number">0</span></span><br><span class="line">    synapse_h_update *= <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># print out progress</span></span><br><span class="line">    <span class="keyword">if</span> (j % <span class="number">1000</span> == <span class="number">0</span>):</span><br><span class="line">        print(<span class="string">"Error:"</span> + str(overallError))</span><br><span class="line">        print(<span class="string">"Pred:"</span> + str(d))</span><br><span class="line">        print(<span class="string">"True:"</span> + str(c))</span><br><span class="line">        out = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> index, x <span class="keyword">in</span> enumerate(reversed(d)):</span><br><span class="line">            out += x * pow(<span class="number">2</span>, index)</span><br><span class="line">        print(str(a_int) + <span class="string">" + "</span> + str(b_int) + <span class="string">" = "</span> + str(out))</span><br><span class="line">        print(<span class="string">"------------"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">Error:[<span class="number">3.45638663</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">9</span> + <span class="number">60</span> = <span class="number">1</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.63389116</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">28</span> + <span class="number">35</span> = <span class="number">255</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.91366595</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">116</span> + <span class="number">44</span> = <span class="number">72</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.72191702</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">4</span> + <span class="number">73</span> = <span class="number">223</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.5852713</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">71</span> + <span class="number">11</span> = <span class="number">8</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">2.53352328</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">81</span> + <span class="number">113</span> = <span class="number">162</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">0.57691441</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">81</span> + <span class="number">0</span> = <span class="number">81</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">1.42589952</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">4</span> + <span class="number">125</span> = <span class="number">129</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">0.47477457</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">39</span> + <span class="number">17</span> = <span class="number">56</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">0.21595037</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">11</span> + <span class="number">3</span> = <span class="number">14</span></span><br><span class="line">------------</span><br></pre></td></tr></table></figure>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p><a href="https://blog.csdn.net/zzukun/article/details/49968129" target="_blank" rel="noopener">https://blog.csdn.net/zzukun/article/details/49968129</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/lstm_simplest_example.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -407,7 +577,7 @@
                 
               
 
-              <time title="Created: 2018-07-25 23:00:10 / Modified: 23:03:35" itemprop="dateCreated datePublished" datetime="2018-07-25T23:00:10+10:00">2018-07-25</time>
+              <time title="Created: 2018-07-25 23:00:10 / Modified: 23:25:13" itemprop="dateCreated datePublished" datetime="2018-07-25T23:00:10+10:00">2018-07-25</time>
             
 
             
@@ -467,7 +637,7 @@
           
             <p>description: simplest example for LSTM ANN in python</p>
 <h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> LSTM</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
-<h1 id="initial-dataset"><a href="#initial-dataset" class="headerlink" title="initial dataset"></a>initial dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test_set = [<span class="number">0.001</span>, <span class="number">0.002</span>, <span class="number">0.003</span>, <span class="number">0.004</span>, <span class="number">0.005</span>, <span class="number">0.006</span>, <span class="number">0.007</span>, <span class="number">0.008</span>]</span><br><span class="line"></span><br><span class="line">dataset = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">1000</span>):</span><br><span class="line">    dataset.append(i / <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="initial-dataset"><a href="#initial-dataset" class="headerlink" title="initial dataset"></a>initial dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test_set = [<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>, <span class="number">0.4</span>, <span class="number">0.5</span>, <span class="number">0.6</span>, <span class="number">0.7</span>, <span class="number">0.8</span>]</span><br><span class="line">dataset = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">100</span>):</span><br><span class="line">    dataset.append(i%<span class="number">10</span>/<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
 <h1 id="transform-data-into-current-data-next-data"><a href="#transform-data-into-current-data-next-data" class="headerlink" title="transform data into [current_data, next_data]"></a>transform data into [current_data, next_data]</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dataX, dataY = [], []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(dataset) - <span class="number">2</span>):</span><br><span class="line">    dataX.append(dataset[i])</span><br><span class="line">    dataY.append(dataset[i + <span class="number">1</span>])</span><br><span class="line">dataX = numpy.array(dataX)</span><br><span class="line">dataY = numpy.array(dataY)</span><br></pre></td></tr></table></figure>
 <h1 id="reshape-data"><a href="#reshape-data" class="headerlink" title="reshape data"></a>reshape data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataX = numpy.reshape(dataX, (dataX.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 <h1 id="create-and-fit-the-LSTM-network"><a href="#create-and-fit-the-LSTM-network" class="headerlink" title="create and fit the LSTM network"></a>create and fit the LSTM network</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(LSTM(<span class="number">4</span>, input_shape=(<span class="number">1</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(Dense(<span class="number">1</span>))</span><br><span class="line">model.compile(loss=<span class="string">'mean_squared_error'</span>, optimizer=<span class="string">'adam'</span>)</span><br><span class="line">model.fit(dataX, dataY, epochs=<span class="number">10</span>, batch_size=<span class="number">1</span>, verbose=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
@@ -1887,176 +2057,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_AI_simple_MLP_in_Keras.html" itemprop="url">
-                  python create simple MLP in Keras
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 19:38:02 / Modified: 19:40:39" itemprop="dateCreated datePublished" datetime="2018-07-23T19:38:02+10:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: create simple MLP in Keras</p>
-<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">import</span> numpy</span><br></pre></td></tr></table></figure>
-<h1 id="fix-random-seed-for-reproducibility"><a href="#fix-random-seed-for-reproducibility" class="headerlink" title="fix random seed for reproducibility"></a>fix random seed for reproducibility</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.seed(<span class="number">7</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="load-pima-indians-dataset"><a href="#load-pima-indians-dataset" class="headerlink" title="load pima indians dataset"></a>load pima indians dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataset = numpy.loadtxt(<span class="string">"pima-indians-diabetes.csv"</span>, delimiter=<span class="string">","</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="split-into-input-X-and-output-Y-variables"><a href="#split-into-input-X-and-output-Y-variables" class="headerlink" title="split into input (X) and output (Y) variables"></a>split into input (X) and output (Y) variables</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = dataset[:,<span class="number">0</span>:<span class="number">8</span>]</span><br><span class="line">Y = dataset[:,<span class="number">8</span>]</span><br></pre></td></tr></table></figure>
-<h1 id="create-model"><a href="#create-model" class="headerlink" title="create model"></a>create model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(<span class="number">12</span>, input_dim=<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">1</span>, activation=<span class="string">'sigmoid'</span>))</span><br></pre></td></tr></table></figure>
-<h1 id="Compile-model"><a href="#Compile-model" class="headerlink" title="Compile model"></a>Compile model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.compile(loss=<span class="string">'binary_crossentropy'</span>, optimizer=<span class="string">'adam'</span>, metrics=[<span class="string">'accuracy'</span>])</span><br></pre></td></tr></table></figure>
-<h1 id="Fit-the-model"><a href="#Fit-the-model" class="headerlink" title="Fit the model"></a>Fit the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(X, Y, epochs=<span class="number">150</span>, batch_size=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="evaluate-the-model"><a href="#evaluate-the-model" class="headerlink" title="evaluate the model"></a>evaluate the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scores = model.evaluate(X, Y)</span><br><span class="line">print(<span class="string">"\n%s: %.2f%%"</span> % (model.metrics_names[<span class="number">1</span>], scores[<span class="number">1</span>]*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2104,7 +2104,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">46</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

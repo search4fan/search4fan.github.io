@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://search4fan.github.io/post/python_AI_LSTM_self_build_example.html</loc>
+    
+    <lastmod>2018-07-27T12:27:51.504Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://search4fan.github.io/post/lstm_simplest_example.html</loc>
     
-    <lastmod>2018-07-25T13:03:35.528Z</lastmod>
+    <lastmod>2018-07-25T13:25:13.840Z</lastmod>
     
   </url>
   
