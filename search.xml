@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>VBA Difference between .text .value .value2</title>
+      <link href="/post/vba_get_cell_text.html"/>
+      <url>/post/vba_get_cell_text.html</url>
+      <content type="html"><![CDATA[<p>description: difference between .text .value .value2 in Excel</p><h1 id="text"><a href="#text" class="headerlink" title=".text"></a>.text</h1><p>get the screen displayed text<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cells(<span class="number">1</span>,<span class="number">1</span>).<span class="keyword">text</span> </span><br><span class="line"><span class="comment">'get ##### if the cell width too short</span></span><br></pre></td></tr></table></figure></p><h1 id="value"><a href="#value" class="headerlink" title=".value"></a>.value</h1><p>can get formatted Currency and date<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cells(<span class="number">1</span>,<span class="number">1</span>).value </span><br><span class="line"><span class="comment">'get 13/02/2016 12:52 if it is a date</span></span><br></pre></td></tr></table></figure></p><h1 id="value2"><a href="#value2" class="headerlink" title=".value2"></a>.value2</h1><p>get underlying value (include empty, string, error, number and boolean)<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cells(<span class="number">1</span>,<span class="number">1</span>).value2 </span><br><span class="line"><span class="comment">'get 2342432.12 if it is a date</span></span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      <categories>
+          
+          <category> vba </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+            <tag> Excel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>simplest example of self-build LSTM in python</title>
       <link href="/post/python_AI_LSTM_self_build_example.html"/>
       <url>/post/python_AI_LSTM_self_build_example.html</url>
@@ -981,13 +1004,13 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> google </tag>
             
-            <tag> blog </tag>
+            <tag> hexo </tag>
             
             <tag> adsense </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
