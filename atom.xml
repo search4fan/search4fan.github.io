@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-30T12:04:05.289Z</updated>
+  <updated>2018-07-31T06:19:41.084Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python add new column to dataframe with same or different length with pandas</title>
+    <link href="http://search4fan.github.io/post/python_add_new_column.html"/>
+    <id>http://search4fan.github.io/post/python_add_new_column.html</id>
+    <published>2018-07-31T06:15:32.951Z</published>
+    <updated>2018-07-31T06:19:41.084Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: add new column to a dataframe&lt;/p&gt;
+&lt;h1 id=&quot;initial-data&quot;&gt;&lt;a href=&quot;#initial-data&quot; class=&quot;headerlink&quot; title=&quot;initial
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>VBA Difference between .text .value .value2</title>
@@ -68,9 +91,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -99,9 +122,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -254,9 +277,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -285,9 +308,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -316,9 +339,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -347,9 +370,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -378,9 +401,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -408,9 +431,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
@@ -439,9 +462,9 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
   </entry>
   
@@ -577,37 +600,6 @@
     
     
       <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python add one day to a date</title>
-    <link href="http://search4fan.github.io/post/python_datetime_add_day.html"/>
-    <id>http://search4fan.github.io/post/python_datetime_add_day.html</id>
-    <published>2018-07-20T10:29:22.435Z</published>
-    <updated>2018-07-20T10:30:58.486Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python add one day to a date &lt;/p&gt;
-&lt;h1 id=&quot;python-datetime-date-add-one-day&quot;&gt;&lt;a href=&quot;#python-datetime-date-add-one-day&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="date" scheme="http://search4fan.github.io/tags/date/"/>
-    
-      <category term="datetime" scheme="http://search4fan.github.io/tags/datetime/"/>
     
   </entry>
   
