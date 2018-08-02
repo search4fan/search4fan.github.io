@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-31T06:19:41.084Z</updated>
+  <updated>2018-08-02T11:07:21.732Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>get google suggested keywords in python</title>
+    <link href="http://search4fan.github.io/post/python_get_search_keywords_from_google.html"/>
+    <id>http://search4fan.github.io/post/python_get_search_keywords_from_google.html</id>
+    <published>2018-08-02T10:41:00.000Z</published>
+    <updated>2018-08-02T11:07:21.732Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: use python to get the keyword suggestion from google&lt;/p&gt;
+&lt;h1 id=&quot;codes-for-scraping-google’s-keywords&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="google" scheme="http://search4fan.github.io/tags/google/"/>
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python add new column to dataframe with same or different length with pandas</title>
@@ -573,33 +602,6 @@
     
     
       <category term="git" scheme="http://search4fan.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python print format string example</title>
-    <link href="http://search4fan.github.io/post/python_format_string_output.html"/>
-    <id>http://search4fan.github.io/post/python_format_string_output.html</id>
-    <published>2018-07-21T11:59:41.959Z</published>
-    <updated>2018-07-21T12:02:11.551Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python print format string example&lt;/p&gt;
-&lt;h1 id=&quot;python-Using-and-format-for-formating-print-output&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
   </entry>
   

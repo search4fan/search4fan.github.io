@@ -361,6 +361,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_get_search_keywords_from_google.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_get_search_keywords_from_google.html" itemprop="url">
+                  get google suggested keywords in python
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-02 20:41:00 / Modified: 21:07:21" itemprop="dateCreated datePublished" datetime="2018-08-02T20:41:00+10:00">2018-08-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: use python to get the keyword suggestion from google</p>
+<h1 id="codes-for-scraping-google’s-keywords"><a href="#codes-for-scraping-google’s-keywords" class="headerlink" title="codes for scraping google’s keywords"></a>codes for scraping google’s keywords</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests, json</span><br><span class="line">URL=<span class="string">"http://suggestqueries.google.com/complete/search?client=firefox&amp;q=google keywords"</span></span><br><span class="line">headers = &#123;<span class="string">'User-agent'</span>:<span class="string">'Mozilla/5.0'</span>&#125;</span><br><span class="line">response = requests.get(URL, headers=headers)</span><br><span class="line">result = json.loads(response.content.decode(<span class="string">'utf-8'</span>))</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<h1 id="result-for-crawling-google-keywords"><a href="#result-for-crawling-google-keywords" class="headerlink" title="result for crawling google keywords"></a>result for crawling google keywords</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'google keywords'</span>, [<span class="string">'google keywords'</span>, <span class="string">'google keywords planner'</span>, <span class="string">'google keywords free'</span>, <span class="string">'google keywords analytics'</span>, <span class="string">'google keywords planner tools'</span>, <span class="string">'google keywords finder'</span>, <span class="string">'google keywords youtube'</span>, <span class="string">'google keywords api'</span>, <span class="string">'google keywords search volume'</span>, <span class="string">'google keywords everywhere'</span>]]</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_add_new_column.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1812,175 +1976,6 @@
 <h1 id="define-the-checkpoint"><a href="#define-the-checkpoint" class="headerlink" title="define the checkpoint"></a>define the checkpoint</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">filepath=<span class="string">"weights-improvement-&#123;epoch:02d&#125;-&#123;loss:.4f&#125;.hdf5"</span></span><br><span class="line">checkpoint = ModelCheckpoint(filepath, monitor=<span class="string">'loss'</span>, verbose=<span class="number">1</span>, save_best_only=<span class="keyword">True</span>, mode=<span class="string">'min'</span>)</span><br><span class="line">callbacks_list = [checkpoint]</span><br></pre></td></tr></table></figure>
 <h1 id="fit-the-model"><a href="#fit-the-model" class="headerlink" title="fit the model"></a>fit the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(X, y, epochs=<span class="number">20</span>, batch_size=<span class="number">128</span>, callbacks=callbacks_list)</span><br></pre></td></tr></table></figure>
 
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_rl_example.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_AI_rl_example.html" itemprop="url">
-                  a example for RL in python
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 20:01:26 / Modified: 20:05:57" itemprop="dateCreated datePublished" datetime="2018-07-23T20:01:26+10:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: a small example for reinforcement learning in python</p>
-<h1 id="import-packages-and-set-seed"><a href="#import-packages-and-set-seed" class="headerlink" title="import packages and set seed"></a>import packages and set seed</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">2</span>)  <span class="comment"># reproducible</span></span><br></pre></td></tr></table></figure>
-<h1 id="initial-parameters"><a href="#initial-parameters" class="headerlink" title="initial parameters"></a>initial parameters</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NUMBER_OF_STATES = <span class="number">6</span>   <span class="comment"># the length of the 1 dimensional world </span></span><br><span class="line">ACTIONS = [<span class="string">'left'</span>, <span class="string">'right'</span>]     <span class="comment"># available actions</span></span><br><span class="line">EPSILON = <span class="number">0.9</span>   <span class="comment"># greedy police </span></span><br><span class="line">ALPHA = <span class="number">0.1</span>     <span class="comment"># learning rate</span></span><br><span class="line">GAMMA = <span class="number">0.9</span>    <span class="comment"># discount factor </span></span><br><span class="line">MAX_EPISODES = <span class="number">13</span>   <span class="comment"># maximum episodes</span></span><br><span class="line">FRESH_TIME = <span class="number">0.3</span> <span class="comment"># speed of actions</span></span><br></pre></td></tr></table></figure>
-<h1 id="build-q-table-for-actions"><a href="#build-q-table-for-actions" class="headerlink" title="build q-table for actions"></a>build q-table for actions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_q_table</span><span class="params">(number_of_states, actions)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    just build a table with zero in the beginning</span></span><br><span class="line"><span class="string">    :param number_of_states:</span></span><br><span class="line"><span class="string">    :param actions:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    table = pd.DataFrame(</span><br><span class="line">        np.zeros((number_of_states, len(actions))),     <span class="comment"># q_table initial values</span></span><br><span class="line">        columns=actions,    <span class="comment"># actions's name</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># print(table)    # show table</span></span><br><span class="line">    <span class="keyword">return</span> table</span><br></pre></td></tr></table></figure>
-<h1 id="method-to-take-action"><a href="#method-to-take-action" class="headerlink" title="method to take action"></a>method to take action</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">choose_action</span><span class="params">(state, q_table)</span>:</span></span><br><span class="line">    <span class="comment"># This is how to choose an action</span></span><br><span class="line">    state_actions = q_table.iloc[state, :]</span><br><span class="line">     <span class="comment"># np.random.uniform() is a random Number</span></span><br><span class="line">    <span class="keyword">if</span> (np.random.uniform() &gt; EPSILON) <span class="keyword">or</span> ((state_actions == <span class="number">0</span>).all()):  <span class="comment"># act non-greedy or state-action have no value</span></span><br><span class="line">        action_name = np.random.choice(ACTIONS)</span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># act greedy</span></span><br><span class="line">        action_name = state_actions.idxmax()    <span class="comment"># replace argmax to idxmax as argmax means a different function in newer version of pandas</span></span><br><span class="line">    <span class="keyword">return</span> action_name</span><br></pre></td></tr></table></figure>
-<h1 id="define-the-change-of-environment"><a href="#define-the-change-of-environment" class="headerlink" title="define the change of environment"></a>define the change of environment</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_env_feedback</span><span class="params">(Current_State, Current_Action)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    get the result based on the movement, right to +1, left to -1</span></span><br><span class="line"><span class="string">    :param Current_State:</span></span><br><span class="line"><span class="string">    :param Current_Action:</span></span><br><span class="line"><span class="string">    :return: response 1 means End while response 0 means pass</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># This is how agent will interact with the environment</span></span><br><span class="line">    <span class="keyword">if</span> Current_Action == <span class="string">'right'</span>:    <span class="comment"># move right</span></span><br><span class="line">        <span class="keyword">if</span> Current_State == NUMBER_OF_STATES - <span class="number">2</span>:   <span class="comment"># terminate</span></span><br><span class="line">            Next_State = <span class="string">'terminal'</span></span><br><span class="line">            Response = <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Next_State = Current_State + <span class="number">1</span></span><br><span class="line">            Response = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># move left</span></span><br><span class="line">        Response = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> Current_State == <span class="number">0</span>:</span><br><span class="line">            Next_State = Current_State  <span class="comment"># reach the wall</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Next_State = Current_State - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> Next_State, Response</span><br></pre></td></tr></table></figure>
-<h1 id="update-environment"><a href="#update-environment" class="headerlink" title="update environment"></a>update environment</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_env</span><span class="params">(state, episode, step_counter)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    print the screen to the movement</span></span><br><span class="line"><span class="string">    :param state:</span></span><br><span class="line"><span class="string">    :param episode:</span></span><br><span class="line"><span class="string">    :param step_counter:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># This is how environment be updated</span></span><br><span class="line">    env_list = [<span class="string">'-'</span>] * (NUMBER_OF_STATES - <span class="number">1</span>) + [<span class="string">'T'</span>]   <span class="comment"># '---------T' our environment</span></span><br><span class="line">    <span class="keyword">if</span> state == <span class="string">'terminal'</span>:</span><br><span class="line">        interaction = <span class="string">'Episode %s: total_steps = %s'</span> % (episode+<span class="number">1</span>, step_counter)</span><br><span class="line">        print(<span class="string">'\r&#123;&#125;'</span>.format(interaction), end=<span class="string">''</span>)</span><br><span class="line">        time.sleep(<span class="number">2</span>)</span><br><span class="line">        print(<span class="string">'\r                                '</span>, end=<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        env_list[state] = <span class="string">'o'</span></span><br><span class="line">        interaction = <span class="string">''</span>.join(env_list)</span><br><span class="line">        print(<span class="string">'\r&#123;&#125;'</span>.format(interaction), end=<span class="string">''</span>)</span><br><span class="line">        time.sleep(FRESH_TIME)</span><br></pre></td></tr></table></figure>
-<h1 id="main-part-of-RL-loop"><a href="#main-part-of-RL-loop" class="headerlink" title="main part of RL loop"></a>main part of RL loop</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rl</span><span class="params">()</span>:</span></span><br><span class="line">    q_table = build_q_table(NUMBER_OF_STATES, ACTIONS)</span><br><span class="line">    <span class="keyword">for</span> episode <span class="keyword">in</span> range(MAX_EPISODES):</span><br><span class="line">        step_counter = <span class="number">0</span></span><br><span class="line">        current_state = <span class="number">0</span></span><br><span class="line">        is_terminated = <span class="keyword">False</span></span><br><span class="line">        update_env(current_state, episode, step_counter)</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">not</span> is_terminated:</span><br><span class="line"></span><br><span class="line">            action = choose_action(current_state, q_table)</span><br><span class="line">            next_state, R = get_env_feedback(current_state, action)  <span class="comment"># take action &amp; get next state and reward</span></span><br><span class="line">            q_predict = q_table.loc[current_state, action]</span><br><span class="line">            <span class="keyword">if</span> next_state != <span class="string">'terminal'</span>:</span><br><span class="line">                q_target = R + GAMMA * q_table.iloc[next_state, :].max()   <span class="comment"># next state is not terminal</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                q_target = R     <span class="comment"># next state is terminal</span></span><br><span class="line">                is_terminated = <span class="keyword">True</span>    <span class="comment"># terminate this episode</span></span><br><span class="line"></span><br><span class="line">            q_table.loc[current_state, action] += ALPHA * (q_target - q_predict)  <span class="comment"># update</span></span><br><span class="line">            current_state = next_state  <span class="comment"># move to next state</span></span><br><span class="line"></span><br><span class="line">            update_env(current_state, episode, step_counter+<span class="number">1</span>)</span><br><span class="line">            step_counter += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> q_table</span><br></pre></td></tr></table></figure>
-<h1 id="run-the-application"><a href="#run-the-application" class="headerlink" title="run the application"></a>run the application</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    q_table = rl()</span><br><span class="line">    print(<span class="string">'\r\nQ-table:\n'</span>)</span><br><span class="line">    print(q_table)</span><br></pre></td></tr></table></figure>
           
         
       
