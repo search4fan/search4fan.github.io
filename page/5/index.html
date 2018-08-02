@@ -1895,7 +1895,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/vba_clear_sheet_content.html">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_get_search_keywords_from_google.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="killfun">
@@ -1914,8 +1914,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/post/vba_clear_sheet_content.html" itemprop="url">
-                  vba clear sheet content
+                <a class="post-title-link" href="/post/python_get_search_keywords_from_google.html" itemprop="url">
+                  get google suggested keywords in python
                 </a>
               
             
@@ -1941,7 +1941,7 @@
                 
               
 
-              <time title="Created: 2018-01-08 11:03:00" itemprop="dateCreated datePublished" datetime="2018-01-08T11:03:00+11:00">2018-01-08</time>
+              <time title="Created: 2018-02-08 20:41:00" itemprop="dateCreated datePublished" datetime="2018-02-08T20:41:00+11:00">2018-02-08</time>
             
 
             
@@ -1958,7 +1958,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-01 11:04:47" itemprop="dateModified" datetime="2018-08-01T11:04:47+10:00">2018-08-01</time>
+                <time title="Modified: 2018-08-02 20:44:35" itemprop="dateModified" datetime="2018-08-02T20:44:35+10:00">2018-08-02</time>
               
             
           </span>
@@ -1975,7 +1975,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vba/" itemprop="url" rel="index"><span itemprop="name">vba</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
 
                 
                 
@@ -2011,8 +2011,9 @@
       
         
           
-            <p>description: vba clear sheet content </p>
-<h1 id="clear-sheet-content"><a href="#clear-sheet-content" class="headerlink" title="clear sheet content"></a>clear sheet content</h1><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sheets(<span class="string">"sheetname"</span>).Cells.ClearContents</span><br></pre></td></tr></table></figure>
+            <p>description: use python to get the keyword suggestion from google</p>
+<h1 id="codes-for-scraping-google’s-keywords"><a href="#codes-for-scraping-google’s-keywords" class="headerlink" title="codes for scraping google’s keywords"></a>codes for scraping google’s keywords</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests, json</span><br><span class="line">URL=<span class="string">"http://suggestqueries.google.com/complete/search?client=firefox&amp;q=google keywords"</span></span><br><span class="line">headers = &#123;<span class="string">'User-agent'</span>:<span class="string">'Mozilla/5.0'</span>&#125;</span><br><span class="line">response = requests.get(URL, headers=headers)</span><br><span class="line">result = json.loads(response.content.decode(<span class="string">'utf-8'</span>))</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<h1 id="result-for-crawling-google-keywords"><a href="#result-for-crawling-google-keywords" class="headerlink" title="result for crawling google keywords"></a>result for crawling google keywords</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'google keywords'</span>, [<span class="string">'google keywords'</span>, <span class="string">'google keywords planner'</span>, <span class="string">'google keywords free'</span>, <span class="string">'google keywords analytics'</span>, <span class="string">'google keywords planner tools'</span>, <span class="string">'google keywords finder'</span>, <span class="string">'google keywords youtube'</span>, <span class="string">'google keywords api'</span>, <span class="string">'google keywords search volume'</span>, <span class="string">'google keywords everywhere'</span>]]</span><br></pre></td></tr></table></figure>
 
           
         
@@ -2059,7 +2060,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -2102,7 +2103,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">50</span>
+                    <span class="site-state-item-count">51</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
