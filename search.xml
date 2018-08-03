@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>markdown internal link or reference</title>
+      <link href="/post/markdown_internal_link.html"/>
+      <url>/post/markdown_internal_link.html</url>
+      <content type="html"><![CDATA[<p>description: markdown internal page links</p><h1 id="add-anchor-in-the-place-to-jump"><a href="#add-anchor-in-the-place-to-jump" class="headerlink" title="add anchor in the place to jump"></a>add anchor in the place to jump</h1><figure class="highlight m"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id<span class="built_in">=</span><span class="string">"search4fan"</span>&gt;About Search4fan&lt;/span&gt;</span><br></pre></td></tr></table></figure><h1 id="use-the-following-syntax-to-jump-to-the-anchor"><a href="#use-the-following-syntax-to-jump-to-the-anchor" class="headerlink" title="use the following syntax to jump to the anchor"></a>use the following syntax to jump to the anchor</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">About</span>](<span class="link">#search4fan</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>get google suggested keywords in python</title>
       <link href="/post/python_get_search_keywords_from_google.html"/>
       <url>/post/python_get_search_keywords_from_google.html</url>
@@ -1040,9 +1055,9 @@
             
             <tag> hexo </tag>
             
-            <tag> adsense </tag>
-            
             <tag> blog </tag>
+            
+            <tag> adsense </tag>
             
         </tags>
       

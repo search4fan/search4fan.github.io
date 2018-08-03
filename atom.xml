@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-02T11:07:21.732Z</updated>
+  <updated>2018-08-03T01:21:43.550Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>markdown internal link or reference</title>
+    <link href="http://search4fan.github.io/post/markdown_internal_link.html"/>
+    <id>http://search4fan.github.io/post/markdown_internal_link.html</id>
+    <published>2018-08-03T01:18:00.000Z</published>
+    <updated>2018-08-03T01:21:43.550Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: markdown internal page links&lt;/p&gt;
+&lt;h1 id=&quot;add-anchor-in-the-place-to-jump&quot;&gt;&lt;a href=&quot;#add-anchor-in-the-place-to-jump&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="markdown" scheme="http://search4fan.github.io/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>get google suggested keywords in python</title>
@@ -566,33 +591,6 @@
         
           &lt;p&gt;description: tortoisegit ssh key windows&lt;/p&gt;
 &lt;h1 id=&quot;tortoisegit-ssh-key-setup&quot;&gt;&lt;a href=&quot;#tortoisegit-ssh-key-setup&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="git" scheme="http://search4fan.github.io/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://search4fan.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git Switch between ssh and HTTPS</title>
-    <link href="http://search4fan.github.io/post/git_switch_https_ssh.html"/>
-    <id>http://search4fan.github.io/post/git_switch_https_ssh.html</id>
-    <published>2018-07-22T04:55:55.881Z</published>
-    <updated>2018-07-22T05:16:04.500Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: git change remote from https to ssh&lt;/p&gt;
-&lt;h1 id=&quot;change-from-HTTPS-into-ssh&quot;&gt;&lt;a href=&quot;#change-from-HTTPS-into-ssh&quot;
         
       
     
