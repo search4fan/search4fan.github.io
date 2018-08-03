@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-03T01:21:43.550Z</updated>
+  <updated>2018-08-03T01:29:43.525Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://search4fan.github.io/post/markdown_internal_link.html"/>
     <id>http://search4fan.github.io/post/markdown_internal_link.html</id>
     <published>2018-08-03T01:18:00.000Z</published>
-    <updated>2018-08-03T01:21:43.550Z</updated>
+    <updated>2018-08-03T01:29:43.525Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
       
     
     </summary>
+    
+      <category term="markdown" scheme="http://search4fan.github.io/categories/markdown/"/>
     
     
       <category term="markdown" scheme="http://search4fan.github.io/tags/markdown/"/>
