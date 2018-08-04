@@ -361,6 +361,342 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/r_AI_ann_for_wine_data.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/r_AI_ann_for_wine_data.html" itemprop="url">
+                  R language to build ANN network for wine data
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-23 20:57:04 / Modified: 21:06:24" itemprop="dateCreated datePublished" datetime="2018-07-23T20:57:04+10:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: build ANN network from wine data in r language</p>
+<h1 id="read-table-data"><a href="#read-table-data" class="headerlink" title="read table data"></a>read table data</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wine &lt;- read.table(<span class="string">"https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data"</span>,</span><br><span class="line">    sep=<span class="string">","</span>, <span class="comment"># 分隔符为 , comma</span></span><br><span class="line">    col.names=c(<span class="string">"Type"</span>,<span class="string">"Alcohol"</span>,<span class="string">"Malic"</span>,<span class="string">"Ash"</span>,<span class="string">"Alcalinity"</span>,<span class="string">"Magnesium"</span>,<span class="string">"Phenols"</span>,<span class="string">"Flavanoids"</span>,<span class="string">"Nonflavanoids"</span>,<span class="string">"Proanthocyanins"</span>,<span class="string">"Color"</span>,<span class="string">"Hue"</span>,<span class="string">"Dilution"</span>,<span class="string">"Proline"</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h1 id="preview-data"><a href="#preview-data" class="headerlink" title="preview data"></a>preview data</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">print(wine)</span><br><span class="line"><span class="comment">#     Type Alcohol Malic  Ash Alcalinity Magnesium Phenols Flavanoids</span></span><br><span class="line"><span class="comment"># 1      1   14.23  1.71 2.43       15.6       127    2.80       3.06</span></span><br><span class="line"><span class="comment"># 2      1   13.20  1.78 2.14       11.2       100    2.65       2.76</span></span><br><span class="line"><span class="comment"># 3      1   13.16  2.36 2.67       18.6       101    2.80       3.24</span></span><br><span class="line"><span class="comment"># 4      1   14.37  1.95 2.50       16.8       113    3.85       3.49</span></span><br><span class="line"><span class="comment"># 5      1   13.24  2.59 2.87       21.0       118    2.80       2.69</span></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"></span><br><span class="line">print(nrow(wine))</span><br><span class="line"><span class="comment"># [1] 178</span></span><br><span class="line"></span><br><span class="line">print(ncol(wine))</span><br><span class="line"><span class="comment"># [1] 14</span></span><br><span class="line"></span><br><span class="line">print(summary(wine))</span><br><span class="line"><span class="comment">#       Type          Alcohol          Malic            Ash       </span></span><br><span class="line"><span class="comment">#  Min.   :1.000   Min.   :11.03   Min.   :0.740   Min.   :1.360  </span></span><br><span class="line"><span class="comment">#  1st Qu.:1.000   1st Qu.:12.36   1st Qu.:1.603   1st Qu.:2.210  </span></span><br><span class="line"><span class="comment">#  Median :2.000   Median :13.05   Median :1.865   Median :2.360  </span></span><br><span class="line"><span class="comment">#  Mean   :1.938   Mean   :13.00   Mean   :2.336   Mean   :2.367 </span></span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<h1 id="attribute-to-categorical-data"><a href="#attribute-to-categorical-data" class="headerlink" title="attribute to categorical data"></a>attribute to categorical data</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wine$Type=factor(wine$Type)</span><br><span class="line">print(summary(wine))</span><br><span class="line"><span class="comment"># Type      Alcohol          Malic            Ash          Alcalinity   </span></span><br><span class="line"><span class="comment">#  1:59   Min.   :11.03   Min.   :0.740   Min.   :1.360   Min.   :10.60  </span></span><br><span class="line"><span class="comment">#  2:71   1st Qu.:12.36   1st Qu.:1.603   1st Qu.:2.210   1st Qu.:17.20  </span></span><br><span class="line"><span class="comment">#  3:48   Median :13.05   Median :1.865   Median :2.360   Median :19.50  </span></span><br><span class="line"><span class="comment">#         Mean   :13.00   Mean   :2.336   Mean   :2.367   Mean   :19.49  </span></span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<h1 id="data-pre-processing-and-transformation"><a href="#data-pre-processing-and-transformation" class="headerlink" title="data pre-processing and transformation"></a>data pre-processing and transformation</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wine.scale &lt;- cbind(wine[<span class="number">1</span>], scale(wine[-<span class="number">1</span>]))</span><br><span class="line">print(summary(wine.scale))</span><br><span class="line">apply(wine.scale[-<span class="number">1</span>], <span class="number">2</span>, sd)</span><br><span class="line"><span class="comment">#  Type      Alcohol             Malic              Ash          </span></span><br><span class="line"><span class="comment">#  1:59   Min.   :-2.42739   Min.   :-1.4290   Min.   :-3.66881  </span></span><br><span class="line"><span class="comment">#  2:71   1st Qu.:-0.78603   1st Qu.:-0.6569   1st Qu.:-0.57051  </span></span><br><span class="line"><span class="comment">#  3:48   Median : 0.06083   Median :-0.4219   Median :-0.02375  </span></span><br><span class="line"><span class="comment">#         Mean   : 0.00000   Mean   : 0.0000   Mean   : 0.00000  </span></span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<h1 id="partitioning-the-data-into-training-and-test-data"><a href="#partitioning-the-data-into-training-and-test-data" class="headerlink" title="partitioning the data into training and test data"></a>partitioning the data into training and test data</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data.size &lt;- nrow(wine.scale) </span><br><span class="line">set.seed(<span class="number">1111</span>) </span><br><span class="line">samp &lt;- c(sample(<span class="number">1</span>:data.size, data.size*<span class="number">0.7</span>))</span><br><span class="line">data.tr &lt;- wine.scale[samp, ]</span><br><span class="line">data.test &lt;- wine.scale[-samp, ]</span><br><span class="line"></span><br><span class="line">summary(data.tr)</span><br><span class="line">summary(data.test)</span><br></pre></td></tr></table></figure>
+<h1 id="data-mining-using-a-neural-Network-classification-technique"><a href="#data-mining-using-a-neural-Network-classification-technique" class="headerlink" title="data mining using a neural Network classification technique"></a>data mining using a neural Network classification technique</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(nnet)</span><br><span class="line">model.nnet &lt;- nnet(Type ~ ., </span><br><span class="line">                   data = data.tr,</span><br><span class="line">                   size=<span class="number">2</span>, <span class="comment"># 2 level </span></span><br><span class="line">                   decay=<span class="number">5e-04</span>,</span><br><span class="line">                   maxit=<span class="number">200</span>) <span class="comment"># stopped after 200 iterations</span></span><br><span class="line">summary(model.nnet)</span><br><span class="line"><span class="comment"># initial  value 164.152084 </span></span><br><span class="line"><span class="comment"># iter  10 value 7.066118</span></span><br><span class="line"><span class="comment"># iter  20 value 1.286566</span></span><br><span class="line"><span class="comment"># iter  30 value 0.542334</span></span><br><span class="line"><span class="comment"># iter  40 value 0.444873</span></span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<h1 id="pattern-model-evaluation"><a href="#pattern-model-evaluation" class="headerlink" title="pattern (model) evaluation"></a>pattern (model) evaluation</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">predicted &lt;- predict(model.nnet,</span><br><span class="line">                     data.test,</span><br><span class="line">                     type=<span class="string">"class"</span>)</span><br><span class="line">predicted</span><br><span class="line"></span><br><span class="line">actual &lt;- data.test$Type</span><br><span class="line">model.confusion.matrix &lt;- table(actual, predicted)</span><br><span class="line">model.confusion.matrix </span><br><span class="line"></span><br><span class="line">confusion.matrix.rate = prop.table(model.confusion.matrix) * <span class="number">100</span></span><br><span class="line">round(confusion.matrix.rate, digit=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">diag.index &lt;- cbind(<span class="number">1</span>:<span class="number">3</span>, <span class="number">1</span>:<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">error.overall = sum(confusion.matrix.rate) - sum(confusion.matrix.rate[diag.index])</span><br><span class="line">paste(<span class="string">"Error Rate ="</span>, round(error.overall, digit=<span class="number">2</span>), <span class="string">"%"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="Data-mining-Task-using-a-nearest-neighbour-approach"><a href="#Data-mining-Task-using-a-nearest-neighbour-approach" class="headerlink" title="Data mining Task using a nearest neighbour approach"></a>Data mining Task using a nearest neighbour approach</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">P1=c(<span class="number">1</span>,<span class="number">3</span>) </span><br><span class="line">P2=c(<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line">P3=c(<span class="number">6</span>,<span class="number">6</span>)</span><br><span class="line"></span><br><span class="line">N1=c(<span class="number">2</span>,<span class="number">1</span>) </span><br><span class="line">N2=c(<span class="number">5</span>,<span class="number">3</span>)</span><br><span class="line">N3=c(<span class="number">6</span>,<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line">train=rbind(P1,P2,P3,N1,N2,N3) <span class="comment"># build the classification matrix </span></span><br><span class="line">plot(train)</span><br><span class="line"></span><br><span class="line">class=factor(c(rep(<span class="string">"lover"</span>,<span class="number">3</span>),rep(<span class="string">"hater"</span>,<span class="number">3</span>))) <span class="comment"># [1] lover lover lover hater hater hater</span></span><br><span class="line">class</span><br><span class="line"></span><br><span class="line">test=c(<span class="number">1</span>,<span class="number">4</span>) <span class="comment"># testing data to be classified </span></span><br><span class="line">test <span class="comment"># 1 4 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">library</span>(class)</span><br><span class="line">summary(knn(train, test, class, k=<span class="number">3</span>)) <span class="comment"># hater 0 lover 1</span></span><br><span class="line"></span><br><span class="line">test=c(<span class="number">6</span>,<span class="number">4</span>)</span><br><span class="line">summary(knn(train, test, class, k=<span class="number">3</span>)) <span class="comment"># hater 1 lover 0</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/r_build_DecisionTree.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/r_build_DecisionTree.html" itemprop="url">
+                  R language to build Decision Tree for wine dataset
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-23 20:23:53 / Modified: 20:27:51" itemprop="dateCreated datePublished" datetime="2018-07-23T20:23:53+10:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: build Decision Tree for wine dataset in R language </p>
+<h1 id="read-data-From-File"><a href="#read-data-From-File" class="headerlink" title="read data From File"></a>read data From File</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wine&lt;-read.table(<span class="string">"E:\\wine.data"</span>,</span><br><span class="line">                 sep=<span class="string">","</span>,</span><br><span class="line">                 col.names = c(<span class="string">"Type"</span>,<span class="string">"Alcohol"</span>,<span class="string">"Malic"</span>,<span class="string">"Ash"</span>,<span class="string">"Alcalinity"</span>,<span class="string">"Magnesium"</span>, <span class="string">"Phenols"</span>,<span class="string">"Flavanoids"</span>, <span class="string">"Nonflavanoids"</span>, <span class="string">"Proanthcyanins"</span>, <span class="string">"Color"</span>, <span class="string">"Hue"</span>, <span class="string">"Dilution"</span>, <span class="string">"Proline"</span>))</span><br><span class="line">wine$Type=factor(wine$Type)</span><br></pre></td></tr></table></figure>
+<h1 id="Data-mining-using-J48-Decision-Tree-classifier"><a href="#Data-mining-using-J48-Decision-Tree-classifier" class="headerlink" title="Data mining using J48 Decision Tree classifier"></a>Data mining using J48 Decision Tree classifier</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wine.scale &lt;- cbind(wine[<span class="number">1</span>], scale(wine[-<span class="number">1</span>])) </span><br><span class="line">data.size &lt;- nrow(wine.scale)</span><br><span class="line">set.seed(<span class="number">1111</span>)</span><br><span class="line">samp &lt;- c(sample(<span class="number">1</span>:data.size, data.size * <span class="number">0.7</span>))</span><br><span class="line">data.tr &lt;- wine.scale[samp, ]</span><br><span class="line">data.test &lt;- wine.scale[-samp, ]</span><br></pre></td></tr></table></figure>
+<h1 id="J48-Model"><a href="#J48-Model" class="headerlink" title="J48 Model"></a>J48 Model</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wine_dt=J48(Type~.,data=data.tr)</span><br><span class="line">wine_dt</span><br><span class="line">prediction_dt = predict(wine_dt, data.test[,<span class="number">2</span>:<span class="number">14</span>]) </span><br><span class="line">prediction_dt</span><br></pre></td></tr></table></figure>
+<h1 id="rpart-get-tree-rules"><a href="#rpart-get-tree-rules" class="headerlink" title="rpart get tree rules"></a>rpart get tree rules</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(rpart)</span><br><span class="line"></span><br><span class="line">res = rpart(Type ~., data = data.tr)</span><br><span class="line">res</span><br><span class="line"></span><br><span class="line">terminal_nodes = rownames(res$frame)[res$frame$var ==<span class="string">"&lt;leaf&gt;"</span>]</span><br><span class="line">path.rpart(res ,nodes=terminal_nodes)</span><br><span class="line">rules = path.rpart(res ,nodes=terminal_nodes)</span><br><span class="line">listed_rules = unlist(rules)</span><br><span class="line">sapply(rules,<span class="string">"["</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">frm &lt;- res$frame</span><br><span class="line">names &lt;- row.names(frm)</span><br><span class="line"></span><br><span class="line">prediction_dt = predict(res, data.test[,<span class="number">2</span>:<span class="number">14</span>], type=<span class="string">"matrix"</span>)</span><br><span class="line">prediction_dt</span><br></pre></td></tr></table></figure>
+<h1 id="party"><a href="#party" class="headerlink" title="party"></a>party</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">update.packages()</span><br><span class="line">Sys.setenv(JAVA_HOME = <span class="string">"D:\\Program Files\\Java\\jdk1.8.0_151"</span>)</span><br><span class="line">install.packages(<span class="string">"zoo"</span>)</span><br><span class="line">install.packages(<span class="string">"party"</span>)</span><br><span class="line">install.packages(<span class="string">"sandwich"</span>)</span><br><span class="line"><span class="keyword">library</span>(party)</span><br><span class="line">mparty = party(Type ~., data = data.tr)</span><br><span class="line">mparty</span><br></pre></td></tr></table></figure>
+<h1 id="party-ctree"><a href="#party-ctree" class="headerlink" title="party ctree()"></a>party ctree()</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p_ctree &lt;- ctree(Type ~., data=data.tr)</span><br><span class="line">ctree_class &lt;- predict(p_ctree,data.test[,<span class="number">2</span>:<span class="number">14</span>], type=<span class="string">"response"</span>)</span><br><span class="line">test_ctree &lt;- predict(p_ctree,data.test[,<span class="number">2</span>:<span class="number">14</span>], type=<span class="string">"node"</span>)</span><br><span class="line">test_ctree</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_LSTM_for_txt.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1701,347 +2037,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_extract_columns.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_extract_columns.html" itemprop="url">
-                  python extract columns from dataframe
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-22 21:16:10 / Modified: 21:19:47" itemprop="dateCreated datePublished" datetime="2018-07-22T21:16:10+10:00">2018-07-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: pandas select columns by name</p>
-<h1 id="python-select-columns-from-dataframe-by-name"><a href="#python-select-columns-from-dataframe-by-name" class="headerlink" title="python select columns from dataframe by name"></a>python select columns from dataframe by name</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas </span><br><span class="line">d = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]], columns=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>])</span><br><span class="line"><span class="comment"># d</span></span><br><span class="line"><span class="comment">#    a  b  c  d</span></span><br><span class="line"><span class="comment"># 0  1  2  3  4</span></span><br><span class="line">d2 = d[[<span class="string">'b'</span>,<span class="string">'c'</span>]]</span><br><span class="line"><span class="comment"># d2</span></span><br><span class="line"><span class="comment">#    b  c</span></span><br><span class="line"><span class="comment"># 0  2  3</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/git_set_ssh_for_tortoisegit.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/git_set_ssh_for_tortoisegit.html" itemprop="url">
-                  TortoiseGit set ssh for github
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-22 15:14:52 / Modified: 15:21:27" itemprop="dateCreated datePublished" datetime="2018-07-22T15:14:52+10:00">2018-07-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: tortoisegit ssh key windows</p>
-<h1 id="tortoisegit-ssh-key-setup"><a href="#tortoisegit-ssh-key-setup" class="headerlink" title="tortoisegit ssh key setup"></a>tortoisegit ssh key setup</h1><ol>
-<li>open <code>Puttygen</code><ol>
-<li>click “Generate”</li>
-<li>need move mouse to Generate key </li>
-<li>save public key and private key</li>
-</ol>
-</li>
-<li>go to repository and right click -&gt; tortoiseGit -&gt; settings<ol>
-<li>remote -&gt; origin -&gt; puttyKey -&gt; add the .ppk file</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2089,7 +2084,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">52</span>
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

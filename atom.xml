@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-03T01:29:43.525Z</updated>
+  <updated>2018-08-04T09:37:09.664Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python plot sine curve or wave</title>
+    <link href="http://search4fan.github.io/post/python_draw_sin_curve.html"/>
+    <id>http://search4fan.github.io/post/python_draw_sin_curve.html</id>
+    <published>2018-08-04T09:34:00.000Z</published>
+    <updated>2018-08-04T09:37:09.664Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python code to plot sine wave&lt;/p&gt;
+&lt;h1 id=&quot;draw-or-plot-sine-curve-code&quot;&gt;&lt;a href=&quot;#draw-or-plot-sine-curve-code&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python remove or delete last column of a dataframe</title>
+    <link href="http://search4fan.github.io/post/python_remove_last_column.html"/>
+    <id>http://search4fan.github.io/post/python_remove_last_column.html</id>
+    <published>2018-08-03T02:08:00.000Z</published>
+    <updated>2018-08-03T02:12:02.205Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python remove last column&lt;/p&gt;
+&lt;h1 id=&quot;init-data&quot;&gt;&lt;a href=&quot;#init-data&quot; class=&quot;headerlink&quot; title=&quot;init data&quot;&gt;&lt;/a&gt;init
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>markdown internal link or reference</title>
@@ -548,60 +602,6 @@
     
     
       <category term="hexo" scheme="http://search4fan.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python extract columns from dataframe</title>
-    <link href="http://search4fan.github.io/post/python_extract_columns.html"/>
-    <id>http://search4fan.github.io/post/python_extract_columns.html</id>
-    <published>2018-07-22T11:16:10.569Z</published>
-    <updated>2018-07-22T11:19:47.398Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: pandas select columns by name&lt;/p&gt;
-&lt;h1 id=&quot;python-select-columns-from-dataframe-by-name&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TortoiseGit set ssh for github</title>
-    <link href="http://search4fan.github.io/post/git_set_ssh_for_tortoisegit.html"/>
-    <id>http://search4fan.github.io/post/git_set_ssh_for_tortoisegit.html</id>
-    <published>2018-07-22T05:14:52.487Z</published>
-    <updated>2018-07-22T05:21:27.988Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: tortoisegit ssh key windows&lt;/p&gt;
-&lt;h1 id=&quot;tortoisegit-ssh-key-setup&quot;&gt;&lt;a href=&quot;#tortoisegit-ssh-key-setup&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="git" scheme="http://search4fan.github.io/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://search4fan.github.io/tags/git/"/>
     
   </entry>
   
