@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>code for wrap java debugger</title>
+      <link href="/post/java_wrap_debugger.html"/>
+      <url>/post/java_wrap_debugger.html</url>
+      <content type="html"><![CDATA[<p>description:</p><h1 id="code-for-wrap-java-debugger"><a href="#code-for-wrap-java-debugger" class="headerlink" title="code for wrap java debugger"></a>code for wrap java debugger</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">e</span><span class="params">(String tag, String msg)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (LOG_LEVEL &gt; ERROR)</span><br><span class="line">        Log.e(tag, msg)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">w</span><span class="params">(String tsg, String msg)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (LOG_LEVEL &gt; ERROR)</span><br><span class="line">        Log.w(tag, msg)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">i</span><span class="params">(String tsg, String msg)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (LOG_LEVEL &gt; ERROR)</span><br><span class="line">        Log.i(tag, msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>python plot sine curve or wave</title>
       <link href="/post/python_draw_sin_curve.html"/>
       <url>/post/python_draw_sin_curve.html</url>
@@ -861,9 +882,9 @@
       
         <tags>
             
-            <tag> ssms </tag>
-            
             <tag> sql server </tag>
+            
+            <tag> ssms </tag>
             
             <tag> sql </tag>
             
@@ -1088,7 +1109,7 @@
       <title>add google adsense into hexo blog in next theme</title>
       <link href="/post/hexo_next_google_adsense.html"/>
       <url>/post/hexo_next_google_adsense.html</url>
-      <content type="html"><![CDATA[<h1 id="build-a-new-adsense-template-under-next-theme-in-layout-custom"><a href="#build-a-new-adsense-template-under-next-theme-in-layout-custom" class="headerlink" title="build a new adsense template under next theme in layout/_custom"></a>build a new adsense template under <code>next</code> theme in <code>layout/_custom</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/layout/_custom/google_adsense.ejs</span><br></pre></td></tr></table></figure><h1 id="put-the-google-adsense-codes-into-google-adsense-ejs"><a href="#put-the-google-adsense-codes-into-google-adsense-ejs" class="headerlink" title="put the google adsense codes into google_adsense.ejs"></a>put the google adsense codes into <code>google_adsense.ejs</code></h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  (adsbygoogle = window.adsbygoogle || []).push(&#123;</span></span><br><span class="line"><span class="undefined">    google_ad_client: "ca-pub-5817381835091099",</span></span><br><span class="line"><span class="undefined">    enable_page_level_ads: true</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="add-following-codes-in-layout-swig-under-theme-folder"><a href="#add-following-codes-in-layout-swig-under-theme-folder" class="headerlink" title="add following codes in _layout.swig under theme folder"></a>add following codes in <code>_layout.swig</code> under theme folder</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google AdSense start --&gt;</span></span><br><span class="line">&#123;% include '_custom/google_adsense.ejs' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Google AdSense end --&gt;</span></span><br></pre></td></tr></table></figure><h1 id="generate-web-page-and-check-source-file-to-see-the-google-code-in-there"><a href="#generate-web-page-and-check-source-file-to-see-the-google-code-in-there" class="headerlink" title="generate web page and check source file to see the google code in there"></a>generate web page and check source file to see the google code in there</h1><hr><p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">searchfor.space</a></p>]]></content>
+      <content type="html"><![CDATA[<h1 id="build-a-new-adsense-template-under-next-theme-in-layout-custom"><a href="#build-a-new-adsense-template-under-next-theme-in-layout-custom" class="headerlink" title="build a new adsense template under next theme in layout/_custom"></a>build a new adsense template under <code>next</code> theme in <code>layout/_custom</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/layout/_custom/google_adsense.ejs</span><br></pre></td></tr></table></figure><h1 id="put-the-google-adsense-codes-into-google-adsense-ejs"><a href="#put-the-google-adsense-codes-into-google-adsense-ejs" class="headerlink" title="put the google adsense codes into google_adsense.ejs"></a>put the google adsense codes into <code>google_adsense.ejs</code></h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  (adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;</span></span><br><span class="line"><span class="javascript">    google_ad_client: <span class="string">"ca-pub-5817381835091099"</span>,</span></span><br><span class="line"><span class="javascript">    enable_page_level_ads: <span class="literal">true</span></span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="add-following-codes-in-layout-swig-under-theme-folder"><a href="#add-following-codes-in-layout-swig-under-theme-folder" class="headerlink" title="add following codes in _layout.swig under theme folder"></a>add following codes in <code>_layout.swig</code> under theme folder</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google AdSense start --&gt;</span></span><br><span class="line">&#123;% include '_custom/google_adsense.ejs' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Google AdSense end --&gt;</span></span><br></pre></td></tr></table></figure><h1 id="generate-web-page-and-check-source-file-to-see-the-google-code-in-there"><a href="#generate-web-page-and-check-source-file-to-see-the-google-code-in-there" class="headerlink" title="generate web page and check source file to see the google code in there"></a>generate web page and check source file to see the google code in there</h1><hr><p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">searchfor.space</a></p>]]></content>
       
       <categories>
           
@@ -1099,9 +1120,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> google </tag>
+            
+            <tag> hexo </tag>
             
             <tag> adsense </tag>
             
