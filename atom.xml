@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-07T06:57:33.264Z</updated>
+  <updated>2018-08-09T11:23:50.143Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python list subtract another list</title>
+    <link href="http://search4fan.github.io/post/python_list_minus_list.html"/>
+    <id>http://search4fan.github.io/post/python_list_minus_list.html</id>
+    <published>2018-08-09T11:19:00.000Z</published>
+    <updated>2018-08-09T11:23:50.143Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: the elements in a list subtract the same index elements in another list &lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>code for wrap java debugger</title>
@@ -573,35 +600,6 @@
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python build small network example for ANN</title>
-    <link href="http://search4fan.github.io/post/python_AI_small_network_example.html"/>
-    <id>http://search4fan.github.io/post/python_AI_small_network_example.html</id>
-    <published>2018-07-23T09:27:55.626Z</published>
-    <updated>2018-07-23T09:31:41.235Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: build small network example in python &lt;/p&gt;
-&lt;h1 id=&quot;initial-a-network&quot;&gt;&lt;a href=&quot;#initial-a-network&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
     
   </entry>
   

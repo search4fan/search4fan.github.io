@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>python list subtract another list</title>
+      <link href="/post/python_list_minus_list.html"/>
+      <url>/post/python_list_minus_list.html</url>
+      <content type="html"><![CDATA[<p>description: the elements in a list subtract the same index elements in another list </p><h1 id="code-for-list-substraction-in-python"><a href="#code-for-list-substraction-in-python" class="headerlink" title="code for list substraction in python"></a>code for list substraction in python</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">l1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">l2 = [<span class="number">4</span>,<span class="number">8</span>,<span class="number">3</span>]</span><br><span class="line">dif = list(map(<span class="keyword">lambda</span> x: x[<span class="number">0</span>]-x[<span class="number">1</span>], zip(l1,l2)))</span><br><span class="line"><span class="comment"># output: </span></span><br><span class="line"><span class="comment"># [-3, -6, 0]</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>code for wrap java debugger</title>
       <link href="/post/java_wrap_debugger.html"/>
       <url>/post/java_wrap_debugger.html</url>
@@ -882,9 +903,9 @@
       
         <tags>
             
-            <tag> sql server </tag>
-            
             <tag> ssms </tag>
+            
+            <tag> sql server </tag>
             
             <tag> sql </tag>
             

@@ -361,6 +361,185 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/docker_sql_server_connect_from_ssms.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/docker_sql_server_connect_from_ssms.html" itemprop="url">
+                  connect sql server from Microsoft Sql Server Management Studio
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-15 21:51:00" itemprop="dateCreated datePublished" datetime="2018-07-15T21:51:00+10:00">2018-07-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-18 11:23:34" itemprop="dateModified" datetime="2018-07-18T11:23:34+10:00">2018-07-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: codes for connecting sql server from Microsoft sql server management studio </p>
+<h1 id="start-sql-server"><a href="#start-sql-server" class="headerlink" title="start sql server"></a>start sql server</h1><p><code>Asdfgh123</code> is default password<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"ACCEPT_EULA=Y"</span> -e <span class="string">"SA_PASSWORD=Asdfgh123"</span> `</span><br><span class="line">   -p 1433:1433 --name sql1 `</span><br><span class="line">   -d microsoft/mssql-server-linux:2017-latest</span><br></pre></td></tr></table></figure></p>
+<h1 id="connect-from-external-tools"><a href="#connect-from-external-tools" class="headerlink" title="connect from external tools"></a>connect from external tools</h1><p>under Windows, open Powershell to test service can be accessed from Windows<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlcmd -S 10.3.2.4,1433 -U SA -P <span class="string">"Asdfgh123"</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="connect-from-sql-server-management-studio"><a href="#connect-from-sql-server-management-studio" class="headerlink" title="connect from sql server management studio"></a>connect from sql server management studio</h1><p>server name is the ip address for docker computer. can use commend <code>ipconfig</code> to get the IPv4 Address<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">server type: database engine </span><br><span class="line">server name: 192.168.11.11 </span><br><span class="line">authentication: sql server authentication </span><br><span class="line">    login: SA</span><br><span class="line">    password: Asdfgh123</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/docker_unauthorized_username_password.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1908,184 +2087,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_next_google_adsense.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/hexo_next_google_adsense.html" itemprop="url">
-                  add google adsense into hexo blog in next theme
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-13 11:54:57" itemprop="dateCreated datePublished" datetime="2018-07-13T11:54:57+10:00">2018-07-13</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-14 16:47:26" itemprop="dateModified" datetime="2018-07-14T16:47:26+10:00">2018-07-14</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="build-a-new-adsense-template-under-next-theme-in-layout-custom"><a href="#build-a-new-adsense-template-under-next-theme-in-layout-custom" class="headerlink" title="build a new adsense template under next theme in layout/_custom"></a>build a new adsense template under <code>next</code> theme in <code>layout/_custom</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/layout/_custom/google_adsense.ejs</span><br></pre></td></tr></table></figure>
-<h1 id="put-the-google-adsense-codes-into-google-adsense-ejs"><a href="#put-the-google-adsense-codes-into-google-adsense-ejs" class="headerlink" title="put the google adsense codes into google_adsense.ejs"></a>put the google adsense codes into <code>google_adsense.ejs</code></h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  (adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;</span></span><br><span class="line"><span class="javascript">    google_ad_client: <span class="string">"ca-pub-5817381835091099"</span>,</span></span><br><span class="line"><span class="javascript">    enable_page_level_ads: <span class="literal">true</span></span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="add-following-codes-in-layout-swig-under-theme-folder"><a href="#add-following-codes-in-layout-swig-under-theme-folder" class="headerlink" title="add following codes in _layout.swig under theme folder"></a>add following codes in <code>_layout.swig</code> under theme folder</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Google AdSense start --&gt;</span></span><br><span class="line">&#123;% include '_custom/google_adsense.ejs' %&#125;</span><br><span class="line"><span class="comment">&lt;!-- Google AdSense end --&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="generate-web-page-and-check-source-file-to-see-the-google-code-in-there"><a href="#generate-web-page-and-check-source-file-to-see-the-google-code-in-there" class="headerlink" title="generate web page and check source file to see the google code in there"></a>generate web page and check source file to see the google code in there</h1><hr>
-<p>more on <a href="http://searchfor.space" target="_blank" rel="noopener">searchfor.space</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2133,7 +2134,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">55</span>
+                    <span class="site-state-item-count">56</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
