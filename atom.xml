@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-09T11:23:50.143Z</updated>
+  <updated>2018-08-13T06:58:14.826Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mount share folder to Linux in virtualbox</title>
+    <link href="http://search4fan.github.io/post/vm_mount_linux_share.html"/>
+    <id>http://search4fan.github.io/post/vm_mount_linux_share.html</id>
+    <published>2018-08-13T06:55:00.000Z</published>
+    <updated>2018-08-13T06:58:14.826Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: mount share folder to Linux in virtualbox&lt;/p&gt;
+&lt;h1 id=&quot;code-to-mount-share-folder-to-Ubuntu-in-virtualbox&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="vm" scheme="http://search4fan.github.io/categories/vm/"/>
+    
+    
+      <category term="vm" scheme="http://search4fan.github.io/tags/vm/"/>
+    
+      <category term="linux" scheme="http://search4fan.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>python list subtract another list</title>
@@ -557,36 +586,6 @@
         
           &lt;p&gt;description: create simple MLP in Keras&lt;/p&gt;
 &lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot; title=&quot;import
-        
-      
-    
-    </summary>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python ANN forward Propagate</title>
-    <link href="http://search4fan.github.io/post/python_AI_forward_propagate.html"/>
-    <id>http://search4fan.github.io/post/python_AI_forward_propagate.html</id>
-    <published>2018-07-23T09:33:29.104Z</published>
-    <updated>2018-07-23T09:36:47.816Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Calculate-neuron-activation-for-an-input&quot;&gt;&lt;a href=&quot;#Calculate-neuron-activation-for-an-input&quot; class=&quot;headerlink&quot; title=&quot;Calculate
         
       
     

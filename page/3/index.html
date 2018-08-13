@@ -361,6 +361,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_forward_propagate.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_forward_propagate.html" itemprop="url">
+                  python ANN forward Propagate
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-23 19:33:29 / Modified: 19:36:47" itemprop="dateCreated datePublished" datetime="2018-07-23T19:33:29+10:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Calculate-neuron-activation-for-an-input"><a href="#Calculate-neuron-activation-for-an-input" class="headerlink" title="Calculate neuron activation for an input"></a>Calculate neuron activation for an input</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">activate</span><span class="params">(weights, inputs)</span>:</span></span><br><span class="line">	activation = weights[<span class="number">-1</span>]</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(len(weights)<span class="number">-1</span>):</span><br><span class="line">		activation += weights[i] * inputs[i]</span><br><span class="line">	<span class="keyword">return</span> activation</span><br></pre></td></tr></table></figure>
+<h1 id="Transfer-neuron-activation"><a href="#Transfer-neuron-activation" class="headerlink" title="Transfer neuron activation"></a>Transfer neuron activation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> exp</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transfer</span><span class="params">(activation)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1.0</span> / (<span class="number">1.0</span> + exp(-activation))</span><br></pre></td></tr></table></figure>
+<h1 id="Forward-propagate-input-to-a-network-output"><a href="#Forward-propagate-input-to-a-network-output" class="headerlink" title="Forward propagate input to a network output"></a>Forward propagate input to a network output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_propagate</span><span class="params">(network, row)</span>:</span></span><br><span class="line">	inputs = row</span><br><span class="line">	<span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">		new_inputs = []</span><br><span class="line">		<span class="keyword">for</span> neuron <span class="keyword">in</span> layer:</span><br><span class="line">			activation = activate(neuron[<span class="string">'weights'</span>], inputs)</span><br><span class="line">			neuron[<span class="string">'output'</span>] = transfer(activation)</span><br><span class="line">			new_inputs.append(neuron[<span class="string">'output'</span>])</span><br><span class="line">		inputs = new_inputs</span><br><span class="line">	<span class="keyword">return</span> inputs</span><br></pre></td></tr></table></figure>
+<h1 id="test-forward-propagation"><a href="#test-forward-propagation" class="headerlink" title="test forward propagation"></a>test forward propagation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network = [[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;],</span><br><span class="line">		[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]]</span><br><span class="line">row = [<span class="number">1</span>, <span class="number">0</span>, <span class="keyword">None</span>]</span><br><span class="line">output = forward_propagate(network, row)</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0.6629970129852887</span>, <span class="number">0.7253160725279748</span>]</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_small_network_example.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1825,171 +1990,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_dataframe_loop_rows.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_dataframe_loop_rows.html" itemprop="url">
-                  python iterate or loop each row of a dataframe
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-19 23:41:04 / Modified: 23:42:49" itemprop="dateCreated datePublished" datetime="2018-07-19T23:41:04+10:00">2018-07-19</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: python iterate a dataframe </p>
-<h1 id="loop-each-row-of-a-dataframe"><a href="#loop-each-row-of-a-dataframe" class="headerlink" title="loop each row of a dataframe"></a>loop each row of a dataframe</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line">data = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> data.values:</span><br><span class="line">    print(row)</span><br><span class="line"><span class="comment"># output </span></span><br><span class="line"><span class="comment"># [1 2 3]</span></span><br><span class="line"><span class="comment"># [4 5 6]</span></span><br><span class="line"><span class="comment"># [7 8 9]</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2037,7 +2037,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">57</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2072,7 +2072,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2153,7 +2155,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">34</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

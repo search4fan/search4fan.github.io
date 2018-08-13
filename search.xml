@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>mount share folder to Linux in virtualbox</title>
+      <link href="/post/vm_mount_linux_share.html"/>
+      <url>/post/vm_mount_linux_share.html</url>
+      <content type="html"><![CDATA[<p>description: mount share folder to Linux in virtualbox</p><h1 id="code-to-mount-share-folder-to-Ubuntu-in-virtualbox"><a href="#code-to-mount-share-folder-to-Ubuntu-in-virtualbox" class="headerlink" title="code to mount share folder to Ubuntu in virtualbox"></a>code to mount share folder to Ubuntu in virtualbox</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t vboxsf &lt;sharefoldername&gt; &lt;linuxpath&gt;</span><br><span class="line"><span class="comment"># e.g.</span></span><br><span class="line">sudo mount -t vboxsf data ~/share/</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> vm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vm </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>python list subtract another list</title>
       <link href="/post/python_list_minus_list.html"/>
       <url>/post/python_list_minus_list.html</url>
@@ -1141,9 +1164,9 @@
       
         <tags>
             
-            <tag> google </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> google </tag>
             
             <tag> adsense </tag>
             
