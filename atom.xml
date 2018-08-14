@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-13T06:58:14.826Z</updated>
+  <updated>2018-08-14T04:56:11.069Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Initialising an array of fixed size in python</title>
+    <link href="http://search4fan.github.io/post/python_create_empty_array_with_fix_length.html"/>
+    <id>http://search4fan.github.io/post/python_create_empty_array_with_fix_length.html</id>
+    <published>2018-08-14T04:54:00.000Z</published>
+    <updated>2018-08-14T04:56:11.069Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python create array with length&lt;/p&gt;
+&lt;h1 id=&quot;code-for-creating-array-with-fix-length&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>mount share folder to Linux in virtualbox</title>
@@ -555,37 +582,6 @@
         
           &lt;p&gt;description: simple CNN example for MNIST dataset&lt;/p&gt;
 &lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python create simple MLP in Keras</title>
-    <link href="http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html"/>
-    <id>http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html</id>
-    <published>2018-07-23T09:38:02.371Z</published>
-    <updated>2018-07-23T09:40:39.846Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: create simple MLP in Keras&lt;/p&gt;
-&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot; title=&quot;import
         
       
     

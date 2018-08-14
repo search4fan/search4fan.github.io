@@ -361,6 +361,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_simple_MLP_in_Keras.html" itemprop="url">
+                  python create simple MLP in Keras
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-23 19:38:02 / Modified: 19:40:39" itemprop="dateCreated datePublished" datetime="2018-07-23T19:38:02+10:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: create simple MLP in Keras</p>
+<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">import</span> numpy</span><br></pre></td></tr></table></figure>
+<h1 id="fix-random-seed-for-reproducibility"><a href="#fix-random-seed-for-reproducibility" class="headerlink" title="fix random seed for reproducibility"></a>fix random seed for reproducibility</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.seed(<span class="number">7</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="load-pima-indians-dataset"><a href="#load-pima-indians-dataset" class="headerlink" title="load pima indians dataset"></a>load pima indians dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataset = numpy.loadtxt(<span class="string">"pima-indians-diabetes.csv"</span>, delimiter=<span class="string">","</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="split-into-input-X-and-output-Y-variables"><a href="#split-into-input-X-and-output-Y-variables" class="headerlink" title="split into input (X) and output (Y) variables"></a>split into input (X) and output (Y) variables</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = dataset[:,<span class="number">0</span>:<span class="number">8</span>]</span><br><span class="line">Y = dataset[:,<span class="number">8</span>]</span><br></pre></td></tr></table></figure>
+<h1 id="create-model"><a href="#create-model" class="headerlink" title="create model"></a>create model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(<span class="number">12</span>, input_dim=<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">1</span>, activation=<span class="string">'sigmoid'</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="Compile-model"><a href="#Compile-model" class="headerlink" title="Compile model"></a>Compile model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.compile(loss=<span class="string">'binary_crossentropy'</span>, optimizer=<span class="string">'adam'</span>, metrics=[<span class="string">'accuracy'</span>])</span><br></pre></td></tr></table></figure>
+<h1 id="Fit-the-model"><a href="#Fit-the-model" class="headerlink" title="Fit the model"></a>Fit the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(X, Y, epochs=<span class="number">150</span>, batch_size=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="evaluate-the-model"><a href="#evaluate-the-model" class="headerlink" title="evaluate the model"></a>evaluate the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scores = model.evaluate(X, Y)</span><br><span class="line">print(<span class="string">"\n%s: %.2f%%"</span> % (model.metrics_names[<span class="number">1</span>], scores[<span class="number">1</span>]*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_forward_propagate.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1823,173 +1993,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_dataframe_loop_set.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_dataframe_loop_set.html" itemprop="url">
-                  python change dataframe column into set and loop the set
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-20 19:59:47 / Modified: 20:06:03" itemprop="dateCreated datePublished" datetime="2018-07-20T19:59:47+10:00">2018-07-20</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: change dataframe column into set and iterate</p>
-<h1 id="change-dataframe-column-into-a-set"><a href="#change-dataframe-column-into-a-set" class="headerlink" title="change dataframe column into a set"></a>change dataframe column into a set</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line">a = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>]], columns=[<span class="string">'a'</span>,<span class="string">'b'</span>])</span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment">#    a  b</span></span><br><span class="line"><span class="comment"># 0  1  2</span></span><br><span class="line"><span class="comment"># 1  2  3</span></span><br><span class="line">b = a[<span class="string">'a'</span>].unique()</span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># array([1, 2, 4], dtype=int64)</span></span><br><span class="line">b = set(b)</span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># &#123;1, 2, 4&#125;</span></span><br></pre></td></tr></table></figure>
-<h1 id="iterate-dataframe-column-set"><a href="#iterate-dataframe-column-set" class="headerlink" title="iterate dataframe column set"></a>iterate dataframe column set</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> b:</span><br><span class="line">    print(item)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
-<h1 id="combine-into-a-single-code"><a href="#combine-into-a-single-code" class="headerlink" title="combine into a single code"></a>combine into a single code</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> a[<span class="string">'a'</span>].unique():</span><br><span class="line">    print(item)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2037,7 +2040,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">57</span>
+                    <span class="site-state-item-count">58</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
