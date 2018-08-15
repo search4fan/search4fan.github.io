@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-14T04:56:11.069Z</updated>
+  <updated>2018-08-15T13:57:36.186Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Simplest web server run by python</title>
+    <link href="http://search4fan.github.io/post/python_simplest_web_server_for_testing.html"/>
+    <id>http://search4fan.github.io/post/python_simplest_web_server_for_testing.html</id>
+    <published>2018-08-15T13:56:00.000Z</published>
+    <updated>2018-08-15T13:57:36.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: use python to create a simplest server for testing website &lt;/p&gt;
+&lt;h1 id=&quot;code-for-python-to-create-a-web-server&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Initialising an array of fixed size in python</title>
@@ -551,37 +578,6 @@
         
           &lt;p&gt;description: build Decision Tree from bank note dataset in python&lt;/p&gt;
 &lt;h1 id=&quot;CART-on-the-Bank-Note-dataset&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python simple convolutional neural network for MNIST dataset</title>
-    <link href="http://search4fan.github.io/post/python_AI_simple_CNN_forMNIST.html"/>
-    <id>http://search4fan.github.io/post/python_AI_simple_CNN_forMNIST.html</id>
-    <published>2018-07-23T09:48:30.152Z</published>
-    <updated>2018-07-23T09:52:42.946Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: simple CNN example for MNIST dataset&lt;/p&gt;
-&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot;
         
       
     
