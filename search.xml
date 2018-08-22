@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>refresh environment variables without reboot windows 10</title>
+      <link href="/post/win10_new_system_variable_without_restart.html"/>
+      <url>/post/win10_new_system_variable_without_restart.html</url>
+      <content type="html"><![CDATA[<p>description: Add a windows environment varibale without rebooting the computer </p><h1 id="process-to-refresh-environment-variables-without-reboot-windows"><a href="#process-to-refresh-environment-variables-without-reboot-windows" class="headerlink" title="process to refresh environment variables  without reboot windows"></a>process to refresh environment variables  without reboot windows</h1><ul><li>open cmd commend prompt window </li><li>input <code>set PATH=C</code> -&gt; this will refresh the environment variables </li><li>close and restart cmd window</li><li>input <code>echo %PATH%</code> to test </li></ul>]]></content>
+      
+      <categories>
+          
+          <category> win10 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> win10 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Simplest web server run by python</title>
       <link href="/post/python_simplest_web_server_for_testing.html"/>
       <url>/post/python_simplest_web_server_for_testing.html</url>
@@ -1106,9 +1127,9 @@
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
-            
             <tag> seo </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
@@ -1131,9 +1152,9 @@
             
             <tag> hexo </tag>
             
-            <tag> seo </tag>
-            
             <tag> sitemap </tag>
+            
+            <tag> seo </tag>
             
         </tags>
       
@@ -1206,13 +1227,13 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
-            <tag> blog </tag>
-            
             <tag> google </tag>
             
+            <tag> hexo </tag>
+            
             <tag> adsense </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
