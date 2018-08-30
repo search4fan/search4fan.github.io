@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-30T04:07:35.894Z</updated>
+  <updated>2018-08-30T12:34:09.767Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker.exe error response from daemon driver failed programming external connectivity on endpoint</title>
+    <link href="http://search4fan.github.io/post/docker-error-response-from-daemon-external-connectivity.html"/>
+    <id>http://search4fan.github.io/post/docker-error-response-from-daemon-external-connectivity.html</id>
+    <published>2018-08-30T12:26:00.000Z</published>
+    <updated>2018-08-30T12:34:09.767Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: fix docker error response from daemon: driver failed programming external connectivity on endpoint&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Java Open New Thread to Run Static Method</title>
@@ -552,37 +579,6 @@
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
       <category term="r language" scheme="http://search4fan.github.io/tags/r-language/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python to use LSTM for predicting words in Txt</title>
-    <link href="http://search4fan.github.io/post/python_AI_LSTM_for_txt.html"/>
-    <id>http://search4fan.github.io/post/python_AI_LSTM_for_txt.html</id>
-    <published>2018-07-23T10:06:54.724Z</published>
-    <updated>2018-07-23T10:11:19.440Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: use LSTM to predict words in Text in python&lt;/p&gt;
-&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
     
   </entry>
   

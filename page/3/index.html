@@ -361,6 +361,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_LSTM_for_txt.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_LSTM_for_txt.html" itemprop="url">
+                  python to use LSTM for predicting words in Txt
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-23 20:06:54 / Modified: 20:11:19" itemprop="dateCreated datePublished" datetime="2018-07-23T20:06:54+10:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: use LSTM to predict words in Text in python</p>
+<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dropout</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> LSTM</span><br><span class="line"><span class="keyword">from</span> keras.callbacks <span class="keyword">import</span> ModelCheckpoint</span><br><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> np_utils</span><br></pre></td></tr></table></figure>
+<h1 id="load-ascii-text-and-covert-to-lowercase"><a href="#load-ascii-text-and-covert-to-lowercase" class="headerlink" title="load ascii text and covert to lowercase"></a>load ascii text and covert to lowercase</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">filename = <span class="string">"wonderland.txt"</span></span><br><span class="line">raw_text = open(filename).read()</span><br><span class="line">raw_text = raw_text.lower()</span><br></pre></td></tr></table></figure>
+<h1 id="create-mapping-of-unique-chars-to-integers"><a href="#create-mapping-of-unique-chars-to-integers" class="headerlink" title="create mapping of unique chars to integers"></a>create mapping of unique chars to integers</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chars = sorted(list(set(raw_text)))</span><br><span class="line">char_to_int = dict((c, i) <span class="keyword">for</span> i, c <span class="keyword">in</span> enumerate(chars))</span><br></pre></td></tr></table></figure>
+<h1 id="summarize-the-loaded-data"><a href="#summarize-the-loaded-data" class="headerlink" title="summarize the loaded data"></a>summarize the loaded data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Total Characters:  147674</span></span><br><span class="line"><span class="comment"># Total Vocab:  47</span></span><br><span class="line">n_chars = len(raw_text)</span><br><span class="line">n_vocab = len(chars)</span><br><span class="line">print(<span class="string">"Total Characters: "</span>, n_chars)</span><br><span class="line">print(<span class="string">"Total Vocab: "</span>, n_vocab)</span><br></pre></td></tr></table></figure>
+<h1 id="split-the-book-text-up-into-subsequences-with-a-fixed-length-of-100-characters"><a href="#split-the-book-text-up-into-subsequences-with-a-fixed-length-of-100-characters" class="headerlink" title="split the book text up into subsequences with a fixed length of 100 characters"></a>split the book text up into subsequences with a fixed length of 100 characters</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">seq_length = <span class="number">100</span></span><br><span class="line">dataX = []</span><br><span class="line">dataY = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, n_chars - seq_length, <span class="number">1</span>):</span><br><span class="line">	seq_in = raw_text[i: i+seq_length]</span><br><span class="line">	seq_out = raw_text[ i+seq_length ]</span><br><span class="line">	dataX.append([char_to_int[char] <span class="keyword">for</span> char <span class="keyword">in</span> seq_in])</span><br><span class="line">	dataY.append(char_to_int[seq_out])</span><br><span class="line">n_patterns = len(dataX)</span><br><span class="line"><span class="comment"># Total Patterns:  147574</span></span><br><span class="line">print( <span class="string">"Total Patterns: "</span>, n_patterns)</span><br></pre></td></tr></table></figure>
+<h1 id="reshape-X-to-be-samples-time-steps-features"><a href="#reshape-X-to-be-samples-time-steps-features" class="headerlink" title="reshape X to be [samples, time steps, features]"></a>reshape X to be [samples, time steps, features]</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X = numpy.reshape(dataX, (n_patterns, seq_length, <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="normalize"><a href="#normalize" class="headerlink" title="normalize"></a>normalize</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X = X / float(n_vocab)</span><br></pre></td></tr></table></figure>
+<h1 id="one-hot-encode-the-output-variable"><a href="#one-hot-encode-the-output-variable" class="headerlink" title="one hot encode the output variable"></a>one hot encode the output variable</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = np_utils.to_categorical(dataY)</span><br></pre></td></tr></table></figure>
+<h1 id="define-the-LSTM-model"><a href="#define-the-LSTM-model" class="headerlink" title="define the LSTM model"></a>define the LSTM model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(LSTM(<span class="number">256</span>, input_shape=(X.shape[<span class="number">1</span>], X.shape[<span class="number">2</span>])))</span><br><span class="line">model.add(Dropout(<span class="number">0.2</span>))</span><br><span class="line"><span class="comment"># y.shape (144312, 47)</span></span><br><span class="line">model.add(Dense(y.shape[<span class="number">1</span>], activation=<span class="string">'softmax'</span>))</span><br><span class="line">model.compile(loss=<span class="string">'categorical_crossentropy'</span>, optimizer=<span class="string">'adam'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="define-the-checkpoint"><a href="#define-the-checkpoint" class="headerlink" title="define the checkpoint"></a>define the checkpoint</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">filepath=<span class="string">"weights-improvement-&#123;epoch:02d&#125;-&#123;loss:.4f&#125;.hdf5"</span></span><br><span class="line">checkpoint = ModelCheckpoint(filepath, monitor=<span class="string">'loss'</span>, verbose=<span class="number">1</span>, save_best_only=<span class="keyword">True</span>, mode=<span class="string">'min'</span>)</span><br><span class="line">callbacks_list = [checkpoint]</span><br></pre></td></tr></table></figure>
+<h1 id="fit-the-model"><a href="#fit-the-model" class="headerlink" title="fit the model"></a>fit the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(X, y, epochs=<span class="number">20</span>, batch_size=<span class="number">128</span>, callbacks=callbacks_list)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_rl_example.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1869,171 +2042,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/git_switch_https_ssh.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/git_switch_https_ssh.html" itemprop="url">
-                  Git Switch between ssh and HTTPS
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-22 14:55:55 / Modified: 15:16:04" itemprop="dateCreated datePublished" datetime="2018-07-22T14:55:55+10:00">2018-07-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: git change remote from https to ssh</p>
-<h1 id="change-from-HTTPS-into-ssh"><a href="#change-from-HTTPS-into-ssh" class="headerlink" title="change from HTTPS into ssh"></a>change from HTTPS into ssh</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="built_in">set</span>-url origin git@github.com:kelfan/kelfan.github.io.git</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2081,7 +2089,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">61</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
