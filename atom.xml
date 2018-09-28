@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-08-30T12:34:09.767Z</updated>
+  <updated>2018-07-15T06:58:20.000Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>docker.exe error response from daemon driver failed programming external connectivity on endpoint</title>
-    <link href="http://search4fan.github.io/post/docker-error-response-from-daemon-external-connectivity.html"/>
-    <id>http://search4fan.github.io/post/docker-error-response-from-daemon-external-connectivity.html</id>
-    <published>2018-08-30T12:26:00.000Z</published>
-    <updated>2018-08-30T12:34:09.767Z</updated>
+    <title>Microsoft Visual Studio Code insert date time variables into snippet template</title>
+    <link href="http://search4fan.github.io/post/vs_code_datetime_snippet.html"/>
+    <id>http://search4fan.github.io/post/vs_code_datetime_snippet.html</id>
+    <published>2018-09-27T06:15:50.038Z</published>
+    <updated>2018-07-15T06:58:20.000Z</updated>
     
     <summary type="html">
     
@@ -29,26 +29,28 @@
       
         
         
-          &lt;p&gt;description: fix docker error response from daemon: driver failed programming external connectivity on endpoint&lt;/p&gt;
-&lt;h1
+          &lt;p&gt;description: make a snippet with current datetime &lt;/p&gt;
+&lt;h1 id=&quot;open-snippet-file-to-edit&quot;&gt;&lt;a href=&quot;#open-snippet-file-to-edit&quot;
         
       
     
     </summary>
     
-      <category term="docker" scheme="http://search4fan.github.io/categories/docker/"/>
+      <category term="VS code" scheme="http://search4fan.github.io/categories/VS-code/"/>
     
     
-      <category term="docker" scheme="http://search4fan.github.io/tags/docker/"/>
+      <category term="VS code" scheme="http://search4fan.github.io/tags/VS-code/"/>
+    
+      <category term="snippet" scheme="http://search4fan.github.io/tags/snippet/"/>
     
   </entry>
   
   <entry>
-    <title>Java Open New Thread to Run Static Method</title>
-    <link href="http://search4fan.github.io/post/java_new_thread_run_static.html"/>
-    <id>http://search4fan.github.io/post/java_new_thread_run_static.html</id>
-    <published>2018-08-30T04:06:00.000Z</published>
-    <updated>2018-08-30T04:07:35.894Z</updated>
+    <title>get list of modules name in Excel vba</title>
+    <link href="http://search4fan.github.io/post/vba_get_list_of_modules_name.html"/>
+    <id>http://search4fan.github.io/post/vba_get_list_of_modules_name.html</id>
+    <published>2018-09-27T06:15:50.036Z</published>
+    <updated>2018-07-18T08:51:38.000Z</updated>
     
     <summary type="html">
     
@@ -56,314 +58,19 @@
       
         
         
-          &lt;p&gt;description: new thread to run static method in java &lt;/p&gt;
-&lt;h1 id=&quot;Code-for-run-static-method-in-new-thread-in-java&quot;&gt;&lt;a
+          &lt;p&gt;description: vba to get list of modules name &lt;/p&gt;
+&lt;h1 id=&quot;code-of-vba-to-get-list-of-module-names&quot;&gt;&lt;a
         
       
     
     </summary>
     
-      <category term="java" scheme="http://search4fan.github.io/categories/java/"/>
+      <category term="vba" scheme="http://search4fan.github.io/categories/vba/"/>
     
     
-      <category term="java" scheme="http://search4fan.github.io/tags/java/"/>
+      <category term="vba" scheme="http://search4fan.github.io/tags/vba/"/>
     
-  </entry>
-  
-  <entry>
-    <title>refresh environment variables without reboot windows 10</title>
-    <link href="http://search4fan.github.io/post/win10_new_system_variable_without_restart.html"/>
-    <id>http://search4fan.github.io/post/win10_new_system_variable_without_restart.html</id>
-    <published>2018-08-22T05:39:00.000Z</published>
-    <updated>2018-08-22T05:44:00.909Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: Add a windows environment varibale without rebooting the computer &lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-      <category term="win10" scheme="http://search4fan.github.io/categories/win10/"/>
-    
-    
-      <category term="win10" scheme="http://search4fan.github.io/tags/win10/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Simplest web server run by python</title>
-    <link href="http://search4fan.github.io/post/python_simplest_web_server_for_testing.html"/>
-    <id>http://search4fan.github.io/post/python_simplest_web_server_for_testing.html</id>
-    <published>2018-08-15T13:56:00.000Z</published>
-    <updated>2018-08-15T13:57:36.186Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: use python to create a simplest server for testing website &lt;/p&gt;
-&lt;h1 id=&quot;code-for-python-to-create-a-web-server&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Initialising an array of fixed size in python</title>
-    <link href="http://search4fan.github.io/post/python_create_empty_array_with_fix_length.html"/>
-    <id>http://search4fan.github.io/post/python_create_empty_array_with_fix_length.html</id>
-    <published>2018-08-14T04:54:00.000Z</published>
-    <updated>2018-08-14T04:56:11.069Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python create array with length&lt;/p&gt;
-&lt;h1 id=&quot;code-for-creating-array-with-fix-length&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mount share folder to Linux in virtualbox</title>
-    <link href="http://search4fan.github.io/post/vm_mount_linux_share.html"/>
-    <id>http://search4fan.github.io/post/vm_mount_linux_share.html</id>
-    <published>2018-08-13T06:55:00.000Z</published>
-    <updated>2018-08-13T06:58:14.826Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: mount share folder to Linux in virtualbox&lt;/p&gt;
-&lt;h1 id=&quot;code-to-mount-share-folder-to-Ubuntu-in-virtualbox&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="vm" scheme="http://search4fan.github.io/categories/vm/"/>
-    
-    
-      <category term="vm" scheme="http://search4fan.github.io/tags/vm/"/>
-    
-      <category term="linux" scheme="http://search4fan.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python list subtract another list</title>
-    <link href="http://search4fan.github.io/post/python_list_minus_list.html"/>
-    <id>http://search4fan.github.io/post/python_list_minus_list.html</id>
-    <published>2018-08-09T11:19:00.000Z</published>
-    <updated>2018-08-09T11:23:50.143Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: the elements in a list subtract the same index elements in another list &lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>code for wrap java debugger</title>
-    <link href="http://search4fan.github.io/post/java_wrap_debugger.html"/>
-    <id>http://search4fan.github.io/post/java_wrap_debugger.html</id>
-    <published>2018-08-07T06:56:00.000Z</published>
-    <updated>2018-08-07T06:57:33.264Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description:&lt;/p&gt;
-&lt;h1 id=&quot;code-for-wrap-java-debugger&quot;&gt;&lt;a href=&quot;#code-for-wrap-java-debugger&quot; class=&quot;headerlink&quot; title=&quot;code for wrap
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://search4fan.github.io/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://search4fan.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python plot sine curve or wave</title>
-    <link href="http://search4fan.github.io/post/python_draw_sin_curve.html"/>
-    <id>http://search4fan.github.io/post/python_draw_sin_curve.html</id>
-    <published>2018-08-04T09:34:00.000Z</published>
-    <updated>2018-08-04T09:37:09.664Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python code to plot sine wave&lt;/p&gt;
-&lt;h1 id=&quot;draw-or-plot-sine-curve-code&quot;&gt;&lt;a href=&quot;#draw-or-plot-sine-curve-code&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python remove or delete last column of a dataframe</title>
-    <link href="http://search4fan.github.io/post/python_remove_last_column.html"/>
-    <id>http://search4fan.github.io/post/python_remove_last_column.html</id>
-    <published>2018-08-03T02:08:00.000Z</published>
-    <updated>2018-08-03T02:12:02.205Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python remove last column&lt;/p&gt;
-&lt;h1 id=&quot;init-data&quot;&gt;&lt;a href=&quot;#init-data&quot; class=&quot;headerlink&quot; title=&quot;init data&quot;&gt;&lt;/a&gt;init
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown internal link or reference</title>
-    <link href="http://search4fan.github.io/post/markdown_internal_link.html"/>
-    <id>http://search4fan.github.io/post/markdown_internal_link.html</id>
-    <published>2018-08-03T01:18:00.000Z</published>
-    <updated>2018-08-03T01:29:43.525Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: markdown internal page links&lt;/p&gt;
-&lt;h1 id=&quot;add-anchor-in-the-place-to-jump&quot;&gt;&lt;a href=&quot;#add-anchor-in-the-place-to-jump&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="markdown" scheme="http://search4fan.github.io/categories/markdown/"/>
-    
-    
-      <category term="markdown" scheme="http://search4fan.github.io/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>get google suggested keywords in python</title>
-    <link href="http://search4fan.github.io/post/python_get_search_keywords_from_google.html"/>
-    <id>http://search4fan.github.io/post/python_get_search_keywords_from_google.html</id>
-    <published>2018-08-02T10:41:00.000Z</published>
-    <updated>2018-08-02T11:07:21.732Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: use python to get the keyword suggestion from google&lt;/p&gt;
-&lt;h1 id=&quot;codes-for-scraping-google’s-keywords&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="google" scheme="http://search4fan.github.io/tags/google/"/>
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python add new column to dataframe with same or different length with pandas</title>
-    <link href="http://search4fan.github.io/post/python_add_new_column.html"/>
-    <id>http://search4fan.github.io/post/python_add_new_column.html</id>
-    <published>2018-07-31T06:15:32.951Z</published>
-    <updated>2018-07-31T06:19:41.084Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: add new column to a dataframe&lt;/p&gt;
-&lt;h1 id=&quot;initial-data&quot;&gt;&lt;a href=&quot;#initial-data&quot; class=&quot;headerlink&quot; title=&quot;initial
-        
-      
-    
-    </summary>
-    
+      <category term="excel" scheme="http://search4fan.github.io/tags/excel/"/>
     
   </entry>
   
@@ -371,8 +78,8 @@
     <title>VBA Difference between .text .value .value2</title>
     <link href="http://search4fan.github.io/post/vba_get_cell_text.html"/>
     <id>http://search4fan.github.io/post/vba_get_cell_text.html</id>
-    <published>2018-07-30T11:48:10.397Z</published>
-    <updated>2018-07-30T12:04:05.289Z</updated>
+    <published>2018-09-27T06:15:50.035Z</published>
+    <updated>2018-07-30T12:04:06.000Z</updated>
     
     <summary type="html">
     
@@ -397,11 +104,11 @@
   </entry>
   
   <entry>
-    <title>simplest example of self-build LSTM in python</title>
-    <link href="http://search4fan.github.io/post/python_AI_LSTM_self_build_example.html"/>
-    <id>http://search4fan.github.io/post/python_AI_LSTM_self_build_example.html</id>
-    <published>2018-07-27T12:20:46.115Z</published>
-    <updated>2018-07-27T12:27:51.504Z</updated>
+    <title>ssms save changes not permitted</title>
+    <link href="http://search4fan.github.io/post/ssms_not_permit_change.html"/>
+    <id>http://search4fan.github.io/post/ssms_not_permit_change.html</id>
+    <published>2018-09-27T06:15:50.031Z</published>
+    <updated>2018-07-18T01:24:50.000Z</updated>
     
     <summary type="html">
     
@@ -409,30 +116,26 @@
       
         
         
-          &lt;p&gt;description: simple lstm example tensorflow&lt;/p&gt;
-&lt;h1 id=&quot;compute-sigmoid-nonlinearity&quot;&gt;&lt;a href=&quot;#compute-sigmoid-nonlinearity&quot;
+          &lt;p&gt;description: Sql Server ‘Saving changes is not permitted’&lt;/p&gt;
+&lt;h1 id=&quot;problem-description&quot;&gt;&lt;a href=&quot;#problem-description&quot;
         
       
     
     </summary>
     
-      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
-    
-      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
     
   </entry>
   
   <entry>
-    <title>LSTM simplest example in python</title>
-    <link href="http://search4fan.github.io/post/lstm_simplest_example.html"/>
-    <id>http://search4fan.github.io/post/lstm_simplest_example.html</id>
-    <published>2018-07-25T13:00:10.537Z</published>
-    <updated>2018-07-25T13:25:13.840Z</updated>
+    <title>display line number in sql server management studio</title>
+    <link href="http://search4fan.github.io/post/ssms_display_line_number.html"/>
+    <id>http://search4fan.github.io/post/ssms_display_line_number.html</id>
+    <published>2018-09-27T06:15:50.030Z</published>
+    <updated>2018-07-18T01:24:36.000Z</updated>
     
     <summary type="html">
     
@@ -440,8 +143,66 @@
       
         
         
-          &lt;p&gt;description: simplest example for LSTM ANN in python&lt;/p&gt;
-&lt;h1 id=&quot;import-packages&quot;&gt;&lt;a href=&quot;#import-packages&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;description: display line number in mssql editor&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tools -&amp;gt; options &lt;/li&gt;
+&lt;li&gt;Text Editor -&amp;gt; Transact-SQL -&amp;gt; line
+        
+      
+    
+    </summary>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
+    
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>basic frequent Sql commends in sql server</title>
+    <link href="http://search4fan.github.io/post/ssms_basic_frequent_commends.html"/>
+    <id>http://search4fan.github.io/post/ssms_basic_frequent_commends.html</id>
+    <published>2018-09-27T06:15:50.029Z</published>
+    <updated>2018-07-18T01:24:28.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: sql comments for basic query &lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="sql server" scheme="http://search4fan.github.io/categories/sql-server/"/>
+    
+    
+      <category term="ssms" scheme="http://search4fan.github.io/tags/ssms/"/>
+    
+      <category term="sql" scheme="http://search4fan.github.io/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>R language to build Decision Tree for wine dataset</title>
+    <link href="http://search4fan.github.io/post/r_build_DecisionTree.html"/>
+    <id>http://search4fan.github.io/post/r_build_DecisionTree.html</id>
+    <published>2018-09-27T06:15:50.027Z</published>
+    <updated>2018-07-23T10:27:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: build Decision Tree for wine dataset in R language &lt;/p&gt;
+&lt;h1 id=&quot;read-data-From-File&quot;&gt;&lt;a href=&quot;#read-data-From-File&quot;
         
       
     
@@ -450,11 +211,11 @@
       <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
     
     
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
       <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
     
       <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+    
+      <category term="r language" scheme="http://search4fan.github.io/tags/r-language/"/>
     
   </entry>
   
@@ -462,8 +223,8 @@
     <title>r language to cluster iris dataset through k-means and hierarchical clustering</title>
     <link href="http://search4fan.github.io/post/r_AI_kmeans_hcluster.html"/>
     <id>http://search4fan.github.io/post/r_AI_kmeans_hcluster.html</id>
-    <published>2018-07-24T00:58:42.848Z</published>
-    <updated>2018-07-24T01:25:28.919Z</updated>
+    <published>2018-09-27T06:15:50.026Z</published>
+    <updated>2018-07-24T01:25:30.000Z</updated>
     
     <summary type="html">
     
@@ -493,8 +254,8 @@
     <title>R language to cluster image colors by using k-means clustering</title>
     <link href="http://search4fan.github.io/post/r_AI_cluster_by_k-means.html"/>
     <id>http://search4fan.github.io/post/r_AI_cluster_by_k-means.html</id>
-    <published>2018-07-24T00:27:52.058Z</published>
-    <updated>2018-07-24T01:25:09.717Z</updated>
+    <published>2018-09-27T06:15:50.025Z</published>
+    <updated>2018-07-24T01:25:10.000Z</updated>
     
     <summary type="html">
     
@@ -524,8 +285,8 @@
     <title>R language to build ANN network for wine data</title>
     <link href="http://search4fan.github.io/post/r_AI_ann_for_wine_data.html"/>
     <id>http://search4fan.github.io/post/r_AI_ann_for_wine_data.html</id>
-    <published>2018-07-23T10:57:04.791Z</published>
-    <updated>2018-07-23T11:06:24.108Z</updated>
+    <published>2018-09-27T06:15:50.024Z</published>
+    <updated>2018-07-23T11:06:26.000Z</updated>
     
     <summary type="html">
     
@@ -552,11 +313,11 @@
   </entry>
   
   <entry>
-    <title>R language to build Decision Tree for wine dataset</title>
-    <link href="http://search4fan.github.io/post/r_build_DecisionTree.html"/>
-    <id>http://search4fan.github.io/post/r_build_DecisionTree.html</id>
-    <published>2018-07-23T10:23:53.362Z</published>
-    <updated>2018-07-23T10:27:51.922Z</updated>
+    <title>python numpy datetime64 today</title>
+    <link href="http://search4fan.github.io/post/python_timedelta_days.html"/>
+    <id>http://search4fan.github.io/post/python_timedelta_days.html</id>
+    <published>2018-09-27T06:15:50.023Z</published>
+    <updated>2018-07-14T06:47:28.000Z</updated>
     
     <summary type="html">
     
@@ -564,21 +325,274 @@
       
         
         
-          &lt;p&gt;description: build Decision Tree for wine dataset in R language &lt;/p&gt;
-&lt;h1 id=&quot;read-data-From-File&quot;&gt;&lt;a href=&quot;#read-data-From-File&quot;
+          &lt;h1 id=&quot;python-numpy-datetime64-today&quot;&gt;&lt;a href=&quot;#python-numpy-datetime64-today&quot; class=&quot;headerlink&quot; title=&quot;python numpy datetime64
         
       
     
     </summary>
     
-      <category term="machine learning" scheme="http://search4fan.github.io/categories/machine-learning/"/>
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
     
     
-      <category term="AI" scheme="http://search4fan.github.io/tags/AI/"/>
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
     
-      <category term="machine learning" scheme="http://search4fan.github.io/tags/machine-learning/"/>
+      <category term="timedelta" scheme="http://search4fan.github.io/tags/timedelta/"/>
     
-      <category term="r language" scheme="http://search4fan.github.io/tags/r-language/"/>
+      <category term="datetime64" scheme="http://search4fan.github.io/tags/datetime64/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python timedelta to seconds</title>
+    <link href="http://search4fan.github.io/post/python_timedelta%20_to_seconds.html"/>
+    <id>http://search4fan.github.io/post/python_timedelta _to_seconds.html</id>
+    <published>2018-09-27T06:15:50.022Z</published>
+    <updated>2018-07-14T06:47:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;python-timedelta-to-seconds&quot;&gt;&lt;a href=&quot;#python-timedelta-to-seconds&quot; class=&quot;headerlink&quot; title=&quot;python timedelta to
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="timedelta" scheme="http://search4fan.github.io/tags/timedelta/"/>
+    
+      <category term="datetime64" scheme="http://search4fan.github.io/tags/datetime64/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python parse string into datetime</title>
+    <link href="http://search4fan.github.io/post/python_string_to_datetime.html"/>
+    <id>http://search4fan.github.io/post/python_string_to_datetime.html</id>
+    <published>2018-09-27T06:15:50.021Z</published>
+    <updated>2018-07-20T10:17:46.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python parse string into datetime&lt;/p&gt;
+&lt;h1 id=&quot;parse-string-into-datetime&quot;&gt;&lt;a href=&quot;#parse-string-into-datetime&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python print format string example</title>
+    <link href="http://search4fan.github.io/post/python_format_string_output.html"/>
+    <id>http://search4fan.github.io/post/python_format_string_output.html</id>
+    <published>2018-09-27T06:15:50.015Z</published>
+    <updated>2018-07-21T12:02:12.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python print format string example&lt;/p&gt;
+&lt;h1 id=&quot;python-Using-and-format-for-formating-print-output&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python extract columns from dataframe</title>
+    <link href="http://search4fan.github.io/post/python_extract_columns.html"/>
+    <id>http://search4fan.github.io/post/python_extract_columns.html</id>
+    <published>2018-09-27T06:15:50.014Z</published>
+    <updated>2018-07-22T11:19:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: pandas select columns by name&lt;/p&gt;
+&lt;h1 id=&quot;python-select-columns-from-dataframe-by-name&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python add one day to a date</title>
+    <link href="http://search4fan.github.io/post/python_datetime_add_day.html"/>
+    <id>http://search4fan.github.io/post/python_datetime_add_day.html</id>
+    <published>2018-09-27T06:15:50.011Z</published>
+    <updated>2018-07-20T10:31:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python add one day to a date &lt;/p&gt;
+&lt;h1 id=&quot;python-datetime-date-add-one-day&quot;&gt;&lt;a href=&quot;#python-datetime-date-add-one-day&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="date" scheme="http://search4fan.github.io/tags/date/"/>
+    
+      <category term="datetime" scheme="http://search4fan.github.io/tags/datetime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python resign headers to a dataframe</title>
+    <link href="http://search4fan.github.io/post/python_dataframe_resign_headers.html"/>
+    <id>http://search4fan.github.io/post/python_dataframe_resign_headers.html</id>
+    <published>2018-09-27T06:15:50.010Z</published>
+    <updated>2018-07-19T11:42:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python pandas rename or change column names&lt;/p&gt;
+&lt;h1 id=&quot;python-rename-column-headers&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python change dataframe column into set and loop the set</title>
+    <link href="http://search4fan.github.io/post/python_dataframe_loop_set.html"/>
+    <id>http://search4fan.github.io/post/python_dataframe_loop_set.html</id>
+    <published>2018-09-27T06:15:50.009Z</published>
+    <updated>2018-07-20T10:06:04.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: change dataframe column into set and iterate&lt;/p&gt;
+&lt;h1 id=&quot;change-dataframe-column-into-a-set&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python iterate or loop each row of a dataframe</title>
+    <link href="http://search4fan.github.io/post/python_dataframe_loop_rows.html"/>
+    <id>http://search4fan.github.io/post/python_dataframe_loop_rows.html</id>
+    <published>2018-09-27T06:15:50.008Z</published>
+    <updated>2018-07-19T13:42:50.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python iterate a dataframe &lt;/p&gt;
+&lt;h1 id=&quot;loop-each-row-of-a-dataframe&quot;&gt;&lt;a href=&quot;#loop-each-row-of-a-dataframe&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python assign value of dataframe by conditions</title>
+    <link href="http://search4fan.github.io/post/python_assign_value_conditionally.html"/>
+    <id>http://search4fan.github.io/post/python_assign_value_conditionally.html</id>
+    <published>2018-09-27T06:15:50.006Z</published>
+    <updated>2018-07-14T07:20:20.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: python assign or set value if conditions match &lt;/p&gt;
+&lt;h1 id=&quot;python-assign-or-set-value-based-on-conditions&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
+    
+      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
     
   </entry>
   

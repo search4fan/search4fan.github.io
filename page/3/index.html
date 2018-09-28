@@ -361,6 +361,908 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_small_network_example.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_small_network_example.html" itemprop="url">
+                  python build small network example for ANN
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-27 16:15:50" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:50+10:00">2018-09-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-23 19:31:42" itemprop="dateModified" datetime="2018-07-23T19:31:42+10:00">2018-07-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: build small network example in python </p>
+<h1 id="initial-a-network"><a href="#initial-a-network" class="headerlink" title="initial a network"></a>initial a network</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">initialize_network</span><span class="params">(n_inputs, n_hidden, n_outputs)</span>:</span></span><br><span class="line">	network = list()</span><br><span class="line">	hidden_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_inputs + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden)]</span><br><span class="line">	network.append(hidden_layer)</span><br><span class="line">	output_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_outputs)]</span><br><span class="line">	network.append(output_layer)</span><br><span class="line">	<span class="keyword">return</span> network</span><br></pre></td></tr></table></figure>
+<h1 id="test-network"><a href="#test-network" class="headerlink" title="test network"></a>test network</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">seed(<span class="number">1</span>)</span><br><span class="line">network = initialize_network(<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">	print(layer)</span><br></pre></td></tr></table></figure>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;]</span><br><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_simple_MLP_in_Keras.html" itemprop="url">
+                  python create simple MLP in Keras
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-27 16:15:50" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:50+10:00">2018-09-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-23 19:40:40" itemprop="dateModified" datetime="2018-07-23T19:40:40+10:00">2018-07-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: create simple MLP in Keras</p>
+<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">import</span> numpy</span><br></pre></td></tr></table></figure>
+<h1 id="fix-random-seed-for-reproducibility"><a href="#fix-random-seed-for-reproducibility" class="headerlink" title="fix random seed for reproducibility"></a>fix random seed for reproducibility</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.seed(<span class="number">7</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="load-pima-indians-dataset"><a href="#load-pima-indians-dataset" class="headerlink" title="load pima indians dataset"></a>load pima indians dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataset = numpy.loadtxt(<span class="string">"pima-indians-diabetes.csv"</span>, delimiter=<span class="string">","</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="split-into-input-X-and-output-Y-variables"><a href="#split-into-input-X-and-output-Y-variables" class="headerlink" title="split into input (X) and output (Y) variables"></a>split into input (X) and output (Y) variables</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = dataset[:,<span class="number">0</span>:<span class="number">8</span>]</span><br><span class="line">Y = dataset[:,<span class="number">8</span>]</span><br></pre></td></tr></table></figure>
+<h1 id="create-model"><a href="#create-model" class="headerlink" title="create model"></a>create model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(<span class="number">12</span>, input_dim=<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">1</span>, activation=<span class="string">'sigmoid'</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="Compile-model"><a href="#Compile-model" class="headerlink" title="Compile model"></a>Compile model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.compile(loss=<span class="string">'binary_crossentropy'</span>, optimizer=<span class="string">'adam'</span>, metrics=[<span class="string">'accuracy'</span>])</span><br></pre></td></tr></table></figure>
+<h1 id="Fit-the-model"><a href="#Fit-the-model" class="headerlink" title="Fit the model"></a>Fit the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(X, Y, epochs=<span class="number">150</span>, batch_size=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="evaluate-the-model"><a href="#evaluate-the-model" class="headerlink" title="evaluate the model"></a>evaluate the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scores = model.evaluate(X, Y)</span><br><span class="line">print(<span class="string">"\n%s: %.2f%%"</span> % (model.metrics_names[<span class="number">1</span>], scores[<span class="number">1</span>]*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_simple_CNN_forMNIST.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_simple_CNN_forMNIST.html" itemprop="url">
+                  python simple convolutional neural network for MNIST dataset
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-27 16:15:50" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:50+10:00">2018-09-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-23 19:52:44" itemprop="dateModified" datetime="2018-07-23T19:52:44+10:00">2018-07-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: simple CNN example for MNIST dataset</p>
+<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> mnist</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dropout</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Flatten</span><br><span class="line"><span class="keyword">from</span> keras.layers.convolutional <span class="keyword">import</span> Conv2D</span><br><span class="line"><span class="keyword">from</span> keras.layers.convolutional <span class="keyword">import</span> MaxPooling2D</span><br><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> np_utils</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> backend <span class="keyword">as</span> K</span><br><span class="line">K.set_image_dim_ordering(<span class="string">'th'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="fix-random-seed-for-reproducibility"><a href="#fix-random-seed-for-reproducibility" class="headerlink" title="fix random seed for reproducibility"></a>fix random seed for reproducibility</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seed = <span class="number">7</span></span><br><span class="line">numpy.random.seed(seed)</span><br></pre></td></tr></table></figure>
+<h1 id="load-data"><a href="#load-data" class="headerlink" title="load data"></a>load data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(X_train, y_train), (X_test, y_test) = mnist.load_data()</span><br><span class="line"><span class="comment"># reshape to be [samples][pixels][width][height]</span></span><br><span class="line">X_train = X_train.reshape(X_train.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>).astype(<span class="string">'float32'</span>)</span><br><span class="line">X_test = X_test.reshape(X_test.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>).astype(<span class="string">'float32'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="normalize-inputs-from-0-255-to-0-1"><a href="#normalize-inputs-from-0-255-to-0-1" class="headerlink" title="normalize inputs from 0-255 to 0-1"></a>normalize inputs from 0-255 to 0-1</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">X_train = X_train / <span class="number">255</span></span><br><span class="line">X_test = X_test / <span class="number">255</span></span><br><span class="line"><span class="comment"># one hot encode outputs</span></span><br><span class="line">y_train = np_utils.to_categorical(y_train)</span><br><span class="line">y_test = np_utils.to_categorical(y_test)</span><br><span class="line">num_classes = y_test.shape[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<h1 id="define-baseline-model"><a href="#define-baseline-model" class="headerlink" title="define baseline model"></a>define baseline model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">baseline_model</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="comment"># create model</span></span><br><span class="line">	model = Sequential()</span><br><span class="line">	model.add(Conv2D(<span class="number">32</span>, (<span class="number">5</span>, <span class="number">5</span>), input_shape=(<span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">	model.add(MaxPooling2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">	model.add(Dropout(<span class="number">0.2</span>))</span><br><span class="line">	model.add(Flatten())</span><br><span class="line">	model.add(Dense(<span class="number">128</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">	model.add(Dense(num_classes, activation=<span class="string">'softmax'</span>))</span><br><span class="line">	<span class="comment"># Compile model</span></span><br><span class="line">	model.compile(loss=<span class="string">'categorical_crossentropy'</span>, optimizer=<span class="string">'adam'</span>, metrics=[<span class="string">'accuracy'</span>])</span><br><span class="line">	<span class="keyword">return</span> model</span><br></pre></td></tr></table></figure>
+<h1 id="define-model"><a href="#define-model" class="headerlink" title="define model"></a>define model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># build the model</span></span><br><span class="line">model = baseline_model()</span><br><span class="line"><span class="comment"># Fit the model</span></span><br><span class="line">model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=<span class="number">3</span>, batch_size=<span class="number">200</span>, verbose=<span class="number">2</span>)</span><br><span class="line"><span class="comment"># Final evaluation of the model</span></span><br><span class="line">scores = model.evaluate(X_test, y_test, verbose=<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"Baseline Error: %.2f%%"</span> % (<span class="number">100</span>-scores[<span class="number">1</span>]*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Train on <span class="number">60000</span> samples, validate on <span class="number">10000</span> samples</span><br><span class="line"></span><br><span class="line">Epoch <span class="number">1</span>/<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="number">69</span>s - loss: <span class="number">0.2498</span> - acc: <span class="number">0.9283</span> - val_loss: <span class="number">0.0715</span> - val_acc: <span class="number">0.9803</span></span><br><span class="line"></span><br><span class="line">Epoch <span class="number">2</span>/<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="number">70</span>s - loss: <span class="number">0.0714</span> - acc: <span class="number">0.9786</span> - val_loss: <span class="number">0.0503</span> - val_acc: <span class="number">0.9833</span></span><br><span class="line"></span><br><span class="line">Epoch <span class="number">3</span>/<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_rl_example.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_rl_example.html" itemprop="url">
+                  a example for RL in python
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-27 16:15:50" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:50+10:00">2018-09-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-23 20:05:58" itemprop="dateModified" datetime="2018-07-23T20:05:58+10:00">2018-07-23</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: a small example for reinforcement learning in python</p>
+<h1 id="import-packages-and-set-seed"><a href="#import-packages-and-set-seed" class="headerlink" title="import packages and set seed"></a>import packages and set seed</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">2</span>)  <span class="comment"># reproducible</span></span><br></pre></td></tr></table></figure>
+<h1 id="initial-parameters"><a href="#initial-parameters" class="headerlink" title="initial parameters"></a>initial parameters</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NUMBER_OF_STATES = <span class="number">6</span>   <span class="comment"># the length of the 1 dimensional world </span></span><br><span class="line">ACTIONS = [<span class="string">'left'</span>, <span class="string">'right'</span>]     <span class="comment"># available actions</span></span><br><span class="line">EPSILON = <span class="number">0.9</span>   <span class="comment"># greedy police </span></span><br><span class="line">ALPHA = <span class="number">0.1</span>     <span class="comment"># learning rate</span></span><br><span class="line">GAMMA = <span class="number">0.9</span>    <span class="comment"># discount factor </span></span><br><span class="line">MAX_EPISODES = <span class="number">13</span>   <span class="comment"># maximum episodes</span></span><br><span class="line">FRESH_TIME = <span class="number">0.3</span> <span class="comment"># speed of actions</span></span><br></pre></td></tr></table></figure>
+<h1 id="build-q-table-for-actions"><a href="#build-q-table-for-actions" class="headerlink" title="build q-table for actions"></a>build q-table for actions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_q_table</span><span class="params">(number_of_states, actions)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    just build a table with zero in the beginning</span></span><br><span class="line"><span class="string">    :param number_of_states:</span></span><br><span class="line"><span class="string">    :param actions:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    table = pd.DataFrame(</span><br><span class="line">        np.zeros((number_of_states, len(actions))),     <span class="comment"># q_table initial values</span></span><br><span class="line">        columns=actions,    <span class="comment"># actions's name</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># print(table)    # show table</span></span><br><span class="line">    <span class="keyword">return</span> table</span><br></pre></td></tr></table></figure>
+<h1 id="method-to-take-action"><a href="#method-to-take-action" class="headerlink" title="method to take action"></a>method to take action</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">choose_action</span><span class="params">(state, q_table)</span>:</span></span><br><span class="line">    <span class="comment"># This is how to choose an action</span></span><br><span class="line">    state_actions = q_table.iloc[state, :]</span><br><span class="line">     <span class="comment"># np.random.uniform() is a random Number</span></span><br><span class="line">    <span class="keyword">if</span> (np.random.uniform() &gt; EPSILON) <span class="keyword">or</span> ((state_actions == <span class="number">0</span>).all()):  <span class="comment"># act non-greedy or state-action have no value</span></span><br><span class="line">        action_name = np.random.choice(ACTIONS)</span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># act greedy</span></span><br><span class="line">        action_name = state_actions.idxmax()    <span class="comment"># replace argmax to idxmax as argmax means a different function in newer version of pandas</span></span><br><span class="line">    <span class="keyword">return</span> action_name</span><br></pre></td></tr></table></figure>
+<h1 id="define-the-change-of-environment"><a href="#define-the-change-of-environment" class="headerlink" title="define the change of environment"></a>define the change of environment</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_env_feedback</span><span class="params">(Current_State, Current_Action)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    get the result based on the movement, right to +1, left to -1</span></span><br><span class="line"><span class="string">    :param Current_State:</span></span><br><span class="line"><span class="string">    :param Current_Action:</span></span><br><span class="line"><span class="string">    :return: response 1 means End while response 0 means pass</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># This is how agent will interact with the environment</span></span><br><span class="line">    <span class="keyword">if</span> Current_Action == <span class="string">'right'</span>:    <span class="comment"># move right</span></span><br><span class="line">        <span class="keyword">if</span> Current_State == NUMBER_OF_STATES - <span class="number">2</span>:   <span class="comment"># terminate</span></span><br><span class="line">            Next_State = <span class="string">'terminal'</span></span><br><span class="line">            Response = <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Next_State = Current_State + <span class="number">1</span></span><br><span class="line">            Response = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># move left</span></span><br><span class="line">        Response = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> Current_State == <span class="number">0</span>:</span><br><span class="line">            Next_State = Current_State  <span class="comment"># reach the wall</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Next_State = Current_State - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> Next_State, Response</span><br></pre></td></tr></table></figure>
+<h1 id="update-environment"><a href="#update-environment" class="headerlink" title="update environment"></a>update environment</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_env</span><span class="params">(state, episode, step_counter)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    print the screen to the movement</span></span><br><span class="line"><span class="string">    :param state:</span></span><br><span class="line"><span class="string">    :param episode:</span></span><br><span class="line"><span class="string">    :param step_counter:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># This is how environment be updated</span></span><br><span class="line">    env_list = [<span class="string">'-'</span>] * (NUMBER_OF_STATES - <span class="number">1</span>) + [<span class="string">'T'</span>]   <span class="comment"># '---------T' our environment</span></span><br><span class="line">    <span class="keyword">if</span> state == <span class="string">'terminal'</span>:</span><br><span class="line">        interaction = <span class="string">'Episode %s: total_steps = %s'</span> % (episode+<span class="number">1</span>, step_counter)</span><br><span class="line">        print(<span class="string">'\r&#123;&#125;'</span>.format(interaction), end=<span class="string">''</span>)</span><br><span class="line">        time.sleep(<span class="number">2</span>)</span><br><span class="line">        print(<span class="string">'\r                                '</span>, end=<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        env_list[state] = <span class="string">'o'</span></span><br><span class="line">        interaction = <span class="string">''</span>.join(env_list)</span><br><span class="line">        print(<span class="string">'\r&#123;&#125;'</span>.format(interaction), end=<span class="string">''</span>)</span><br><span class="line">        time.sleep(FRESH_TIME)</span><br></pre></td></tr></table></figure>
+<h1 id="main-part-of-RL-loop"><a href="#main-part-of-RL-loop" class="headerlink" title="main part of RL loop"></a>main part of RL loop</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rl</span><span class="params">()</span>:</span></span><br><span class="line">    q_table = build_q_table(NUMBER_OF_STATES, ACTIONS)</span><br><span class="line">    <span class="keyword">for</span> episode <span class="keyword">in</span> range(MAX_EPISODES):</span><br><span class="line">        step_counter = <span class="number">0</span></span><br><span class="line">        current_state = <span class="number">0</span></span><br><span class="line">        is_terminated = <span class="keyword">False</span></span><br><span class="line">        update_env(current_state, episode, step_counter)</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">not</span> is_terminated:</span><br><span class="line"></span><br><span class="line">            action = choose_action(current_state, q_table)</span><br><span class="line">            next_state, R = get_env_feedback(current_state, action)  <span class="comment"># take action &amp; get next state and reward</span></span><br><span class="line">            q_predict = q_table.loc[current_state, action]</span><br><span class="line">            <span class="keyword">if</span> next_state != <span class="string">'terminal'</span>:</span><br><span class="line">                q_target = R + GAMMA * q_table.iloc[next_state, :].max()   <span class="comment"># next state is not terminal</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                q_target = R     <span class="comment"># next state is terminal</span></span><br><span class="line">                is_terminated = <span class="keyword">True</span>    <span class="comment"># terminate this episode</span></span><br><span class="line"></span><br><span class="line">            q_table.loc[current_state, action] += ALPHA * (q_target - q_predict)  <span class="comment"># update</span></span><br><span class="line">            current_state = next_state  <span class="comment"># move to next state</span></span><br><span class="line"></span><br><span class="line">            update_env(current_state, episode, step_counter+<span class="number">1</span>)</span><br><span class="line">            step_counter += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> q_table</span><br></pre></td></tr></table></figure>
+<h1 id="run-the-application"><a href="#run-the-application" class="headerlink" title="run the application"></a>run the application</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    q_table = rl()</span><br><span class="line">    print(<span class="string">'\r\nQ-table:\n'</span>)</span><br><span class="line">    print(q_table)</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_LSTM_self_build_example.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_AI_LSTM_self_build_example.html" itemprop="url">
+                  simplest example of self-build LSTM in python
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-27 16:15:49" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:49+10:00">2018-09-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-27 22:27:52" itemprop="dateModified" datetime="2018-07-27T22:27:52+10:00">2018-07-27</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: simple lstm example tensorflow</p>
+<h1 id="compute-sigmoid-nonlinearity"><a href="#compute-sigmoid-nonlinearity" class="headerlink" title="compute sigmoid nonlinearity"></a>compute sigmoid nonlinearity</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoid</span><span class="params">(x)</span>:</span></span><br><span class="line">    output = <span class="number">1</span> / (<span class="number">1</span> + np.exp(-x))</span><br><span class="line">    <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
+<h1 id="convert-output-of-sigmoid-function-to-its-derivative"><a href="#convert-output-of-sigmoid-function-to-its-derivative" class="headerlink" title="convert output of sigmoid function to its derivative"></a>convert output of sigmoid function to its derivative</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoid_output_to_derivative</span><span class="params">(output)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> output * (<span class="number">1</span> - output)</span><br></pre></td></tr></table></figure>
+<h1 id="training-dataset-generation"><a href="#training-dataset-generation" class="headerlink" title="training dataset generation"></a>training dataset generation</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int2binary = &#123;&#125;</span><br><span class="line">binary_dim = <span class="number">8</span></span><br><span class="line"></span><br><span class="line">largest_number = pow(<span class="number">2</span>, binary_dim)</span><br><span class="line"><span class="comment"># generate binary table</span></span><br><span class="line">binary = np.unpackbits(</span><br><span class="line">    np.array([range(largest_number)], dtype=np.uint8).T, axis=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># int + binary array pair</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(largest_number):</span><br><span class="line">    int2binary[i] = binary[i]</span><br></pre></td></tr></table></figure>
+<h1 id="input-variables"><a href="#input-variables" class="headerlink" title="input variables"></a>input variables</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alpha = <span class="number">0.1</span></span><br><span class="line">input_dim = <span class="number">2</span></span><br><span class="line">hidden_dim = <span class="number">16</span></span><br><span class="line">output_dim = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h1 id="initialize-neural-network-weights"><a href="#initialize-neural-network-weights" class="headerlink" title="initialize neural network weights"></a>initialize neural network weights</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">synapse_0 = <span class="number">2</span> * np.random.random((input_dim, hidden_dim)) - <span class="number">1</span> </span><br><span class="line">synapse_1 = <span class="number">2</span> * np.random.random((hidden_dim, output_dim)) - <span class="number">1</span></span><br><span class="line">synapse_h = <span class="number">2</span> * np.random.random((hidden_dim, hidden_dim)) - <span class="number">1</span> </span><br><span class="line"></span><br><span class="line">synapse_0_update = np.zeros_like(synapse_0)</span><br><span class="line">synapse_1_update = np.zeros_like(synapse_1) </span><br><span class="line">synapse_h_update = np.zeros_like(synapse_h)</span><br></pre></td></tr></table></figure>
+<h1 id="training-logic-训练的次数"><a href="#training-logic-训练的次数" class="headerlink" title="training logic # 训练的次数"></a>training logic # 训练的次数</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">10000</span>):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># generate a simple addition problem (a + b = c)</span></span><br><span class="line">    a_int = np.random.randint(largest_number / <span class="number">2</span>)  <span class="comment"># int version</span></span><br><span class="line">    a = int2binary[a_int]  <span class="comment"># binary encoding like a: [0, 0, 0, 0, 1, 0, 0, 1]</span></span><br><span class="line"></span><br><span class="line">    b_int = np.random.randint(largest_number / <span class="number">2</span>)  <span class="comment"># int version</span></span><br><span class="line">    b = int2binary[b_int]  <span class="comment"># binary encoding like b: [0, 0, 1, 1, 1, 1, 0, 0]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># true answer</span></span><br><span class="line">    c_int = a_int + b_int</span><br><span class="line">    c = int2binary[c_int]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># where we'll store our best guess (binary encoded)</span></span><br><span class="line">    d = np.zeros_like(c)  <span class="comment"># like [0, 0, 0, 0, 0, 0, 0, 0]</span></span><br><span class="line"></span><br><span class="line">    overallError = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    layer_2_deltas = list()</span><br><span class="line">    layer_1_values = list()  <span class="comment"># restore hidden layer for next timestep</span></span><br><span class="line">    layer_1_values.append(np.zeros(hidden_dim))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># moving along the positions in the binary encoding</span></span><br><span class="line">    <span class="keyword">for</span> position <span class="keyword">in</span> range(binary_dim):</span><br><span class="line">        <span class="comment"># generate input and output</span></span><br><span class="line">        X = np.array([[a[binary_dim - position - <span class="number">1</span>], b[binary_dim - position - <span class="number">1</span>]]])  <span class="comment"># like [[1, 0]]</span></span><br><span class="line">        y = np.array([[c[binary_dim - position - <span class="number">1</span>]]]).T  <span class="comment"># [[1]] </span></span><br><span class="line">        <span class="comment"># hidden layer (input ~+ prev_hidden) </span></span><br><span class="line">        layer_1 = sigmoid(np.dot(X, synapse_0) + np.dot(layer_1_values[<span class="number">-1</span>], synapse_h))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># output layer (new binary representation) </span></span><br><span class="line">        layer_2 = sigmoid(np.dot(layer_1, synapse_1)) </span><br><span class="line">        <span class="comment"># calculate the difference and error</span></span><br><span class="line">        layer_2_error = y - layer_2</span><br><span class="line">        layer_2_deltas.append((layer_2_error) * sigmoid_output_to_derivative(layer_2)) </span><br><span class="line">        overallError += np.abs(layer_2_error[<span class="number">0</span>]) </span><br><span class="line">        <span class="comment"># decode estimate so we can print it out</span></span><br><span class="line">        d[binary_dim - position - <span class="number">1</span>] = np.round(layer_2[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># store hidden layer so we can use it in the next timestep</span></span><br><span class="line">        layer_1_values.append(copy.deepcopy(layer_1))</span><br><span class="line"></span><br><span class="line">    future_layer_1_delta = np.zeros(hidden_dim)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># update weights</span></span><br><span class="line">    <span class="keyword">for</span> position <span class="keyword">in</span> range(binary_dim):  </span><br><span class="line">        X = np.array([[a[position], b[position]]])</span><br><span class="line">        layer_1 = layer_1_values[-position - <span class="number">1</span>]</span><br><span class="line">        prev_layer_1 = layer_1_values[-position - <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># error at output layer</span></span><br><span class="line">        layer_2_delta = layer_2_deltas[-position - <span class="number">1</span>]</span><br><span class="line">        <span class="comment"># error at hidden layer</span></span><br><span class="line">        layer_1_delta = (future_layer_1_delta.dot(synapse_h.T) + \</span><br><span class="line">                         layer_2_delta.dot(synapse_1.T)) * sigmoid_output_to_derivative(layer_1)</span><br><span class="line">        <span class="comment"># let's update all our weights so we can try again</span></span><br><span class="line">        synapse_1_update += np.atleast_2d(layer_1).T.dot(layer_2_delta)</span><br><span class="line">        synapse_h_update += np.atleast_2d(prev_layer_1).T.dot(layer_1_delta)</span><br><span class="line">        synapse_0_update += X.T.dot(layer_1_delta)</span><br><span class="line"></span><br><span class="line">        future_layer_1_delta = layer_1_delta</span><br><span class="line"></span><br><span class="line">    synapse_0 += synapse_0_update * alpha</span><br><span class="line">    synapse_1 += synapse_1_update * alpha</span><br><span class="line">    synapse_h += synapse_h_update * alpha</span><br><span class="line"></span><br><span class="line">    synapse_0_update *= <span class="number">0</span></span><br><span class="line">    synapse_1_update *= <span class="number">0</span></span><br><span class="line">    synapse_h_update *= <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># print out progress</span></span><br><span class="line">    <span class="keyword">if</span> (j % <span class="number">1000</span> == <span class="number">0</span>):</span><br><span class="line">        print(<span class="string">"Error:"</span> + str(overallError))</span><br><span class="line">        print(<span class="string">"Pred:"</span> + str(d))</span><br><span class="line">        print(<span class="string">"True:"</span> + str(c))</span><br><span class="line">        out = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> index, x <span class="keyword">in</span> enumerate(reversed(d)):</span><br><span class="line">            out += x * pow(<span class="number">2</span>, index)</span><br><span class="line">        print(str(a_int) + <span class="string">" + "</span> + str(b_int) + <span class="string">" = "</span> + str(out))</span><br><span class="line">        print(<span class="string">"------------"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">Error:[<span class="number">3.45638663</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">9</span> + <span class="number">60</span> = <span class="number">1</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.63389116</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">28</span> + <span class="number">35</span> = <span class="number">255</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.91366595</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">116</span> + <span class="number">44</span> = <span class="number">72</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.72191702</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">4</span> + <span class="number">73</span> = <span class="number">223</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">3.5852713</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">71</span> + <span class="number">11</span> = <span class="number">8</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">2.53352328</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">81</span> + <span class="number">113</span> = <span class="number">162</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">0.57691441</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">81</span> + <span class="number">0</span> = <span class="number">81</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">1.42589952</span>]</span><br><span class="line">Pred:[<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>]</span><br><span class="line"><span class="number">4</span> + <span class="number">125</span> = <span class="number">129</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">0.47477457</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">39</span> + <span class="number">17</span> = <span class="number">56</span></span><br><span class="line">------------</span><br><span class="line">Error:[<span class="number">0.21595037</span>]</span><br><span class="line">Pred:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="keyword">True</span>:[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>]</span><br><span class="line"><span class="number">11</span> + <span class="number">3</span> = <span class="number">14</span></span><br><span class="line">------------</span><br></pre></td></tr></table></figure>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p><a href="https://blog.csdn.net/zzukun/article/details/49968129" target="_blank" rel="noopener">https://blog.csdn.net/zzukun/article/details/49968129</a></p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_LSTM_for_txt.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -407,12 +1309,24 @@
                 
               
 
-              <time title="Created: 2018-07-23 20:06:54 / Modified: 20:11:19" itemprop="dateCreated datePublished" datetime="2018-07-23T20:06:54+10:00">2018-07-23</time>
+              <time title="Created: 2018-09-27 16:15:49" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:49+10:00">2018-09-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-23 20:11:20" itemprop="dateModified" datetime="2018-07-23T20:11:20+10:00">2018-07-23</time>
               
             
           </span>
@@ -534,7 +1448,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_rl_example.html">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_forward_propagate.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="killfun">
@@ -553,8 +1467,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/post/python_AI_rl_example.html" itemprop="url">
-                  a example for RL in python
+                <a class="post-title-link" href="/post/python_AI_forward_propagate.html" itemprop="url">
+                  python ANN forward Propagate
                 </a>
               
             
@@ -580,12 +1494,24 @@
                 
               
 
-              <time title="Created: 2018-07-23 20:01:26 / Modified: 20:05:57" itemprop="dateCreated datePublished" datetime="2018-07-23T20:01:26+10:00">2018-07-23</time>
+              <time title="Created: 2018-09-27 16:15:49" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:49+10:00">2018-09-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-23 19:36:48" itemprop="dateModified" datetime="2018-07-23T19:36:48+10:00">2018-07-23</time>
               
             
           </span>
@@ -638,15 +1564,11 @@
       
         
           
-            <p>description: a small example for reinforcement learning in python</p>
-<h1 id="import-packages-and-set-seed"><a href="#import-packages-and-set-seed" class="headerlink" title="import packages and set seed"></a>import packages and set seed</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">2</span>)  <span class="comment"># reproducible</span></span><br></pre></td></tr></table></figure>
-<h1 id="initial-parameters"><a href="#initial-parameters" class="headerlink" title="initial parameters"></a>initial parameters</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NUMBER_OF_STATES = <span class="number">6</span>   <span class="comment"># the length of the 1 dimensional world </span></span><br><span class="line">ACTIONS = [<span class="string">'left'</span>, <span class="string">'right'</span>]     <span class="comment"># available actions</span></span><br><span class="line">EPSILON = <span class="number">0.9</span>   <span class="comment"># greedy police </span></span><br><span class="line">ALPHA = <span class="number">0.1</span>     <span class="comment"># learning rate</span></span><br><span class="line">GAMMA = <span class="number">0.9</span>    <span class="comment"># discount factor </span></span><br><span class="line">MAX_EPISODES = <span class="number">13</span>   <span class="comment"># maximum episodes</span></span><br><span class="line">FRESH_TIME = <span class="number">0.3</span> <span class="comment"># speed of actions</span></span><br></pre></td></tr></table></figure>
-<h1 id="build-q-table-for-actions"><a href="#build-q-table-for-actions" class="headerlink" title="build q-table for actions"></a>build q-table for actions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_q_table</span><span class="params">(number_of_states, actions)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    just build a table with zero in the beginning</span></span><br><span class="line"><span class="string">    :param number_of_states:</span></span><br><span class="line"><span class="string">    :param actions:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    table = pd.DataFrame(</span><br><span class="line">        np.zeros((number_of_states, len(actions))),     <span class="comment"># q_table initial values</span></span><br><span class="line">        columns=actions,    <span class="comment"># actions's name</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># print(table)    # show table</span></span><br><span class="line">    <span class="keyword">return</span> table</span><br></pre></td></tr></table></figure>
-<h1 id="method-to-take-action"><a href="#method-to-take-action" class="headerlink" title="method to take action"></a>method to take action</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">choose_action</span><span class="params">(state, q_table)</span>:</span></span><br><span class="line">    <span class="comment"># This is how to choose an action</span></span><br><span class="line">    state_actions = q_table.iloc[state, :]</span><br><span class="line">     <span class="comment"># np.random.uniform() is a random Number</span></span><br><span class="line">    <span class="keyword">if</span> (np.random.uniform() &gt; EPSILON) <span class="keyword">or</span> ((state_actions == <span class="number">0</span>).all()):  <span class="comment"># act non-greedy or state-action have no value</span></span><br><span class="line">        action_name = np.random.choice(ACTIONS)</span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># act greedy</span></span><br><span class="line">        action_name = state_actions.idxmax()    <span class="comment"># replace argmax to idxmax as argmax means a different function in newer version of pandas</span></span><br><span class="line">    <span class="keyword">return</span> action_name</span><br></pre></td></tr></table></figure>
-<h1 id="define-the-change-of-environment"><a href="#define-the-change-of-environment" class="headerlink" title="define the change of environment"></a>define the change of environment</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_env_feedback</span><span class="params">(Current_State, Current_Action)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    get the result based on the movement, right to +1, left to -1</span></span><br><span class="line"><span class="string">    :param Current_State:</span></span><br><span class="line"><span class="string">    :param Current_Action:</span></span><br><span class="line"><span class="string">    :return: response 1 means End while response 0 means pass</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># This is how agent will interact with the environment</span></span><br><span class="line">    <span class="keyword">if</span> Current_Action == <span class="string">'right'</span>:    <span class="comment"># move right</span></span><br><span class="line">        <span class="keyword">if</span> Current_State == NUMBER_OF_STATES - <span class="number">2</span>:   <span class="comment"># terminate</span></span><br><span class="line">            Next_State = <span class="string">'terminal'</span></span><br><span class="line">            Response = <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Next_State = Current_State + <span class="number">1</span></span><br><span class="line">            Response = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># move left</span></span><br><span class="line">        Response = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> Current_State == <span class="number">0</span>:</span><br><span class="line">            Next_State = Current_State  <span class="comment"># reach the wall</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Next_State = Current_State - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> Next_State, Response</span><br></pre></td></tr></table></figure>
-<h1 id="update-environment"><a href="#update-environment" class="headerlink" title="update environment"></a>update environment</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_env</span><span class="params">(state, episode, step_counter)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    print the screen to the movement</span></span><br><span class="line"><span class="string">    :param state:</span></span><br><span class="line"><span class="string">    :param episode:</span></span><br><span class="line"><span class="string">    :param step_counter:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># This is how environment be updated</span></span><br><span class="line">    env_list = [<span class="string">'-'</span>] * (NUMBER_OF_STATES - <span class="number">1</span>) + [<span class="string">'T'</span>]   <span class="comment"># '---------T' our environment</span></span><br><span class="line">    <span class="keyword">if</span> state == <span class="string">'terminal'</span>:</span><br><span class="line">        interaction = <span class="string">'Episode %s: total_steps = %s'</span> % (episode+<span class="number">1</span>, step_counter)</span><br><span class="line">        print(<span class="string">'\r&#123;&#125;'</span>.format(interaction), end=<span class="string">''</span>)</span><br><span class="line">        time.sleep(<span class="number">2</span>)</span><br><span class="line">        print(<span class="string">'\r                                '</span>, end=<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        env_list[state] = <span class="string">'o'</span></span><br><span class="line">        interaction = <span class="string">''</span>.join(env_list)</span><br><span class="line">        print(<span class="string">'\r&#123;&#125;'</span>.format(interaction), end=<span class="string">''</span>)</span><br><span class="line">        time.sleep(FRESH_TIME)</span><br></pre></td></tr></table></figure>
-<h1 id="main-part-of-RL-loop"><a href="#main-part-of-RL-loop" class="headerlink" title="main part of RL loop"></a>main part of RL loop</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rl</span><span class="params">()</span>:</span></span><br><span class="line">    q_table = build_q_table(NUMBER_OF_STATES, ACTIONS)</span><br><span class="line">    <span class="keyword">for</span> episode <span class="keyword">in</span> range(MAX_EPISODES):</span><br><span class="line">        step_counter = <span class="number">0</span></span><br><span class="line">        current_state = <span class="number">0</span></span><br><span class="line">        is_terminated = <span class="keyword">False</span></span><br><span class="line">        update_env(current_state, episode, step_counter)</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">not</span> is_terminated:</span><br><span class="line"></span><br><span class="line">            action = choose_action(current_state, q_table)</span><br><span class="line">            next_state, R = get_env_feedback(current_state, action)  <span class="comment"># take action &amp; get next state and reward</span></span><br><span class="line">            q_predict = q_table.loc[current_state, action]</span><br><span class="line">            <span class="keyword">if</span> next_state != <span class="string">'terminal'</span>:</span><br><span class="line">                q_target = R + GAMMA * q_table.iloc[next_state, :].max()   <span class="comment"># next state is not terminal</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                q_target = R     <span class="comment"># next state is terminal</span></span><br><span class="line">                is_terminated = <span class="keyword">True</span>    <span class="comment"># terminate this episode</span></span><br><span class="line"></span><br><span class="line">            q_table.loc[current_state, action] += ALPHA * (q_target - q_predict)  <span class="comment"># update</span></span><br><span class="line">            current_state = next_state  <span class="comment"># move to next state</span></span><br><span class="line"></span><br><span class="line">            update_env(current_state, episode, step_counter+<span class="number">1</span>)</span><br><span class="line">            step_counter += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> q_table</span><br></pre></td></tr></table></figure>
-<h1 id="run-the-application"><a href="#run-the-application" class="headerlink" title="run the application"></a>run the application</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    q_table = rl()</span><br><span class="line">    print(<span class="string">'\r\nQ-table:\n'</span>)</span><br><span class="line">    print(q_table)</span><br></pre></td></tr></table></figure>
+            <h1 id="Calculate-neuron-activation-for-an-input"><a href="#Calculate-neuron-activation-for-an-input" class="headerlink" title="Calculate neuron activation for an input"></a>Calculate neuron activation for an input</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">activate</span><span class="params">(weights, inputs)</span>:</span></span><br><span class="line">	activation = weights[<span class="number">-1</span>]</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(len(weights)<span class="number">-1</span>):</span><br><span class="line">		activation += weights[i] * inputs[i]</span><br><span class="line">	<span class="keyword">return</span> activation</span><br></pre></td></tr></table></figure>
+<h1 id="Transfer-neuron-activation"><a href="#Transfer-neuron-activation" class="headerlink" title="Transfer neuron activation"></a>Transfer neuron activation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> exp</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transfer</span><span class="params">(activation)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1.0</span> / (<span class="number">1.0</span> + exp(-activation))</span><br></pre></td></tr></table></figure>
+<h1 id="Forward-propagate-input-to-a-network-output"><a href="#Forward-propagate-input-to-a-network-output" class="headerlink" title="Forward propagate input to a network output"></a>Forward propagate input to a network output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_propagate</span><span class="params">(network, row)</span>:</span></span><br><span class="line">	inputs = row</span><br><span class="line">	<span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">		new_inputs = []</span><br><span class="line">		<span class="keyword">for</span> neuron <span class="keyword">in</span> layer:</span><br><span class="line">			activation = activate(neuron[<span class="string">'weights'</span>], inputs)</span><br><span class="line">			neuron[<span class="string">'output'</span>] = transfer(activation)</span><br><span class="line">			new_inputs.append(neuron[<span class="string">'output'</span>])</span><br><span class="line">		inputs = new_inputs</span><br><span class="line">	<span class="keyword">return</span> inputs</span><br></pre></td></tr></table></figure>
+<h1 id="test-forward-propagation"><a href="#test-forward-propagation" class="headerlink" title="test forward propagation"></a>test forward propagation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network = [[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;],</span><br><span class="line">		[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]]</span><br><span class="line">row = [<span class="number">1</span>, <span class="number">0</span>, <span class="keyword">None</span>]</span><br><span class="line">output = forward_propagate(network, row)</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure>
+<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0.6629970129852887</span>, <span class="number">0.7253160725279748</span>]</span><br></pre></td></tr></table></figure>
           
         
       
@@ -749,12 +1671,24 @@
                 
               
 
-              <time title="Created: 2018-07-23 19:53:56 / Modified: 19:59:20" itemprop="dateCreated datePublished" datetime="2018-07-23T19:53:56+10:00">2018-07-23</time>
+              <time title="Created: 2018-09-27 16:15:49" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:49+10:00">2018-09-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-23 19:59:22" itemprop="dateModified" datetime="2018-07-23T19:59:22+10:00">2018-07-23</time>
               
             
           </span>
@@ -883,7 +1817,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_simple_CNN_forMNIST.html">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_add_new_column.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="killfun">
@@ -902,8 +1836,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/post/python_AI_simple_CNN_forMNIST.html" itemprop="url">
-                  python simple convolutional neural network for MNIST dataset
+                <a class="post-title-link" href="/post/python_add_new_column.html" itemprop="url">
+                  python add new column to dataframe with same or different length with pandas
                 </a>
               
             
@@ -929,34 +1863,28 @@
                 
               
 
-              <time title="Created: 2018-07-23 19:48:30 / Modified: 19:52:42" itemprop="dateCreated datePublished" datetime="2018-07-23T19:48:30+10:00">2018-07-23</time>
+              <time title="Created: 2018-09-27 16:15:49" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:49+10:00">2018-09-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-31 16:19:42" itemprop="dateModified" datetime="2018-07-31T16:19:42+10:00">2018-07-31</time>
               
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -987,14 +1915,12 @@
       
         
           
-            <p>description: simple CNN example for MNIST dataset</p>
-<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> mnist</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dropout</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Flatten</span><br><span class="line"><span class="keyword">from</span> keras.layers.convolutional <span class="keyword">import</span> Conv2D</span><br><span class="line"><span class="keyword">from</span> keras.layers.convolutional <span class="keyword">import</span> MaxPooling2D</span><br><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> np_utils</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> backend <span class="keyword">as</span> K</span><br><span class="line">K.set_image_dim_ordering(<span class="string">'th'</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="fix-random-seed-for-reproducibility"><a href="#fix-random-seed-for-reproducibility" class="headerlink" title="fix random seed for reproducibility"></a>fix random seed for reproducibility</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seed = <span class="number">7</span></span><br><span class="line">numpy.random.seed(seed)</span><br></pre></td></tr></table></figure>
-<h1 id="load-data"><a href="#load-data" class="headerlink" title="load data"></a>load data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(X_train, y_train), (X_test, y_test) = mnist.load_data()</span><br><span class="line"><span class="comment"># reshape to be [samples][pixels][width][height]</span></span><br><span class="line">X_train = X_train.reshape(X_train.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>).astype(<span class="string">'float32'</span>)</span><br><span class="line">X_test = X_test.reshape(X_test.shape[<span class="number">0</span>], <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>).astype(<span class="string">'float32'</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="normalize-inputs-from-0-255-to-0-1"><a href="#normalize-inputs-from-0-255-to-0-1" class="headerlink" title="normalize inputs from 0-255 to 0-1"></a>normalize inputs from 0-255 to 0-1</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">X_train = X_train / <span class="number">255</span></span><br><span class="line">X_test = X_test / <span class="number">255</span></span><br><span class="line"><span class="comment"># one hot encode outputs</span></span><br><span class="line">y_train = np_utils.to_categorical(y_train)</span><br><span class="line">y_test = np_utils.to_categorical(y_test)</span><br><span class="line">num_classes = y_test.shape[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<h1 id="define-baseline-model"><a href="#define-baseline-model" class="headerlink" title="define baseline model"></a>define baseline model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">baseline_model</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="comment"># create model</span></span><br><span class="line">	model = Sequential()</span><br><span class="line">	model.add(Conv2D(<span class="number">32</span>, (<span class="number">5</span>, <span class="number">5</span>), input_shape=(<span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">	model.add(MaxPooling2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">	model.add(Dropout(<span class="number">0.2</span>))</span><br><span class="line">	model.add(Flatten())</span><br><span class="line">	model.add(Dense(<span class="number">128</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">	model.add(Dense(num_classes, activation=<span class="string">'softmax'</span>))</span><br><span class="line">	<span class="comment"># Compile model</span></span><br><span class="line">	model.compile(loss=<span class="string">'categorical_crossentropy'</span>, optimizer=<span class="string">'adam'</span>, metrics=[<span class="string">'accuracy'</span>])</span><br><span class="line">	<span class="keyword">return</span> model</span><br></pre></td></tr></table></figure>
-<h1 id="define-model"><a href="#define-model" class="headerlink" title="define model"></a>define model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># build the model</span></span><br><span class="line">model = baseline_model()</span><br><span class="line"><span class="comment"># Fit the model</span></span><br><span class="line">model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=<span class="number">3</span>, batch_size=<span class="number">200</span>, verbose=<span class="number">2</span>)</span><br><span class="line"><span class="comment"># Final evaluation of the model</span></span><br><span class="line">scores = model.evaluate(X_test, y_test, verbose=<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"Baseline Error: %.2f%%"</span> % (<span class="number">100</span>-scores[<span class="number">1</span>]*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Train on <span class="number">60000</span> samples, validate on <span class="number">10000</span> samples</span><br><span class="line"></span><br><span class="line">Epoch <span class="number">1</span>/<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="number">69</span>s - loss: <span class="number">0.2498</span> - acc: <span class="number">0.9283</span> - val_loss: <span class="number">0.0715</span> - val_acc: <span class="number">0.9803</span></span><br><span class="line"></span><br><span class="line">Epoch <span class="number">2</span>/<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="number">70</span>s - loss: <span class="number">0.0714</span> - acc: <span class="number">0.9786</span> - val_loss: <span class="number">0.0503</span> - val_acc: <span class="number">0.9833</span></span><br><span class="line"></span><br><span class="line">Epoch <span class="number">3</span>/<span class="number">3</span></span><br></pre></td></tr></table></figure>
+            <p>description: add new column to a dataframe</p>
+<h1 id="initial-data"><a href="#initial-data" class="headerlink" title="initial data"></a>initial data</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = pandas.DataFrame(&#123;<span class="string">'a'</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;)</span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment">#    a</span></span><br><span class="line"><span class="comment"># 0  1</span></span><br><span class="line"><span class="comment"># 1  2</span></span><br><span class="line"><span class="comment"># 2  3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">b = pandas.DataFrame(&#123;<span class="string">'b'</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;)</span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment">#    b</span></span><br><span class="line"><span class="comment"># 0  2</span></span><br><span class="line"><span class="comment"># 1  4</span></span><br><span class="line"><span class="comment"># 2  6</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">c = pandas.DataFrame(&#123;<span class="string">'c'</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]&#125;)</span><br><span class="line"><span class="comment"># c</span></span><br><span class="line"><span class="comment">#    c</span></span><br><span class="line"><span class="comment"># 0  1</span></span><br><span class="line"><span class="comment"># 1  2</span></span><br><span class="line"><span class="comment"># 2  3</span></span><br><span class="line"><span class="comment"># 3  4</span></span><br><span class="line"><span class="comment"># 4  5</span></span><br></pre></td></tr></table></figure>
+<h1 id="concat-the-same-length"><a href="#concat-the-same-length" class="headerlink" title="concat the same length"></a>concat the same length</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pandas.concat([a,b], axis=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#    a  b</span></span><br><span class="line"><span class="comment"># 0  1  2</span></span><br><span class="line"><span class="comment"># 1  2  4</span></span><br><span class="line"><span class="comment"># 2  3  6</span></span><br></pre></td></tr></table></figure>
+<h1 id="concat-different-length"><a href="#concat-different-length" class="headerlink" title="concat different length"></a>concat different length</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pandas.concat([a,c], axis=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#      a  c</span></span><br><span class="line"><span class="comment"># 0  1.0  1</span></span><br><span class="line"><span class="comment"># 1  2.0  2</span></span><br><span class="line"><span class="comment"># 2  3.0  3</span></span><br><span class="line"><span class="comment"># 3  NaN  4</span></span><br><span class="line"><span class="comment"># 4  NaN  5</span></span><br></pre></td></tr></table></figure>
 
           
         
@@ -1052,7 +1978,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_simple_MLP_in_Keras.html">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/mssql_install_error_1638.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="killfun">
@@ -1071,8 +1997,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/post/python_AI_simple_MLP_in_Keras.html" itemprop="url">
-                  python create simple MLP in Keras
+                <a class="post-title-link" href="/post/mssql_install_error_1638.html" itemprop="url">
+                  Microsoft Sql server installation with 1638 error
                 </a>
               
             
@@ -1098,12 +2024,24 @@
                 
               
 
-              <time title="Created: 2018-07-23 19:38:02 / Modified: 19:40:39" itemprop="dateCreated datePublished" datetime="2018-07-23T19:38:02+10:00">2018-07-23</time>
+              <time title="Created: 2018-09-27 16:15:49" itemprop="dateCreated datePublished" datetime="2018-09-27T16:15:49+10:00">2018-09-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-18 09:39:54" itemprop="dateModified" datetime="2018-07-18T09:39:54+10:00">2018-07-18</time>
               
             
           </span>
@@ -1120,7 +2058,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/sql-server/" itemprop="url" rel="index"><span itemprop="name">sql server</span></a></span>
 
                 
                 
@@ -1156,848 +2094,13 @@
       
         
           
-            <p>description: create simple MLP in Keras</p>
-<h1 id="import-packages"><a href="#import-packages" class="headerlink" title="import packages"></a>import packages</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential</span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> Dense</span><br><span class="line"><span class="keyword">import</span> numpy</span><br></pre></td></tr></table></figure>
-<h1 id="fix-random-seed-for-reproducibility"><a href="#fix-random-seed-for-reproducibility" class="headerlink" title="fix random seed for reproducibility"></a>fix random seed for reproducibility</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.seed(<span class="number">7</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="load-pima-indians-dataset"><a href="#load-pima-indians-dataset" class="headerlink" title="load pima indians dataset"></a>load pima indians dataset</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataset = numpy.loadtxt(<span class="string">"pima-indians-diabetes.csv"</span>, delimiter=<span class="string">","</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="split-into-input-X-and-output-Y-variables"><a href="#split-into-input-X-and-output-Y-variables" class="headerlink" title="split into input (X) and output (Y) variables"></a>split into input (X) and output (Y) variables</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = dataset[:,<span class="number">0</span>:<span class="number">8</span>]</span><br><span class="line">Y = dataset[:,<span class="number">8</span>]</span><br></pre></td></tr></table></figure>
-<h1 id="create-model"><a href="#create-model" class="headerlink" title="create model"></a>create model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(<span class="number">12</span>, input_dim=<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">8</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Dense(<span class="number">1</span>, activation=<span class="string">'sigmoid'</span>))</span><br></pre></td></tr></table></figure>
-<h1 id="Compile-model"><a href="#Compile-model" class="headerlink" title="Compile model"></a>Compile model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.compile(loss=<span class="string">'binary_crossentropy'</span>, optimizer=<span class="string">'adam'</span>, metrics=[<span class="string">'accuracy'</span>])</span><br></pre></td></tr></table></figure>
-<h1 id="Fit-the-model"><a href="#Fit-the-model" class="headerlink" title="Fit the model"></a>Fit the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(X, Y, epochs=<span class="number">150</span>, batch_size=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="evaluate-the-model"><a href="#evaluate-the-model" class="headerlink" title="evaluate the model"></a>evaluate the model</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scores = model.evaluate(X, Y)</span><br><span class="line">print(<span class="string">"\n%s: %.2f%%"</span> % (model.metrics_names[<span class="number">1</span>], scores[<span class="number">1</span>]*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_forward_propagate.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_AI_forward_propagate.html" itemprop="url">
-                  python ANN forward Propagate
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 19:33:29 / Modified: 19:36:47" itemprop="dateCreated datePublished" datetime="2018-07-23T19:33:29+10:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Calculate-neuron-activation-for-an-input"><a href="#Calculate-neuron-activation-for-an-input" class="headerlink" title="Calculate neuron activation for an input"></a>Calculate neuron activation for an input</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">activate</span><span class="params">(weights, inputs)</span>:</span></span><br><span class="line">	activation = weights[<span class="number">-1</span>]</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(len(weights)<span class="number">-1</span>):</span><br><span class="line">		activation += weights[i] * inputs[i]</span><br><span class="line">	<span class="keyword">return</span> activation</span><br></pre></td></tr></table></figure>
-<h1 id="Transfer-neuron-activation"><a href="#Transfer-neuron-activation" class="headerlink" title="Transfer neuron activation"></a>Transfer neuron activation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> exp</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transfer</span><span class="params">(activation)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1.0</span> / (<span class="number">1.0</span> + exp(-activation))</span><br></pre></td></tr></table></figure>
-<h1 id="Forward-propagate-input-to-a-network-output"><a href="#Forward-propagate-input-to-a-network-output" class="headerlink" title="Forward propagate input to a network output"></a>Forward propagate input to a network output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward_propagate</span><span class="params">(network, row)</span>:</span></span><br><span class="line">	inputs = row</span><br><span class="line">	<span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">		new_inputs = []</span><br><span class="line">		<span class="keyword">for</span> neuron <span class="keyword">in</span> layer:</span><br><span class="line">			activation = activate(neuron[<span class="string">'weights'</span>], inputs)</span><br><span class="line">			neuron[<span class="string">'output'</span>] = transfer(activation)</span><br><span class="line">			new_inputs.append(neuron[<span class="string">'output'</span>])</span><br><span class="line">		inputs = new_inputs</span><br><span class="line">	<span class="keyword">return</span> inputs</span><br></pre></td></tr></table></figure>
-<h1 id="test-forward-propagation"><a href="#test-forward-propagation" class="headerlink" title="test forward propagation"></a>test forward propagation</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">network = [[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;],</span><br><span class="line">		[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]]</span><br><span class="line">row = [<span class="number">1</span>, <span class="number">0</span>, <span class="keyword">None</span>]</span><br><span class="line">output = forward_propagate(network, row)</span><br><span class="line">print(output)</span><br></pre></td></tr></table></figure>
-<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0.6629970129852887</span>, <span class="number">0.7253160725279748</span>]</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_AI_small_network_example.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_AI_small_network_example.html" itemprop="url">
-                  python build small network example for ANN
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 19:27:55 / Modified: 19:31:41" itemprop="dateCreated datePublished" datetime="2018-07-23T19:27:55+10:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: build small network example in python </p>
-<h1 id="initial-a-network"><a href="#initial-a-network" class="headerlink" title="initial a network"></a>initial a network</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">initialize_network</span><span class="params">(n_inputs, n_hidden, n_outputs)</span>:</span></span><br><span class="line">	network = list()</span><br><span class="line">	hidden_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_inputs + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden)]</span><br><span class="line">	network.append(hidden_layer)</span><br><span class="line">	output_layer = [&#123;<span class="string">'weights'</span>:[random() <span class="keyword">for</span> i <span class="keyword">in</span> range(n_hidden + <span class="number">1</span>)]&#125; <span class="keyword">for</span> i <span class="keyword">in</span> range(n_outputs)]</span><br><span class="line">	network.append(output_layer)</span><br><span class="line">	<span class="keyword">return</span> network</span><br></pre></td></tr></table></figure>
-<h1 id="test-network"><a href="#test-network" class="headerlink" title="test network"></a>test network</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">seed(<span class="number">1</span>)</span><br><span class="line">network = initialize_network(<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> layer <span class="keyword">in</span> network:</span><br><span class="line">	print(layer)</span><br></pre></td></tr></table></figure>
-<h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.13436424411240122</span>, <span class="number">0.8474337369372327</span>, <span class="number">0.763774618976614</span>]&#125;]</span><br><span class="line">[&#123;<span class="string">'weights'</span>: [<span class="number">0.2550690257394217</span>, <span class="number">0.49543508709194095</span>]&#125;, &#123;<span class="string">'weights'</span>: [<span class="number">0.4494910647887381</span>, <span class="number">0.651592972722763</span>]&#125;]</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/hexo_deploy_ssh.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/hexo_deploy_ssh.html" itemprop="url">
-                  hexo deploy to github with ssh
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 09:27:02 / Modified: 09:29:59" itemprop="dateCreated datePublished" datetime="2018-07-23T09:27:02+10:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: hexo deploy github pages through ssh</p>
-<h1 id="configuration-for-deploying-to-github-with-ssh"><a href="#configuration-for-deploying-to-github-with-ssh" class="headerlink" title="configuration for deploying to github with ssh"></a>configuration for deploying to github with ssh</h1><p>change the configuration in <code>_config.yml</code> under the hexo root folder<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:kelfan/kelfan.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_extract_columns.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/python_extract_columns.html" itemprop="url">
-                  python extract columns from dataframe
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-22 21:16:10 / Modified: 21:19:47" itemprop="dateCreated datePublished" datetime="2018-07-22T21:16:10+10:00">2018-07-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: pandas select columns by name</p>
-<h1 id="python-select-columns-from-dataframe-by-name"><a href="#python-select-columns-from-dataframe-by-name" class="headerlink" title="python select columns from dataframe by name"></a>python select columns from dataframe by name</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas </span><br><span class="line">d = pandas.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]], columns=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>])</span><br><span class="line"><span class="comment"># d</span></span><br><span class="line"><span class="comment">#    a  b  c  d</span></span><br><span class="line"><span class="comment"># 0  1  2  3  4</span></span><br><span class="line">d2 = d[[<span class="string">'b'</span>,<span class="string">'c'</span>]]</span><br><span class="line"><span class="comment"># d2</span></span><br><span class="line"><span class="comment">#    b  c</span></span><br><span class="line"><span class="comment"># 0  2  3</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
-
-          
-        
-      
-    </div>
-
-    
-      
-
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/git_set_ssh_for_tortoisegit.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="killfun">
-      <meta itemprop="description" content="Personal blog for collecting useful information">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Search For Fun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/git_set_ssh_for_tortoisegit.html" itemprop="url">
-                  TortoiseGit set ssh for github
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-22 15:14:52 / Modified: 15:21:27" itemprop="dateCreated datePublished" datetime="2018-07-22T15:14:52+10:00">2018-07-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>description: tortoisegit ssh key windows</p>
-<h1 id="tortoisegit-ssh-key-setup"><a href="#tortoisegit-ssh-key-setup" class="headerlink" title="tortoisegit ssh key setup"></a>tortoisegit ssh key setup</h1><ol>
-<li>open <code>Puttygen</code><ol>
-<li>click “Generate”</li>
-<li>need move mouse to Generate key </li>
-<li>save public key and private key</li>
-</ol>
-</li>
-<li>go to repository and right click -&gt; tortoiseGit -&gt; settings<ol>
-<li>remote -&gt; origin -&gt; puttyKey -&gt; add the .ppk file</li>
-</ol>
-</li>
-</ol>
+            <p>description: unable to install Sql Server with exit code 1638 </p>
+<h1 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h1><ul>
+<li>exit code 1638 means a newer version of Microsoft Visual C++ has been installed </li>
+<li>uninstall 2015, 2017 and others higher than 2015</li>
+<li>restart the process </li>
+</ul>
+<h1 id="problem-description"><a href="#problem-description" class="headerlink" title="problem description"></a>problem description</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">TITLE: Microsoft SQL Server 2017 Setup</span><br><span class="line">------------------------------</span><br><span class="line"></span><br><span class="line">The following error has occurred:</span><br><span class="line"></span><br><span class="line">VS Shell installation has failed with exit code 1638.</span><br></pre></td></tr></table></figure>
 <hr>
 <p>more on <a href="https://search4fan.github.io/">search4fan.github.io</a></p>
 
