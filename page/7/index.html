@@ -361,6 +361,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/python_get_search_keywords_from_google.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="killfun">
+      <meta itemprop="description" content="Personal blog for collecting useful information">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Search For Fun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/python_get_search_keywords_from_google.html" itemprop="url">
+                  get google suggested keywords in python
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-02 20:41:00 / Modified: 21:07:22" itemprop="dateCreated datePublished" datetime="2018-08-02T20:41:00+10:00">2018-08-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>description: use python to get the keyword suggestion from google</p>
+<h1 id="codes-for-scraping-google’s-keywords"><a href="#codes-for-scraping-google’s-keywords" class="headerlink" title="codes for scraping google’s keywords"></a>codes for scraping google’s keywords</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests, json</span><br><span class="line">URL=<span class="string">"http://suggestqueries.google.com/complete/search?client=firefox&amp;q=google keywords"</span></span><br><span class="line">headers = &#123;<span class="string">'User-agent'</span>:<span class="string">'Mozilla/5.0'</span>&#125;</span><br><span class="line">response = requests.get(URL, headers=headers)</span><br><span class="line">result = json.loads(response.content.decode(<span class="string">'utf-8'</span>))</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<h1 id="result-for-crawling-google-keywords"><a href="#result-for-crawling-google-keywords" class="headerlink" title="result for crawling google keywords"></a>result for crawling google keywords</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'google keywords'</span>, [<span class="string">'google keywords'</span>, <span class="string">'google keywords planner'</span>, <span class="string">'google keywords free'</span>, <span class="string">'google keywords analytics'</span>, <span class="string">'google keywords planner tools'</span>, <span class="string">'google keywords finder'</span>, <span class="string">'google keywords youtube'</span>, <span class="string">'google keywords api'</span>, <span class="string">'google keywords search volume'</span>, <span class="string">'google keywords everywhere'</span>]]</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://search4fan.github.io/post/test.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -724,7 +888,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-count">63</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -763,7 +927,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -850,7 +1016,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">37</span>
+                      
+                    
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

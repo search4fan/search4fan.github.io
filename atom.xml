@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-07-15T06:58:20.000Z</updated>
+  <updated>2018-10-16T06:31:51.624Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webstorm require unresolved function or method</title>
+    <link href="http://search4fan.github.io/post/webstorm-require-keword-not-being-recognized.html"/>
+    <id>http://search4fan.github.io/post/webstorm-require-keword-not-being-recognized.html</id>
+    <published>2018-10-16T06:31:00.000Z</published>
+    <updated>2018-10-16T06:31:51.624Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: You need to enable “Node.js Globals”
+        
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://search4fan.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="webstorm" scheme="http://search4fan.github.io/tags/webstorm/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft Visual Studio Code insert date time variables into snippet template</title>
@@ -553,35 +579,6 @@
         
           &lt;p&gt;description: python iterate a dataframe &lt;/p&gt;
 &lt;h1 id=&quot;loop-each-row-of-a-dataframe&quot;&gt;&lt;a href=&quot;#loop-each-row-of-a-dataframe&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python assign value of dataframe by conditions</title>
-    <link href="http://search4fan.github.io/post/python_assign_value_conditionally.html"/>
-    <id>http://search4fan.github.io/post/python_assign_value_conditionally.html</id>
-    <published>2018-09-27T06:15:50.006Z</published>
-    <updated>2018-07-14T07:20:20.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python assign or set value if conditions match &lt;/p&gt;
-&lt;h1 id=&quot;python-assign-or-set-value-based-on-conditions&quot;&gt;&lt;a
         
       
     
