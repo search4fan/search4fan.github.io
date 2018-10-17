@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-10-16T06:31:51.624Z</updated>
+  <updated>2018-10-17T11:22:18.622Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://search4fan.github.io/post/webstorm-require-keword-not-being-recognized.html"/>
     <id>http://search4fan.github.io/post/webstorm-require-keword-not-being-recognized.html</id>
     <published>2018-10-16T06:31:00.000Z</published>
-    <updated>2018-10-16T06:31:51.624Z</updated>
+    <updated>2018-10-17T11:22:18.622Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;p&gt;description: You need to enable “Node.js Globals”
+          &lt;p&gt;description: You need to enable “Node.js Globals” entry.&lt;/p&gt;
+&lt;h1 id=&quot;solution&quot;&gt;&lt;a href=&quot;#solution&quot; class=&quot;headerlink&quot;
         
       
     

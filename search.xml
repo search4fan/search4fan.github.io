@@ -6,7 +6,7 @@
       <title>webstorm require unresolved function or method</title>
       <link href="/post/webstorm-require-keword-not-being-recognized.html"/>
       <url>/post/webstorm-require-keword-not-being-recognized.html</url>
-      <content type="html"><![CDATA[<p>description: You need to enable “Node.js Globals” entry.</p>]]></content>
+      <content type="html"><![CDATA[<p>description: You need to enable “Node.js Globals” entry.</p><h1 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h1><p>enable <code>Coding assistance for Node.js</code></p>]]></content>
       
       <categories>
           
@@ -814,13 +814,13 @@
       
         <tags>
             
-            <tag> google </tag>
-            
             <tag> hexo </tag>
             
-            <tag> adsense </tag>
+            <tag> google </tag>
             
             <tag> blog </tag>
+            
+            <tag> adsense </tag>
             
         </tags>
       
