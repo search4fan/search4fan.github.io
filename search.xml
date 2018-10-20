@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>.value2 vba</title>
+      <link href="/post/vba-value2.html"/>
+      <url>/post/vba-value2.html</url>
+      <content type="html"><![CDATA[<p>description: the difference between .text, .value and .value2 </p><h1 id="text"><a href="#text" class="headerlink" title=".text"></a>.text</h1><p>The present of cell. May get ####</p><h1 id="value"><a href="#value" class="headerlink" title=".value"></a>.value</h1><p>Get the cell value formatted. May get truncate decimal number. </p><h1 id="value2"><a href="#value2" class="headerlink" title=".value2"></a>.value2</h1><p>Get the underlying value. Actual store value. </p>]]></content>
+      
+      <categories>
+          
+          <category> vba </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>webstorm require unresolved function or method</title>
       <link href="/post/webstorm-require-keword-not-being-recognized.html"/>
       <url>/post/webstorm-require-keword-not-being-recognized.html</url>
@@ -814,9 +835,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> google </tag>
+            
+            <tag> hexo </tag>
             
             <tag> blog </tag>
             

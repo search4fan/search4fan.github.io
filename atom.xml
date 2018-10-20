@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://search4fan.github.io/"/>
-  <updated>2018-10-17T11:22:18.622Z</updated>
+  <updated>2018-10-20T01:44:35.494Z</updated>
   <id>http://search4fan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>.value2 vba</title>
+    <link href="http://search4fan.github.io/post/vba-value2.html"/>
+    <id>http://search4fan.github.io/post/vba-value2.html</id>
+    <published>2018-10-20T01:41:00.000Z</published>
+    <updated>2018-10-20T01:44:35.494Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;description: the difference between .text, .value and .value2 &lt;/p&gt;
+&lt;h1 id=&quot;text&quot;&gt;&lt;a href=&quot;#text&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="vba" scheme="http://search4fan.github.io/categories/vba/"/>
+    
+    
+      <category term="vba" scheme="http://search4fan.github.io/tags/vba/"/>
+    
+  </entry>
   
   <entry>
     <title>webstorm require unresolved function or method</title>
@@ -551,35 +578,6 @@
         
           &lt;p&gt;description: change dataframe column into set and iterate&lt;/p&gt;
 &lt;h1 id=&quot;change-dataframe-column-into-a-set&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://search4fan.github.io/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://search4fan.github.io/tags/python/"/>
-    
-      <category term="dataframe" scheme="http://search4fan.github.io/tags/dataframe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python iterate or loop each row of a dataframe</title>
-    <link href="http://search4fan.github.io/post/python_dataframe_loop_rows.html"/>
-    <id>http://search4fan.github.io/post/python_dataframe_loop_rows.html</id>
-    <published>2018-09-27T06:15:50.008Z</published>
-    <updated>2018-07-19T13:42:50.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;description: python iterate a dataframe &lt;/p&gt;
-&lt;h1 id=&quot;loop-each-row-of-a-dataframe&quot;&gt;&lt;a href=&quot;#loop-each-row-of-a-dataframe&quot;
         
       
     
